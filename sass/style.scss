@@ -1,0 +1,9 @@
+@import 'mixins';
+
+body {
+	@include background((
+		red url(../images/dummy.jpg) no-repeat left top,
+		(top,#FFF 0%,#000 100%),
+		(#F00 20%,transparent 100%)
+	));
+}
