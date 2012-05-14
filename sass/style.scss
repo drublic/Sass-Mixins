@@ -1,6 +1,14 @@
 @import 'mixins';
 
 body {
+	/* The following outputs:
+	background:  red url(../images/dummy.jpg) no-repeat left top, -webkit-linear-gradient(top, white 0%, black 100%), -webkit-linear-gradient(top, red 20%, transparent 100%);
+	background:  red url(../images/dummy.jpg) no-repeat left top, -moz-linear-gradient(top, white 0%, black 100%), -moz-linear-gradient(top, red 20%, transparent 100%);
+	background:  red url(../images/dummy.jpg) no-repeat left top, -ms-linear-gradient(top, white 0%, black 100%), -ms-linear-gradient(top, red 20%, transparent 100%);
+	background:  red url(../images/dummy.jpg) no-repeat left top, -o-linear-gradient(top, white 0%, black 100%), -o-linear-gradient(top, red 20%, transparent 100%);
+	background:  red url(../images/dummy.jpg) no-repeat left top, linear-gradient(top, white 0%, black 100%), linear-gradient(top, red 20%, transparent 100%);
+	*/
+	
 	@include background((
 		red url(../images/dummy.jpg) no-repeat left top,
 		(top,#FFF 0%,#000 100%),
