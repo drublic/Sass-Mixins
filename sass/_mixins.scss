@@ -1,95 +1,53 @@
-@function fn-linear-gradient($args) {
+@mixin multiple-colored-gradient($args) {
 
-    $gradient: ();
+	$gradient: ();
 	$pos: nth($args, 1);
+	$pos_newsyntax: ();
 
-    @if ($pos != 'top') 
-	and ($pos != 'right') 
-	and ($pos != 'bottom') 
-	and ($pos != 'left') 
-	and ($pos != 'to top') 
-	and ($pos != 'to right') 
-	and ($pos != 'to bottom') 
-	and ($pos != 'to left') 
-	{
-        $pos: top;
-    }
-   
+	@if ($pos != 'top')
+		and ($pos != 'right')
+		and ($pos != 'bottom')
+		and ($pos != 'left')
+		and ($pos != 'to top') 
+		and ($pos != 'to right')
+		and ($pos != 'to bottom') 
+		and ($pos != 'to left') {
+			$pos: 'top';
+	}
+
+	// New Syntax
+	@if $pos == 'top' {
+		$pos_newsyntax: 'to bottom';
+	} @else if $pos == 'right' {
+		$pos_newsyntax: 'to left';
+	} @else if $pos == 'bottom' {
+		$pos_newsyntax: 'to top';
+	} @else if $pos == 'left' {
+		$pos_newsyntax: 'to right';
+	}
+
 	@each $g in $args {
 		@if ($g != 'top') 
-		and ($g != 'right') 
-		and ($g != 'bottom') 
-		and ($g != 'left') 
-		and ($g != 'to top') 
-		and ($g != 'to right') 
-		and ($g != 'to bottom') 
-		and ($g != 'to left') 
-		{
-            $gradient: append($gradient, $g, comma);
-        }
-    }
-
-    $collection: (
-    	-webkit-linear-gradient($pos, $gradient),
-    	-moz-linear-gradient($pos, $gradient),
-    	-ms-linear-gradient($pos, $gradient),
-    	-o-linear-gradient($pos, $gradient),
-    	unquote('linear-gradient(#{$pos}, #{$gradient})')
-	);
-    
-	@return $collection;
-}
-
-@mixin background($args) {
-
- 	$webkit: ();
-   	$moz: ();
-   	$o: ();
-   	$ms: ();
-   	$official: ();
-	
-	@each $bg in $args {
-		$g-webkit: '';
-		$g-moz: '';
-		$g-o: '';
-		$g-ms: '';
-		$g-official: '';
-		
-		$isgradient: false;
-	 	@each $g in $bg {
-			$type: type-of($g);
-			@if($type == list){
-				$isgradient: true;
-			}
+			and ($g != 'right') 
+			and ($g != 'bottom') 
+			and ($g != 'left') 
+			and ($g != 'to top') 
+			and ($g != 'to right') 
+			and ($g != 'to bottom') 
+			and ($g != 'to left') {
+				$gradient: append($gradient, $g, comma);
 		}
-		
-		@if ($isgradient != true){
-			@each $g in $bg {
-				$g-webkit: $g-webkit + ' ' + $g;
-				$g-moz: $g-moz + ' ' + $g;
-				$g-o: $g-o + ' ' + $g;
-				$g-ms: $g-ms + ' ' + $g;
-				$g-official: $g-official + ' ' + $g;
-			}
-		}
-		@else{
-			$g-webkit: $g-webkit + nth(fn-linear-gradient($bg),1);
-			$g-moz: $g-moz + nth(fn-linear-gradient($bg),2);
-			$g-o: $g-o + nth(fn-linear-gradient($bg),3);
-			$g-ms: $g-ms + nth(fn-linear-gradient($bg),4);
-			$g-official: $g-official + nth(fn-linear-gradient($bg),5);
-		}
-		
-		$webkit: append($webkit, unquote($g-webkit), comma);
-		$moz: append($moz, unquote($g-moz), comma);
-		$o: append($o, unquote($g-o), comma);
-		$ms: append($ms, unquote($g-ms), comma);
-		$official: append($official, unquote($g-official), comma);
 	}
-	
-	background:unquote($webkit);
-	background:unquote($moz);
-	background:unquote($o);
-	background:unquote($ms);
-	background:unquote($official);
+
+	background-image: -webkit-linear-gradient(unquote($pos), $gradient);
+	background-image: 	 -moz-linear-gradient(unquote($pos), $gradient);
+	background-image: 		-ms-linear-gradient(unquote($pos), $gradient);
+	background-image: 		 -o-linear-gradient(unquote($pos), $gradient);
+	background-image: 				unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
+
+
+
+
+
+
