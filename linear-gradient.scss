@@ -1,15 +1,24 @@
+// Generates a linear gradient for a given element
+// Documentation: docs/linear-gradient.md
 @mixin x-linear-gradient($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$old-direction: $direction;
 
-	// New Syntax
+	// New Syntax has to be evaluated to old one
 	@if $direction == "to bottom" {
 		$old-direction: "top";
 	} @else if $direction == "to right" {
 		$old-direction: "left";
+	} @else if $direction == "to top" {
+		$old-direction: "bottom";
+	} @else if $direction == "to left" {
+		$old-direction: "right";
 	}
 
+	// Provide a fallback-color
 	background-color: $fallback;
+
+	// Cross-browser linear-gradients
 	background-image: -webkit-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:    -moz-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:     -ms-linear-gradient(unquote($old-direction), $from, $to);

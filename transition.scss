@@ -1,3 +1,5 @@
+// Generates transitions on a given element
+// Documentation: docs/transition.md
 @mixin x-transition ($values) {
 	-webkit-transition: $values;
 	   -moz-transition: $values;

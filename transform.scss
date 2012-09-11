@@ -1,3 +1,5 @@
+// Generates transforms for a given element
+// Documentation: docs/transition.md
 @mixin x-transform ($values) {
 	-webkit-transform: $values;
 	   -moz-transform: $values;
