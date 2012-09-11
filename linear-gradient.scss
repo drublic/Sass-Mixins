@@ -1,0 +1,18 @@
+@mixin linear-gradient($direction: top, $fallback: #ccc, $from: #ccc, $to: #aaa) {
+
+	// New Syntax
+	@if $direction == "top" {
+		$new-direction: "to bottom";
+	} @else if $direction == "left" {
+		$new-direction: "to right";
+	} @else {
+		$new-direction: $direction;
+	}
+
+	background-color: $fallback;
+	background-image: -webkit-linear-gradient($direction, $from, $to);
+	background-image:    -moz-linear-gradient($direction, $from, $to);
+	background-image:     -ms-linear-gradient($direction, $from, $to);
+	background-image:      -o-linear-gradient($direction, $from, $to);
+	background-image:         linear-gradient($new-direction, $from, $to);
+}

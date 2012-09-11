@@ -8,9 +8,9 @@
 		and ($pos != 'right')
 		and ($pos != 'bottom')
 		and ($pos != 'left')
-		and ($pos != 'to top') 
+		and ($pos != 'to top')
 		and ($pos != 'to right')
-		and ($pos != 'to bottom') 
+		and ($pos != 'to bottom')
 		and ($pos != 'to left') {
 			$pos: 'top';
 	}
@@ -27,13 +27,13 @@
 	}
 
 	@each $g in $args {
-		@if ($g != 'top') 
-			and ($g != 'right') 
-			and ($g != 'bottom') 
-			and ($g != 'left') 
-			and ($g != 'to top') 
-			and ($g != 'to right') 
-			and ($g != 'to bottom') 
+		@if ($g != 'top')
+			and ($g != 'right')
+			and ($g != 'bottom')
+			and ($g != 'left')
+			and ($g != 'to top')
+			and ($g != 'to right')
+			and ($g != 'to bottom')
 			and ($g != 'to left') {
 				$gradient: append($gradient, $g, comma);
 		}
@@ -46,6 +46,25 @@
 	background-image: 				unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
 
+
+
+html {
+	height: 100%;
+
+	/* Expected output:
+	  background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
+	  background-image: -moz-linear-gradient(top, red 0%, green 50%, blue 100%);
+	  background-image: -ms-linear-gradient(top, red 0%, green 50%, blue 100%);
+	  background-image: -o-linear-gradient(top, red 0%, green 50%, blue 100%);
+	  background-image: linear-gradient(to bottom, red 0%, green 50%, blue 100%);
+	*/
+	@include multiple-colored-gradient((
+		'top',
+		red 0%,
+		green 50%,
+		blue 100%
+	));
+}
 
 
 
