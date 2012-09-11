@@ -1,18 +1,60 @@
-@import '../multiple-colored-gradient';
+// Import all mixins
+@import 'build/mixins.scss';
 
-html {
-	height: 100%;
+// Import the layout and styling for tests
+@import 'layout';
 
+
+.border-radius {
+	@include x-border-radius(20px 10px);
+}
+
+.box-shadow {
+	@include x-box-shadow(5px 5px 10px 5px #aaa);
+}
+
+.box-sizing {
+	@include x-box-sizing();
+
+	width: 100%;
+	padding: 0 30px;
+}
+
+.linear-gradient {
+	@include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+}
+
+.multiple-colored-gradient {
 	/* Expected output:
-		background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
+	  background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
 	  background-image: -moz-linear-gradient(top, red 0%, green 50%, blue 100%);
 	  background-image: -ms-linear-gradient(top, red 0%, green 50%, blue 100%);
 	  background-image: -o-linear-gradient(top, red 0%, green 50%, blue 100%);
 	  background-image: linear-gradient(to bottom, red 0%, green 50%, blue 100%);
 	*/
-	@include multiple-colored-gradient((
-		'top',
-		red 0%,
-		green 50%,
-		blue 100%
+	@include x-multiple-colored-gradient((
+		"top",
+		#aff 0%,
+		#faf 20%,
+		#ffa 40%,
+		#aaf 60%,
+		#faa 80%,
+		#aaa 100%
 	));
+}
+
+.rem {
+	@include x-rem(font-size, 1.3)
+}
+
+.transform {
+	@include x-transform(rotate(1deg));
+}
+
+.transition {
+	@include x-transition(background 0.3s ease-in);
+
+	&:hover {
+		background: #bbb;
+	}
+}

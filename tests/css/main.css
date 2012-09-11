@@ -1,14 +1,83 @@
 html {
-  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  margin: 0 auto;
+  font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
+  color: #000;
+}
+
+.test-case {
+  width: 100%;
+  background: #eee;
+  margin-bottom: 20px;
+  border: 2px solid #aaa;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.border-radius {
+  -webkit-border-radius: 20px 10px;
+  border-radius: 20px 10px;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 5px 5px 10px 5px #aaaaaa;
+  box-shadow: 5px 5px 10px 5px #aaaaaa;
+}
+
+.box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.linear-gradient {
+  background-color: #cccccc;
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
+}
+
+.multiple-colored-gradient {
   /* Expected output:
-  	background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
+    background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
     background-image: -moz-linear-gradient(top, red 0%, green 50%, blue 100%);
     background-image: -ms-linear-gradient(top, red 0%, green 50%, blue 100%);
     background-image: -o-linear-gradient(top, red 0%, green 50%, blue 100%);
     background-image: linear-gradient(to bottom, red 0%, green 50%, blue 100%);
   */
-  background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
-  background-image: -moz-linear-gradient(top, red 0%, green 50%, blue 100%);
-  background-image: -ms-linear-gradient(top, red 0%, green 50%, blue 100%);
-  background-image: -o-linear-gradient(top, red 0%, green 50%, blue 100%);
-  background-image: linear-gradient(to bottom, red 0%, green 50%, blue 100%); }
+  background-image: -webkit-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
+  background-image: -moz-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
+  background-image: -ms-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
+  background-image: -o-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
+  background-image: linear-gradient(to bottom, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
+}
+
+.rem {
+  font-size: 20.8px;
+  font-size: 1.3rem;
+}
+
+.transform {
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+
+.transition {
+  -webkit-transition: background 0.3s ease-in;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -ms-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+.transition:hover {
+  background: #bbb;
+}
