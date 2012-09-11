@@ -1,0 +1,25 @@
+{
+	"name": "sass-mixins",
+	"title": "SASS-Mixins",
+	"description": "Some SASS-Mixins to use in your project",
+	"version": "0.1.0",
+	"homepage": "https://github.com/drublic/SASS-Mixins",
+	"author": {
+		"name": "Hans Christian Reinl",
+		"url": "http://drublic.de"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/drublic/SASS-Mixins.git"
+	},
+	"bugs": {
+		"url": "https://github.com/drublic/SASS-Mixins/issues"
+	},
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "https://nodeload.github.com/cowboy/grunt/tarball/0ba6d4b529",
+		"grunt-sass": "https://nodeload.github.com/drublic/grunt-sass/tarball/9f029d5e3fa03c826755e8b366006aa9934c1a74"
+	},
+	"keywords": []
+}
