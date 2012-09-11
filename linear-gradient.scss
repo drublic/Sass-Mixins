@@ -1,4 +1,4 @@
-@mixin linear-gradient($direction: top, $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient($direction: top, $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	// New Syntax
 	@if $direction == "top" {

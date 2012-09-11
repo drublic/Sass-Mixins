@@ -1,0 +1,7 @@
+@mixin x-transform ($values) {
+	-webkit-transform: $values;
+	   -moz-transform: $values;
+	     -o-transform: $values;
+	    -ms-transform: $values;
+	        transform: $values;
+}
