@@ -75,11 +75,11 @@
 		}
 	}
 
-	background-image: -webkit-linear-gradient(unquote($pos), $gradient);
-	background-image: 	 -moz-linear-gradient(unquote($pos), $gradient);
-	background-image: 		-ms-linear-gradient(unquote($pos), $gradient);
-	background-image: 		 -o-linear-gradient(unquote($pos), $gradient);
-	background-image: 				unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
+	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
+	background-image:     -moz-linear-gradient(unquote($pos), $gradient);
+	background-image:      -ms-linear-gradient(unquote($pos), $gradient);
+	background-image:       -o-linear-gradient(unquote($pos), $gradient);
+	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
 
 
