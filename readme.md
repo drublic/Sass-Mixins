@@ -16,4 +16,4 @@ Please [file an issue](https://github.com/drublic/SASS-Mixins/issues) if you thi
 Thanks to @Schepp for stating [a similar repo](https://github.com/Schepp/SASS-Mixins).
 
 ### License
-[The MIT License](http://mit-license.org/)
+[The MIT License](https://github.com/drublic/SASS-Mixins/blob/master/LICENSE.md)
