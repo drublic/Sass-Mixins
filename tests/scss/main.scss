@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '../multiple-colored-gradient';
 
 html {
 	height: 100%;
@@ -16,4 +16,3 @@ html {
 		green 50%,
 		blue 100%
 	));
-}
