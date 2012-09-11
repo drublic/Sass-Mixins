@@ -1,3 +1,9 @@
+# SASS-Mixins for your needs
+
+Take what you need.
+
+Please view the [docs](https://github.com/drublic/SASS-Mixins/blob/master/docs/README.md).
+
 ## Contribute
 Please [file an issue](https://github.com/drublic/SASS-Mixins/issues) if you think this could be improved.
 
