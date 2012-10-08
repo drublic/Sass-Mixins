@@ -12,6 +12,7 @@ Take what you need!
 * [rem](docs/rem.md)
 * [transform](docs/transform.md)
 * [transition](docs/transiton.md)
+* tab-size
 
 Documentation on how to use each of these can be found in the accoding
 documentation-files.
