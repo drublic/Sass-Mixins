@@ -1,0 +1,6 @@
+// Generates tab-sizing
+@mixin x-tab-size ($value: 4) {
+	-moz-tab-size: $value;
+	  -o-tab-size: $value;
+	     tab-size: $value;
+}
