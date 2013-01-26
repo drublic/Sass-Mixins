@@ -53,6 +53,7 @@
 	background-color: $fallback;
 
 	// Cross-browser linear-gradients
+	background-image: -webkit-gradient(linear, unquote($veryold-direction), from($from), to($to)); // Android 2.1-3.0
 	background-image: -webkit-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:    -moz-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:     -ms-linear-gradient(unquote($old-direction), $from, $to);

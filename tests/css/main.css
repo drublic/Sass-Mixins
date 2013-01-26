@@ -36,6 +36,7 @@ html {
 
 .linear-gradient {
   background-color: #cccccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
   background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
