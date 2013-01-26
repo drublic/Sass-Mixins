@@ -36,7 +36,7 @@ possible.
 
 ## Thanks
 
-Thanks to @Schepp for stating [a similar repo](https://github.com/Schepp/SASS-Mixins).
+Thanks to @Schepp for starting [a similar repo](https://github.com/Schepp/SASS-Mixins).
 
 ## License
 
