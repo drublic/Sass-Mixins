@@ -3,6 +3,7 @@
 @mixin x-linear-gradient($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$old-direction: $direction;
+	$veryold-direction: $direction;
 
 	// New Syntax has to be evaluated to old one
 	@if $direction == "to bottom" {
@@ -13,6 +14,17 @@
 		$old-direction: "bottom";
 	} @else if $direction == "to left" {
 		$old-direction: "right";
+	}
+
+	// And also for very old syntax
+	@if $direction == "to bottom" {
+		$veryold-direction: "left top, left bottom";
+	} @else if $direction == "to right" {
+		$veryold-direction: "top left, bottom right";
+	} @else if $direction == "to top" {
+		$veryold-direction: "left bottom, left top";
+	} @else if $direction == "to left" {
+		$veryold-direction: "top right, bottom left";
 	}
 
 	// Provide a fallback-color
