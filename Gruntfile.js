@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 			}
 		},
 
-		rubysass: {
+		sass: {
 			css: {
 				options: {
 					unixNewlines: true,
@@ -26,25 +26,14 @@ module.exports = function (grunt) {
 					'tests/css/main.css': 'tests/scss/main.scss'
 				}
 			}
-		},
-
-		watch: {
-			concat: {
-				files: ['*.scss'],
-				tasks: 'concat'
-			},
-
-			css: {
-				files: ['tests/scss/**/*.scss'],
-				tasks: 'rubysass'
-			}
 		}
 	});
 
 	// Load some stuff
-	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 
 	// Default task
-	grunt.registerTask('default', 'concat rubysass:css');
+	grunt.registerTask('default', ['concat', 'sass']);
 
 };

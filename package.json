@@ -18,8 +18,9 @@
 	"license": "MIT",
 	"dependencies": {},
 	"devDependencies": {
-		"grunt": "https://nodeload.github.com/cowboy/grunt/tarball/0ba6d4b529",
-		"grunt-sass": "https://nodeload.github.com/drublic/grunt-sass/tarball/9f029d5e3fa03c826755e8b366006aa9934c1a74"
+		"grunt": "0.4.x",
+		"grunt-contrib-concat": "git://github.com/gruntjs/grunt-contrib-concat.git#366ef62cb65eaccadd154ae42b292244f10644ef",
+		"grunt-contrib-sass": "git://github.com/gruntjs/grunt-contrib-sass.git#6c74616aad8b6f747b680a48a5bba6dadd2b69c4"
 	},
 	"keywords": []
 }
