@@ -64,6 +64,11 @@ html {
   font-size: 1.3rem;
 }
 
+.rem-2 {
+  padding: 16px 0 48px;
+  padding: 1 0 3rem;
+}
+
 .transform {
   -webkit-transform: rotate(1deg);
   -moz-transform: rotate(1deg);

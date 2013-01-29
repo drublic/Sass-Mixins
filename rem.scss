@@ -1,6 +1,24 @@
 // Enables using of CSS3 value `rem`
 // Documentation: docs/rem.md
-@mixin x-rem($property, $value, $mainFontSize: 16px) {
-  #{$property}: $value * $mainFontSize;
-  #{$property}: #{$value}rem;
+@mixin x-rem($property, $values, $main-font-size: 16px) {
+
+	// Empty list for all values in px
+	$px-values: ();
+
+	// Iterate over entries
+	@each $value in $values {
+
+		// If the value is zero, return 0
+		@if $value == 0 {
+			$px-values: append($px-values, $value);
+
+		// If the value is not zero, convert it from px to rem
+		} @else {
+			$px-values: append($px-values, ($value * $main-font-size) );
+		}
+	}
+
+	// Return the property and its list of converted values
+	#{$property}: #{$px-values};
+	#{$property}: #{$values}rem;
 }
