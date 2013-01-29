@@ -117,6 +117,7 @@
 
 	// Empty list for all values in px
 	$px-values: ();
+	$rem-values: ();
 
 	// Iterate over entries
 	@each $value in $values {
@@ -124,16 +125,18 @@
 		// If the value is zero, return 0
 		@if $value == 0 {
 			$px-values: append($px-values, $value);
+			$rem-values: append($rem-values, $value);
 
 		// If the value is not zero, convert it from px to rem
 		} @else {
 			$px-values: append($px-values, ($value * $main-font-size) );
+			$rem-values: append($rem-values, #{$value}rem);
 		}
 	}
 
 	// Return the property and its list of converted values
 	#{$property}: #{$px-values};
-	#{$property}: #{$values}rem;
+	#{$property}: #{$rem-values};
 }
 
 // Generates tab-sizing

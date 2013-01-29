@@ -1,4 +1,4 @@
-# Some SASS-Mixins for your needs
+# Some Sass mixins for your needs
 
 Take what you need!
 
