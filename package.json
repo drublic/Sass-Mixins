@@ -19,8 +19,8 @@
 	"dependencies": {},
 	"devDependencies": {
 		"grunt": "0.4.x",
-		"grunt-contrib-concat": "git://github.com/gruntjs/grunt-contrib-concat.git#366ef62cb65eaccadd154ae42b292244f10644ef",
-		"grunt-contrib-sass": "git://github.com/gruntjs/grunt-contrib-sass.git#6c74616aad8b6f747b680a48a5bba6dadd2b69c4"
+		"grunt-contrib-concat": "0.1.2rc6",
+		"grunt-contrib-sass": "0.2.2rc7"
 	},
 	"keywords": []
 }
