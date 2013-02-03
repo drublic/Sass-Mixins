@@ -2,7 +2,7 @@
 	"name": "sass-mixins",
 	"title": "SASS-Mixins",
 	"description": "Some SASS-Mixins to use in your project",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"homepage": "https://github.com/drublic/SASS-Mixins",
 	"author": {
 		"name": "Hans Christian Reinl",

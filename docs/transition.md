@@ -9,7 +9,6 @@ all the things!
 		-webkit-transition: $values;
 		   -moz-transition: $values;
 		     -o-transition: $values;
-		    -ms-transition: $values;
 		        transition: $values;
 	}
 
@@ -31,6 +30,5 @@ all the things!
 		-webkit-transition: background 0.3s ease-in;
 		   -moz-transition: background 0.3s ease-in;
 		     -o-transition: background 0.3s ease-in;
-		    -ms-transition: background 0.3s ease-in;
 		        transition: background 0.3s ease-in;
 	}
