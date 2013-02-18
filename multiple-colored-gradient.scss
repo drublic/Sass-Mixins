@@ -6,17 +6,6 @@
 	$pos: nth($args, 1);
 	$pos_newsyntax: ();
 
-	@if ($pos != 'top')
-		and ($pos != 'right')
-		and ($pos != 'bottom')
-		and ($pos != 'left')
-		and ($pos != 'to top')
-		and ($pos != 'to right')
-		and ($pos != 'to bottom')
-		and ($pos != 'to left') {
-			$pos: 'top';
-	}
-
 	// New Syntax
 	@if $pos == 'top' {
 		$pos_newsyntax: 'to bottom';
@@ -26,6 +15,8 @@
 		$pos_newsyntax: 'to top';
 	} @else if $pos == 'left' {
 		$pos_newsyntax: 'to right';
+	} @else {
+		$pos_newsyntax: $pos;
 	}
 
 	@each $g in $args {
@@ -36,10 +27,13 @@
 			and ($g != 'to top')
 			and ($g != 'to right')
 			and ($g != 'to bottom')
-			and ($g != 'to left') {
+			and ($g != 'to left')
+			/* angle targeted? */ {
 				$gradient: append($gradient, $g, comma);
 		}
 	}
+
+	/* all done for angle support yet? Not sure. */
 
 	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
 	background-image:     -moz-linear-gradient(unquote($pos), $gradient);
