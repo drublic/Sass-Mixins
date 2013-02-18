@@ -11,7 +11,7 @@ Take what you need!
 * [multiple-colored-gradient](docs/multiple-colored-gradient.md)
 * [rem](docs/rem.md)
 * [transform](docs/transform.md)
-* [transition](docs/transiton.md)
+* [transition](docs/transition.md)
 * tab-size
 
 Documentation on how to use each of these can be found in the accoding
@@ -24,7 +24,7 @@ project and use the mixins as suggested in the docs for each mixin.
 
 ## Contribute
 
-Please [file an issue](https://github.com/drublic/SASS-Mixins/issues) if you
+Please [file an issue](issues) if you
 think something could be improved. Please submit Pull Requests when ever
 possible.
 
@@ -40,4 +40,4 @@ Thanks to @Schepp for starting [a similar repo](https://github.com/Schepp/SASS-M
 
 ## License
 
-[The MIT License](https://github.com/drublic/SASS-Mixins/blob/master/LICENSE.md)
+[The MIT License](LICENSE.md)
