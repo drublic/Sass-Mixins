@@ -69,6 +69,12 @@ html {
   padding: 1rem 0 3rem;
 }
 
+.rem-3 {
+  margin: 16px auto;
+  margin: 1rem auto;
+  width: 50%;
+}
+
 .transform {
   -webkit-transform: rotate(1deg);
   -moz-transform: rotate(1deg);

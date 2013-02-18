@@ -51,6 +51,12 @@
 	@include x-rem(padding, 1 0 3);
 }
 
+.rem-3 {
+	@include x-rem(margin, 1 auto);
+
+	width: 50%;
+}
+
 .transform {
 	@include x-transform(rotate(1deg));
 }
