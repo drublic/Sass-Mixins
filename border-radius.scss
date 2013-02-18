@@ -4,3 +4,5 @@
 	-webkit-border-radius: $values; // iOS Safari 3.2, Android 2.1
 	        border-radius: $values;
 }
+
+// @include x-border-radius(20px 10px);

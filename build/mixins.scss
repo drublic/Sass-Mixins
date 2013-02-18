@@ -5,12 +5,16 @@
 	        border-radius: $values;
 }
 
+// @include x-border-radius(20px 10px);
+
 // Generates box-shadow on a given element
 // Documentation: docs/box-shadow.md
 @mixin x-box-shadow ($values) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }
+
+// @include x-box-shadow(5px 5px 10px 5px #aaa);
 
 // Generates a given element in border-box box-sizing by default
 // Documentation: docs/box-sizing.md
@@ -19,6 +23,8 @@
 	   -moz-box-sizing: $type; // FF 2.0+
 	        box-sizing: $type; // IE 8, Opera 9.5+
 }
+
+// @include x-box-sizing;
 
 // Generates a linear gradient for a given element
 // Documentation: docs/linear-gradient.md
@@ -60,6 +66,8 @@
 	background-image:      -o-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:         linear-gradient(unquote($direction),     $from, $to);
 }
+
+// @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 
 // Generates multiple color stops in gradients for a given element
 // Documentation: docs/multiple-colored-gradient.md
@@ -111,6 +119,8 @@
 	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
 
+// @include x-multiple-colored-gradient(( "top", #aaa 0%, #bbb 50%, #ccc 100% ));
+
 // Enables using of CSS3 value `rem`
 // Documentation: docs/rem.md
 @mixin x-rem($property, $values, $main-font-size: 16px) {
@@ -139,6 +149,8 @@
 	#{$property}: #{$rem-values};
 }
 
+// @include x-rem(font-size, 1.3);
+
 // Generates tab-sizing
 @mixin x-tab-size ($value: 4) {
 	-moz-tab-size: $value;
@@ -156,6 +168,8 @@
 	        transform: $values;
 }
 
+// @include x-transform(rotate(1deg));
+
 // Generates transitions on a given element
 // Documentation: docs/transition.md
 @mixin x-transition ($values) {
@@ -164,3 +178,5 @@
 	     -o-transition: $values;
 	        transition: $values;
 }
+
+// @include x-transition(background 0.3s ease-in);

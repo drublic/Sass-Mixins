@@ -38,3 +38,5 @@
 	background-image:      -o-linear-gradient(unquote($old-direction), $from, $to);
 	background-image:         linear-gradient(unquote($direction),     $from, $to);
 }
+
+// @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);

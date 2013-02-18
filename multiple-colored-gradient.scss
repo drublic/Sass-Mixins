@@ -41,3 +41,5 @@
 	background-image:       -o-linear-gradient(unquote($pos), $gradient);
 	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
+
+// @include x-multiple-colored-gradient(( "top", #aaa 0%, #bbb 50%, #ccc 100% ));
