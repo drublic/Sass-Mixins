@@ -33,6 +33,26 @@ submit Pull Requests when ever possible.
 * animations
 * Mixin that generates grids
 
+
+## Changelog
+
+### 0.2.0 - 18.02.2013
+* Add support for `auto` value in rem mixin
+* Add example of usage to each mixin
+
+### 0.1.3 - 03.02.2013
+* Remove -ms-prefix from transitions
+
+### 0.1.2 - 29.01.2013
+* Multiple values for rem-mixin
+
+### 0.1.1 - 26.01.2013
+* Add very old webkit-gradient syntax
+* Add tab mixin
+
+### 0.1.0 - 11.09.2012
+
+
 ## Thanks
 
 Thanks to @Schepp for starting [a similar repo](https://github.com/Schepp/SASS-Mixins).
