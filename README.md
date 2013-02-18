@@ -24,9 +24,8 @@ project and use the mixins as suggested in the docs for each mixin.
 
 ## Contribute
 
-Please [file an issue](issues) if you
-think something could be improved. Please submit Pull Requests when ever
-possible.
+Please [file an issue](issues) if you think something could be improved. Please
+submit Pull Requests when ever possible.
 
 ## Up the road
 
