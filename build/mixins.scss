@@ -133,7 +133,7 @@
 	@each $value in $values {
 
 		// If the value is zero, return 0
-		@if $value == 0 {
+		@if $value == 0 or $value == auto {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 
