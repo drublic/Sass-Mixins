@@ -2,7 +2,6 @@
 // Documentation: docs/transition.md
 @mixin x-transition ($values) {
 	-webkit-transition: $values;
-	   -moz-transition: $values;
 	     -o-transition: $values;
 	        transition: $values;
 }
