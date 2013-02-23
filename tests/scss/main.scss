@@ -24,6 +24,16 @@
 	@include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 }
 
+.linear-gradient-2 {
+	@include x-linear-gradient("to right", #ddd, #ddd, #555);
+}
+
+.linear-gradient-3 {
+	@include x-linear-gradient(45deg, #ddd, #fff, #000);
+
+	padding: 50px 0;
+}
+
 .multiple-colored-gradient {
 	/* Expected output:
 	  background-image: -webkit-linear-gradient(top, red 0%, green 50%, blue 100%);
