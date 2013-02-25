@@ -1,0 +1,101 @@
+// Generates multiple backgrounds for a given element
+
+// A function for prefixing gradients
+@function prefixed-gradient ($mode, $gradient) {
+
+	$prefix: '-' + $mode + '-';
+
+	// Get angles
+	$angles: helper-gradient-angle('' + nth($gradient, 2));
+	$angle: nth($angles, 1);
+
+	// If unprefixed
+	@if ($mode == '') {
+		$prefix: '';
+		$angle: nth($gradient, 2);
+	}
+
+	// @TODO define old webkit mode
+	@if ($mode == 'webkit-old') {
+		$prefix: '-webkit-';
+		$angle: nth($angles, 2);
+	}
+
+	$prefixed: '-' + $prefix + 'linear-gradient(' + $angle;
+
+	@for $i from 1 through length($gradient) {
+		@if ($i > 2) {
+			$prefixed: append(unquote($prefixed), nth($gradient, $i), comma);
+		}
+	}
+
+	$prefixed: $prefixed + ')';
+
+	@return unquote($prefixed);
+}
+
+@mixin x-multiple-backgrounds ($backgrounds...) {
+	$combined-background-webkit-old: ();
+	$combined-background-webkit: ();
+	$combined-background-moz: ();
+	$combined-background-o: ();
+	$combined-background: ();
+	$end: '';
+
+	// Itterate through all backgrounds passed
+	@each $background in $backgrounds {
+
+		// Prefix gradadients
+		@if (type-of($background) == list) {
+
+			@if (nth($background, 1) == 'linear-gradient') {
+				$combined-background-webkit-old: append($combined-background-webkit-old, prefixed-gradient('webkit-old', $background), comma);
+				$combined-background-webkit: append($combined-background-webkit, prefixed-gradient('webkit', $background), comma);
+				$combined-background-moz: append($combined-background-moz, prefixed-gradient('moz', $background), comma);
+				$combined-background-o: append($combined-background-o, prefixed-gradient('o', $background), comma);
+				$combined-background: append($combined-background, prefixed-gradient('', $background), comma);
+
+			// Nothing to do for non-gradients
+			} @else {
+				$combined-background-webkit-old: append($combined-background-webkit-old, $background, comma);
+				$combined-background-webkit: append($combined-background-webkit, $background, comma);
+				$combined-background-moz: append($combined-background-moz, $background, comma);
+				$combined-background-o: append($combined-background-o, $background, comma);
+				$combined-background: append($combined-background, $background, comma);
+			}
+
+		// Put colors at end of combined background
+		} @else if (type-of($background) == color) {
+			$end: $background;
+			$background: null;
+
+		}
+	}
+
+	// Append color if there is one
+	$combined-background-webkit-old: append($combined-background-webkit-old, $end, space);
+	$combined-background-webkit: append($combined-background-webkit, $end, comma);
+	$combined-background-moz: append($combined-background-moz, $end, comma);
+	$combined-background-o: append($combined-background-o, $end, comma);
+	$combined-background: append($combined-background, $end, comma);
+
+	// Only print all prefixed versions if necessary
+	@if ($combined-background != $combined-background-webkit) {
+		background: unquote($combined-background-webkit-old);
+		background: unquote($combined-background-webkit);
+		background: unquote($combined-background-moz);
+		background: unquote($combined-background-o);
+		background: unquote($combined-background);
+	} @else {
+		background: unquote($combined-background);
+	}
+
+}
+
+/**
+ * @include x-multiple-backgrounds(
+ *	rgba(0, 0, 0, 0.3),
+ *	url('../img/someImage.png') no-repeat,
+ *	('to bottom', #ddd, #aaa, #ddd)
+ * );
+ */
