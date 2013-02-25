@@ -53,6 +53,20 @@
 	));
 }
 
+.multiple-backgrounds {
+	@include x-multiple-backgrounds(
+		rgba(0, 0, 0, 0.3),
+		url('img/someImage-1.png'),
+		url('../img/someImage-2.png') no-repeat,
+		(linear-gradient, to bottom, #aaa, #ddd)
+	);
+
+	@include x-box-sizing;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: left;
+}
+
 .rem {
 	@include x-rem(font-size, 1.3);
 }
