@@ -11,8 +11,8 @@ module.exports = function (grunt) {
 
 		concat: {
 			build: {
-				src: ['*.scss'],
-				dest: 'build/mixins.scss'
+				src: ['partials/*.scss'],
+				dest: 'mixins.scss'
 			}
 		},
 
