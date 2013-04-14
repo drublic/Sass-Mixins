@@ -36,6 +36,11 @@ submit Pull Requests when ever possible.
 
 ## Changelog
 
+### 0.2.1 - 14.04.2013
+* Add Bower support
+* Add mixin for multiple backgrounds
+* Remove moz-prefix for transition
+
 ### 0.2.0 - 18.02.2013
 * Add support for `auto` value in rem mixin
 * Add example of usage to each mixin
