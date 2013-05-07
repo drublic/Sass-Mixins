@@ -19,7 +19,7 @@ html {
   width: 100%;
   background: #eee;
   margin-bottom: 20px;
-  border: 2px solid #aaaaaa;
+  border: 2px solid #aaa;
   text-align: center;
   vertical-align: middle;
 }
@@ -89,11 +89,11 @@ html {
 }
 
 .multiple-backgrounds {
-  background: url("../img/someImage-2.png") no-repeat --webkit-linear-gradient(left top, left bottom, #aaaaaa, #dddddd) rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, --webkit-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, --moz-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, --o-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, -linear-gradient(to bottom, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/someImage-2.png") no-repeat -webkit-linear-gradient(left top, left bottom, #aaaaaa, #dddddd) rgba(0, 0, 0, 0.3);
+  background: url("../img/someImage-2.png") no-repeat, -webkit-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/someImage-2.png") no-repeat, -moz-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/someImage-2.png") no-repeat, -o-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/someImage-2.png") no-repeat, linear-gradient(to bottom, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

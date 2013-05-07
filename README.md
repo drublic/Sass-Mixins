@@ -36,6 +36,9 @@ submit Pull Requests when ever possible.
 
 ## Changelog
 
+### HEAD
+* Fix double dashes in the prefixed gradient function of multiple backgrounds
+
 ### 0.2.1 - 14.04.2013
 * Add Bower support
 * Add mixin for multiple backgrounds
