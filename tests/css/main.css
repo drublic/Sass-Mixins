@@ -118,6 +118,14 @@ html {
   width: 50%;
 }
 
+.rem-4 {
+  border: 16px solid #bada55;
+  border: 1rem solid #bada55;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .transform {
   -webkit-transform: rotate(1deg);
   -moz-transform: rotate(1deg);
