@@ -37,6 +37,7 @@ submit Pull Requests when ever possible.
 ## Changelog
 
 ### HEAD
+* Allow non-number values in rem mixin
 * Fix double dashes in the prefixed gradient function of multiple backgrounds
 
 ### 0.2.1 - 14.04.2013
