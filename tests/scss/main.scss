@@ -81,6 +81,12 @@
 	width: 50%;
 }
 
+.rem-4 {
+	@include x-rem(border, 1 solid #bada55);
+
+	@include x-box-sizing;
+}
+
 .transform {
 	@include x-transform(rotate(1deg));
 }
