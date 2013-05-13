@@ -1,6 +1,7 @@
 // Generates multiple backgrounds for a given element
 
 // A function for prefixing gradients
+
 @function prefixed-gradient ($mode, $gradient) {
 
 	$prefix: '-' + $mode + '-';
@@ -42,10 +43,10 @@
 	$combined-background: ();
 	$end: '';
 
-	// Itterate through all backgrounds passed
+	// Iterate through all backgrounds passed
 	@each $background in $backgrounds {
 
-		// Prefix gradadients
+		// Prefix gradients
 		@if (type-of($background) == list) {
 
 			@if (nth($background, 1) == 'linear-gradient') {
@@ -68,7 +69,6 @@
 		} @else if (type-of($background) == color) {
 			$end: $background;
 			$background: null;
-
 		}
 	}
 

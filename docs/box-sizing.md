@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for box-sizing
+# An awesome Sass-mixin for box-sizing
 
 This mixin generates cross-browser-compatible `box-sizing` output.
 

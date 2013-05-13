@@ -1,5 +1,6 @@
 // Generates multiple color stops in gradients for a given element
 // Documentation: docs/multiple-colored-gradient.md
+
 @mixin x-multiple-colored-gradient($args) {
 
 	$gradient: ();

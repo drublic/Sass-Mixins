@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for box-shadow
+# An awesome Sass-mixin for box-shadow
 
 This mixin generates cross-browser-compatible `box-shadow` output.
 

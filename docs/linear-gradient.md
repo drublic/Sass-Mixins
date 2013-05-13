@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for linear gradients
+# An awesome Sass-mixin for linear gradients
 
 This mixin generates cross-browser-compatible linear-gradients with a fallback
 color.

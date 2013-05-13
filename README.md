@@ -2,12 +2,13 @@
 
 Take what you need!
 
-### This repository has some SASS-Mixins for you:
+### This repository has some Sass-Mixins for you:
 
 * [border-radius](docs/border-radius.md)
 * [box-shadow](docs/box-shadow.md)
 * [box-sizing](docs/box-sizing.md)
 * [linear-gradient](docs/linear-gradient.md)
+* [multiple-backgrounds](docs/multiple-backgrounds.md)
 * [multiple-colored-gradient](docs/multiple-colored-gradient.md)
 * [rem](docs/rem.md)
 * [transform](docs/transform.md)

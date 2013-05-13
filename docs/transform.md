@@ -1,6 +1,6 @@
-# An awesome SASS-mixin for transforming an element
+# An awesome Sass-mixin for transforming an element
 
-This mixin generates cross-browser-compatible `transform` output. Vendor-prefix
+This mixin generates cross-browser-compatible `transform` output. Vendor-prefixes
 all the things.
 
 ## The Mixin

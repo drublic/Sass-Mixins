@@ -1,6 +1,6 @@
-# An awesome SASS-mixin for transitions
+# An awesome Sass-mixin for transitions
 
-This mixin generates cross-browser-compatible `transition` output. Vendor-prefix
+This mixin generates cross-browser-compatible `transition` output. Vendor-prefixes
 all the things!
 
 ## The Mixin
