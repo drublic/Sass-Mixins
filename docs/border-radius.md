@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for border-radius
+# An awesome Sass-mixin for border-radius
 
 This mixin generates cross-browser-compatible `border-radius` output.
 

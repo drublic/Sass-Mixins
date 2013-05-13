@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for multiple color stop gradients
+# An awesome Sass-mixin for multiple color stop gradients
 
 This mixin creates (endless) multiple color stops in gradients just with one
 call for the mixin.

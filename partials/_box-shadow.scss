@@ -1,5 +1,6 @@
 // Generates box-shadow on a given element
 // Documentation: docs/box-shadow.md
+
 @mixin x-box-shadow ($values) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;

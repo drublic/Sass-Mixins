@@ -1,4 +1,4 @@
-# An awesome SASS-mixin for the CSS value `rem`
+# An awesome Sass-mixin for the CSS value `rem`
 
 This mixin will enable using the CSS3 value `rem`, which lets you define
 property-sizes based on the root-element's font-size.

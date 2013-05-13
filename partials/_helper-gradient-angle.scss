@@ -1,6 +1,7 @@
 // Helper for old syntax in linear-gradients
 
 // Return the corrected angle or position for a css gradient
+
 @function angle($deg) {
 	@if type-of($deg) == 'number' {
 		@return mod(abs($deg - 450), 360deg);
