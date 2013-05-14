@@ -39,6 +39,7 @@ submit Pull Requests when ever possible.
 ## Changelog
 
 ### HEAD
+* Remove -moz-transform since is not needed anymore
 * Add mixin for user-select
 
 ### 0.2.2 - 11.05.2013
