@@ -14,6 +14,7 @@ Take what you need!
 * [transform](docs/transform.md)
 * [transition](docs/transition.md)
 * [tab-size](docs/tab-size.md)
+* [user-select](docs/user-select.md)
 
 Documentation on how to use each of these can be found in the accoding
 documentation-files.
@@ -38,6 +39,7 @@ submit Pull Requests when ever possible.
 ## Changelog
 
 ### HEAD
+* Add mixin for user-select
 
 ### 0.2.2 - 11.05.2013
 * Allow non-number values in rem mixin

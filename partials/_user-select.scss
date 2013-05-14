@@ -1,0 +1,12 @@
+// Disables selection of content of an element
+// No Specification
+// Documentation: docs/user-select.md
+
+@mixin x-user-select($prop: none) {
+	-webkit-user-select: $prop;
+	   -moz-user-select: $prop;
+	    -ms-user-select: $prop;
+	        user-select: $prop;
+}
+
+// @include x-user-select;

@@ -98,3 +98,8 @@
 		background: #bbb;
 	}
 }
+
+.user-select {
+	@include x-user-select;
+}
+
