@@ -19,7 +19,8 @@
 	"devDependencies": {
 		"grunt": "0.4.x",
 		"grunt-contrib-concat": "0.2.0",
-		"grunt-contrib-sass": "0.3.0"
+		"grunt-contrib-sass": "0.3.0",
+		"grunt-release": "0.3.3"
 	},
 	"keywords": []
 }
