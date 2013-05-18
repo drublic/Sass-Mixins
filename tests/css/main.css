@@ -74,6 +74,17 @@ html {
   padding: 0 30px;
 }
 
+@media screen and (max-width: 124.99em) {
+  .breakpoint {
+    background: green;
+  }
+}
+@media screen and (min-width: 40em) {
+  .breakpoint {
+    color: blue;
+  }
+}
+
 .linear-gradient {
   background-color: #cccccc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));

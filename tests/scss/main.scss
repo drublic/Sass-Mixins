@@ -40,6 +40,16 @@
 	padding: 0 30px;
 }
 
+.breakpoint {
+	@include x-until(125em) {
+		background: green;
+	}
+
+	@include x-at-least(40em) {
+		color: blue;
+	}
+}
+
 .linear-gradient {
 	@include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 }

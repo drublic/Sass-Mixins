@@ -54,6 +54,25 @@
 
 // @include x-box-sizing;
 
+// Generate responsive breakpoints
+// Documentation: docs/breakpoint.md
+
+@mixin x-at-least ($device-width) {
+	@media screen and (min-width: $device-width) {
+		@content;
+	}
+}
+
+// @include x-at-least(40em) { width: 60%; }
+
+@mixin x-until ($device-width) {
+	@media screen and (max-width: $device-width - 0.01) {
+		@content;
+	}
+}
+
+// @include x-until(40em) { width: 100%; }
+
 // Helper for old syntax in linear-gradients
 
 // Return the corrected angle or position for a css gradient
