@@ -1,3 +1,28 @@
+// Generates keyframe animations
+// Documentation: docs/animation.md
+
+@mixin x-animation ($values) {
+	-webkit-animation: $values;
+	        animation: $values;
+}
+
+@mixin x-keyframes ($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// @include x-animation(jump 1s ease-out);
+
+// @include x-keyframes(jump) {
+//     from { top: 0; }
+//     to { top: -10px; }
+// }
+
 // Generates border-radius on a given element
 // Documentation: docs/border-radius.md
 
@@ -304,10 +329,9 @@
 // Documentation: docs/transition.md
 
 @mixin x-transform ($values) {
-	-webkit-transform: $values;
-	   -moz-transform: $values;
-	     -o-transform: $values;
-	    -ms-transform: $values;
+	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
+	     -o-transform: $values; // Opera 12
+	    -ms-transform: $values; // IE9
 	        transform: $values;
 }
 

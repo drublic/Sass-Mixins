@@ -4,6 +4,7 @@ Take what you need!
 
 ### This repository has some Sass-Mixins for you:
 
+* [animation](docs/animation.md)
 * [border-radius](docs/border-radius.md)
 * [box-shadow](docs/box-shadow.md)
 * [box-sizing](docs/box-sizing.md)
@@ -32,13 +33,13 @@ submit Pull Requests when ever possible.
 ## Up the road
 
 * radial-gradient
-* animations
 * Mixin that generates grids
 
 
 ## Changelog
 
 ### HEAD
+* Add mixin for animations
 * Remove -moz-transform since is not needed anymore
 * Add mixin for user-select
 

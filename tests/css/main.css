@@ -24,6 +24,38 @@ html {
   vertical-align: middle;
 }
 
+@-webkit-keyframes jump {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -10px;
+  }
+}
+
+@keyframes jump {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -10px;
+  }
+}
+
+.animation {
+  -webkit-animation: jump 1s infinite ease-out;
+  animation: jump 1s infinite ease-out;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: left;
+}
+
 .border-radius {
   -webkit-border-radius: 20px 10px;
   border-radius: 20px 10px;
@@ -128,7 +160,6 @@ html {
 
 .transform {
   -webkit-transform: rotate(1deg);
-  -moz-transform: rotate(1deg);
   -o-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   transform: rotate(1deg);

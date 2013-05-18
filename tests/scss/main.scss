@@ -5,6 +5,26 @@
 @import 'layout';
 
 
+@include x-keyframes(jump) {
+	from {
+		top: 0;
+	}
+	to {
+		top: -10px;
+	}
+}
+
+.animation {
+	@include x-animation(jump 1s infinite ease-out);
+	@include x-box-sizing;
+
+	position: relative;
+	padding-left: 2em;
+	padding-right: 2em;
+	text-align: left;
+}
+
+
 .border-radius {
 	@include x-border-radius(20px 10px);
 }

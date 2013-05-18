@@ -1,0 +1,24 @@
+// Generates keyframe animations
+// Documentation: docs/animation.md
+
+@mixin x-animation ($values) {
+	-webkit-animation: $values;
+	        animation: $values;
+}
+
+@mixin x-keyframes ($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+// @include x-animation(jump 1s ease-out);
+
+// @include x-keyframes(jump) {
+//     from { top: 0; }
+//     to { top: -10px; }
+// }
