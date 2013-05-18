@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
 		release: {
 			options: {
-				file: ['package.json', 'bower.json'],
+				file: 'package.json',
 				push: false,
 				npm: false,
 				tagName: 'v<%= version %>',
