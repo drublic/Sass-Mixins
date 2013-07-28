@@ -1,11 +1,35 @@
-// Generates keyframe animations
-// Documentation: docs/animation.md
+/**
+ * @description
+ * Generates keyframe animations
+ *
+ * @author drublic
+ *
+ * @link caniuse
+ * @link spec
+ *
+ * @param values
+ * @returns
+ *   -webkit-animation: <values>;
+ *           animation: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-animation(jump 1s ease-out);
+ *   }
+ */
 
 @mixin x-animation ($values) {
 	-webkit-animation: $values;
 	        animation: $values;
 }
 
+/*
+ * @example
+ *    @include x-keyframes(jump) {
+ *      from { top: 0; }
+ *      to { top: -10px; }
+ *   }
+ */
 @mixin x-keyframes ($name) {
 	@-webkit-keyframes #{$name} {
 		@content;
@@ -15,10 +39,3 @@
 		@content;
 	}
 }
-
-// @include x-animation(jump 1s ease-out);
-
-// @include x-keyframes(jump) {
-//     from { top: 0; }
-//     to { top: -10px; }
-// }

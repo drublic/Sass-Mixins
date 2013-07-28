@@ -1,11 +1,28 @@
-// Generates transforms for a given element
-// Documentation: docs/transition.md
-
+/**
+ * @description
+ * Generates cross-browser-compatible `transform` for a given element
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/transforms2d http://caniuse.com/transforms3d
+ * @link spec
+ *
+ * @param values
+ * @returns
+ *   -webkit-transform: <values>;
+ *      -moz-transform: <values>;
+ *        -o-transform: <values>;
+ *       -ms-transform: <values>;
+ *           transform: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-transform(rotate(1deg));
+ *   }
+ */
 @mixin x-transform ($values) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
 	     -o-transform: $values; // Opera 12
 	    -ms-transform: $values; // IE9
 	        transform: $values;
 }
-
-// @include x-transform(rotate(1deg));

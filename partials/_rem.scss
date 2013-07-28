@@ -1,6 +1,29 @@
-// Enables using of CSS3 value `rem`
-// Documentation: docs/rem.md
-
+/**
+ * @description
+ * This mixin will enable using the CSS3 value `rem`, which lets you define
+ * property-sizes based on the root-element's font-size.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/rem
+ * @link spec http://www.w3.org/TR/css3-values/#relative0
+ *
+ * @param property
+ * @param values
+ * @param default-font-size int optional
+ * @returns
+ *   <property>: (<value> * <default-font-size>)px;
+ *   <property>: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-rem(font-size, 1.3);
+ *   }
+ *
+ * Note: Depending on the font-size of the root-element `rem` calculates a
+ * property of a current element. The fallback solution excepts a
+ * `default-font-size`-argument which is 16px by default.
+ */
 @mixin x-rem($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px

@@ -1,12 +1,27 @@
-// Disables selection of content of an element
-// No Specification
-// Documentation: docs/user-select.md
-
-@mixin x-user-select($prop: none) {
-	-webkit-user-select: $prop;
-	   -moz-user-select: $prop;
-	    -ms-user-select: $prop;
-	        user-select: $prop;
+/**
+ * @description
+ * Disables selection of content of a given element
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/user-select-none
+ *
+ * @param value none|auto optional
+ * @default none
+ * @returns
+ *   -webkit-user-select: <value>;
+ *      -moz-user-select: <value>;
+ *       -ms-user-select: <value>;
+ *           user-select: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-user-select;
+ *   }
+ */
+@mixin x-user-select($vaule: none) {
+	-webkit-user-select: $vaule;
+	   -moz-user-select: $vaule;
+	    -ms-user-select: $vaule;
+	        user-select: $vaule;
 }
-
-// @include x-user-select;

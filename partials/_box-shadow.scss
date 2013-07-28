@@ -1,9 +1,23 @@
-// Generates box-shadow on a given element
-// Documentation: docs/box-shadow.md
-
+/**
+ * @description
+ * Generates cross-browser-compatible `box-shadow` for a given element
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-boxshadow
+ * @link spec http://www.w3.org/TR/css3-background/#the-box-shadow
+ *
+ * @param values
+ * @returns
+ *   -webkit-box-shadow: <values>;
+ *           box-shadow: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-box-shadow(5px 5px 10px 5px #aaa);
+ *   }
+ */
 @mixin x-box-shadow ($values) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }
-
-// @include x-box-shadow(5px 5px 10px 5px #aaa);

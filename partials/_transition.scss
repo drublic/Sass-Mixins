@@ -1,10 +1,26 @@
-// Generates transitions on a given element
-// Documentation: docs/transition.md
-
+/**
+ * @description
+ * Generates cross-browser-compatible `transition` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-transitions
+ * @link spec
+ *
+ * @param values
+ * @returns
+ *   -webkit-transition: <values>;
+ *      -moz-transition: <values>;
+ *        -o-transition: <values>;
+ *           transition: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-transition(background 0.3s ease-in);
+ *   }
+ */
 @mixin x-transition ($values) {
 	-webkit-transition: $values;
 	     -o-transition: $values;
 	        transition: $values;
 }
-
-// @include x-transition(background 0.3s ease-in);

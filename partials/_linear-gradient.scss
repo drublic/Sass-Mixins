@@ -1,8 +1,36 @@
-// Generates a linear gradient for a given element
-// Documentation: docs/linear-gradient.md
-
-// Dependency: @function helper-gradient-angle;
-
+/**
+ * @description
+ * Generates a linear gradient for a given element with a fallback color.
+ *
+ * @author drublic
+ *
+ * @link caniuse
+ * @link spec
+ *
+ * @dependency helper-gradient-angle
+ * @param direction {'to bottom'|'to right'|'to top'|'to left'|<degree>}
+ * @param fallback {color}
+ * @param from {color}
+ * @param to {color}
+ * @default 'to bottom', #ccc, #ccc, #aaa
+ *
+ * @returns
+ *   background-color: <fallback>;
+ *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
+ *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
+ *   background-image:    -moz-linear-gradient(<direction - converted>, <from>, <to>);
+ *   background-image:     -ms-linear-gradient(<direction - converted>, <from>, <to>);
+ *   background-image:      -o-linear-gradient(<direction - converted>, <from>, <to>);
+ *   background-image:         linear-gradient(<direction>, <from>, <to>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+ *   }
+ *
+ * Note: By default this linear-gradient-mixin encourages people to use the
+ * latest CSS-syntax for gradients.
+ */
 @mixin x-linear-gradient($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
@@ -18,5 +46,3 @@
 	background-image:      -o-linear-gradient(unquote(nth($directions, 1)), $from, $to);
 	background-image:         linear-gradient(unquote($direction),     $from, $to);
 }
-
-// @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
