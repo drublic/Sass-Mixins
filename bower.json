@@ -4,7 +4,6 @@
 	"main": "mixins.scss",
 	"author": "Hans Christian Reinl",
 	"ignore": [
-		"docs",
 		"node_modules",
 		"partials",
 		"tests",
