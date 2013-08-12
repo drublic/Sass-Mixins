@@ -40,6 +40,8 @@ submit Pull Requests when ever possible.
 
 ### HEAD
 
+* Add docs in mixins
+
 ### 0.3.0 - 19.05.2013
 * Add mixin for responsive breakpoints
 * Add mixin for animations
