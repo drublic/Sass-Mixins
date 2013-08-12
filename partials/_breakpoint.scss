@@ -1,18 +1,50 @@
-// Generate responsive breakpoints
-// Documentation: docs/breakpoint.md
+/**
+ * @description
+ * These mixins generates Media Queries
+ *
+ * @author drublic
+ *
+ * @link caniuse
+ * @link spec
+ *
+ * Note: Please use the CSS unit `em` for device-width in order to stay
+ * responsive.
+ */
 
+/*
+ * @param device-width {number}
+ * @content
+ * @returns
+ *   @media screen and (min-width: <device-width>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-at-least(40em) { width: 60%; }
+ *   }
+ */
 @mixin x-at-least ($device-width) {
 	@media screen and (min-width: $device-width) {
 		@content;
 	}
 }
 
-// @include x-at-least(40em) { width: 60%; }
-
+/*
+ * @param device-width {number}
+ * @content
+ * @returns
+ *   @media screen and (max-width: <device-width - 0.01>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-until(40em) { width: 100%; }
+ *   }
+ */
 @mixin x-until ($device-width) {
 	@media screen and (max-width: $device-width - 0.01) {
 		@content;
 	}
 }
-
-// @include x-until(40em) { width: 100%; }

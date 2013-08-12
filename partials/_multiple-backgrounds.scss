@@ -1,7 +1,21 @@
-// Generates multiple backgrounds for a given element
+/**
+ * @description
+ * This mixin generates multiple backgrounds
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-gradients
+ * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
+ */
 
-// A function for prefixing gradients
-
+/*
+ * A function for prefixing gradients
+ *
+ * @param mode {'webkit-old'|'webkit'|'moz'|'ms'|'o'|''}
+ * @param gradient
+ * @returns
+ *   -<mode>-linear-gradient(<gradient>);
+ */
 @function prefixed-gradient ($mode, $gradient) {
 
 	$prefix: '-' + $mode + '-';
@@ -35,6 +49,25 @@
 	@return unquote($prefixed);
 }
 
+
+/*
+ * Generates multiple backgrounds
+ *
+ * @param backgrounds {list}
+ * @return
+ *   <property>: (<value> * <default-font-size>)px;
+ *   <property>: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-multiple-backgrounds(
+ *       rgba(0, 0, 0, 0.3),
+ *       url('img/someImage-1.png'),
+ *       url('../img/someImage-2.png') no-repeat,
+ *       (linear-gradient, to bottom, #aaa, #ddd)
+ *     );
+ *   }
+ */
 @mixin x-multiple-backgrounds ($backgrounds...) {
 	$combined-background-webkit-old: ();
 	$combined-background-webkit: ();
@@ -91,12 +124,3 @@
 	}
 
 }
-
-/**
- * @include x-multiple-backgrounds(
- *	rgba(0, 0, 0, 0.3),
- *	url('img/someImage-1.png'),
- *	url('../img/someImage-2.png') no-repeat,
- *	(linear-gradient, to bottom, #aaa, #ddd)
- * );
- */
