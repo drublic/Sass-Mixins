@@ -39,6 +39,7 @@ submit Pull Requests when ever possible.
 
 ### HEAD
 
+* Fix typo ($vaule) in mixin x-user-select
 * Add docs in mixins
 
 ### 0.3.0 - 19.05.2013
