@@ -1,0 +1,25 @@
+/**
+ * @description
+ * Generates `opacity` output for a given element and adds a filter for old IE.
+ *
+ * @author bartveneman
+ *
+ * @link caniuse http://caniuse.com/css-opacity
+ * @link spec http://www.w3.org/TR/css3-color/#transparency
+ *
+ * @param value
+ * @returns
+ *   opacity: <value>;
+ *       filter: alpha(opacity=<value * 100>);
+ *   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=<value * 100>)";
+ *
+ * @example
+ *   .selector {
+ *     @include x-opacity(0.3);
+ *   }
+ */
+@mixin x-opacity ($value: 1) {
+    opacity: $value;
+        filter: alpha(opacity=$value * 100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+}
