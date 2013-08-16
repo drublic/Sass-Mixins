@@ -1,0 +1,25 @@
+/**
+ * @description
+ * Generates cross-browser-compatible `opacity` output for a given element.
+ *
+ * @author bartveneman
+ *
+ * @link caniuse http://caniuse.com/css-opacity
+ * @link spec http://www.w3.org/TR/css3-color/#transparency
+ *
+ * @param value
+ * @returns
+ *   opacity: <value>;
+ *   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=<value * 100>)";
+ *       filter: alpha(opacity=<value * 100>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-opacity(0);
+ *   }
+ */
+@mixin x-opacity ($value: 1) {
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+        filter: alpha(opacity=$value * 100);
+}
