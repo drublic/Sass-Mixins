@@ -39,6 +39,7 @@ submit Pull Requests when ever possible.
 
 ### HEAD
 
+* Remove extra -ms prefixed gradients
 * Fix typo ($vaule) in mixin x-user-select
 * Add docs in mixins
 

@@ -12,7 +12,6 @@
  * @returns
  *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:    -moz-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:     -ms-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:      -o-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *
@@ -68,7 +67,6 @@
 
 	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
 	background-image:     -moz-linear-gradient(unquote($pos), $gradient);
-	background-image:      -ms-linear-gradient(unquote($pos), $gradient);
 	background-image:       -o-linear-gradient(unquote($pos), $gradient);
 	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
