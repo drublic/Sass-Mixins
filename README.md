@@ -41,6 +41,9 @@ submit Pull Requests when ever possible.
 
 * Add docs in mixins
 
+### 0.3.1 - 16.08.2013
+* Remove extra -ms prefixed gradients
+
 ### 0.3.0 - 19.05.2013
 * Add mixin for responsive breakpoints
 * Add mixin for animations

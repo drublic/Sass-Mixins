@@ -142,7 +142,6 @@
  *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
  *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
  *   background-image:    -moz-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:     -ms-linear-gradient(<direction - converted>, <from>, <to>);
  *   background-image:      -o-linear-gradient(<direction - converted>, <from>, <to>);
  *   background-image:         linear-gradient(<direction>, <from>, <to>);
  *
@@ -203,7 +202,6 @@
  * @returns
  *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:    -moz-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:     -ms-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:      -o-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *
@@ -412,7 +410,6 @@ html {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
   background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
 }
@@ -422,7 +419,6 @@ html {
   background-image: -webkit-gradient(linear, top left, bottom right, from(#dddddd), to(#555555));
   background-image: -webkit-linear-gradient(left, #dddddd, #555555);
   background-image: -moz-linear-gradient(left, #dddddd, #555555);
-  background-image: -ms-linear-gradient(left, #dddddd, #555555);
   background-image: -o-linear-gradient(left, #dddddd, #555555);
   background-image: linear-gradient(to right, #dddddd, #555555);
 }
@@ -432,7 +428,6 @@ html {
   background-image: -webkit-gradient(linear, mod(405deg, 360deg), from(white), to(black));
   background-image: -webkit-linear-gradient(mod(405deg, 360deg), white, black);
   background-image: -moz-linear-gradient(mod(405deg, 360deg), white, black);
-  background-image: -ms-linear-gradient(mod(405deg, 360deg), white, black);
   background-image: -o-linear-gradient(mod(405deg, 360deg), white, black);
   background-image: linear-gradient(45deg, white, black);
   padding: 50px 0;
@@ -448,7 +443,6 @@ html {
   */
   background-image: -webkit-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
   background-image: -moz-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
-  background-image: -ms-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
   background-image: -o-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
   background-image: linear-gradient(to bottom, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
 }
