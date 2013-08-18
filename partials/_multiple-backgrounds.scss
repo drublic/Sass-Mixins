@@ -11,7 +11,7 @@
 /*
  * A function for prefixing gradients
  *
- * @param mode {'webkit-old'|'webkit'|'moz'|'ms'|'o'|''}
+ * @param mode {'webkit-old'|'webkit'|'moz'|'o'|''}
  * @param gradient
  * @returns
  *   -<mode>-linear-gradient(<gradient>);
@@ -62,8 +62,7 @@
  *   .selector {
  *     @include x-multiple-backgrounds(
  *       rgba(0, 0, 0, 0.3),
- *       url('img/someImage-1.png'),
- *       url('../img/someImage-2.png') no-repeat,
+ *       url('../img/html5_logo.png') top right no-repeat,
  *       (linear-gradient, to bottom, #aaa, #ddd)
  *     );
  *   }
@@ -102,15 +101,23 @@
 		} @else if (type-of($background) == color) {
 			$end: $background;
 			$background: null;
+		} @else if (type-of($background) == string) {
+			$combined-background-webkit-old: append($combined-background-webkit-old, $background, space);
+			$combined-background-webkit: append($combined-background-webkit, $background, comma);
+			$combined-background-moz: append($combined-background-moz, $background, comma);
+			$combined-background-o: append($combined-background-o, $background, comma);
+			$combined-background: append($combined-background, $background, comma);
 		}
 	}
 
 	// Append color if there is one
-	$combined-background-webkit-old: append($combined-background-webkit-old, $end, space);
-	$combined-background-webkit: append($combined-background-webkit, $end, comma);
-	$combined-background-moz: append($combined-background-moz, $end, comma);
-	$combined-background-o: append($combined-background-o, $end, comma);
-	$combined-background: append($combined-background, $end, comma);
+	@if $end != '' {
+		$combined-background-webkit-old: append($combined-background-webkit-old, $end, space);
+		$combined-background-webkit: append($combined-background-webkit, $end, comma);
+		$combined-background-moz: append($combined-background-moz, $end, comma);
+		$combined-background-o: append($combined-background-o, $end, comma);
+		$combined-background: append($combined-background, $end, comma);
+	}
 
 	// Only print all prefixed versions if necessary
 	@if ($combined-background != $combined-background-webkit) {
