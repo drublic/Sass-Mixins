@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Multiple backgrounds: Fix bug with empty variable `$end` and background images (#12)
 * Move changelog to own file
 * Remove extra -ms prefixed gradients
 * Fix typo ($vaule) in mixin x-user-select

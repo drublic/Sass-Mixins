@@ -165,7 +165,7 @@
 /*
  * A function for prefixing gradients
  *
- * @param mode {'webkit-old'|'webkit'|'moz'|'ms'|'o'|''}
+ * @param mode {'webkit-old'|'webkit'|'moz'|'o'|''}
  * @param gradient
  * @returns
  *   -<mode>-linear-gradient(<gradient>);
@@ -182,8 +182,7 @@
  *   .selector {
  *     @include x-multiple-backgrounds(
  *       rgba(0, 0, 0, 0.3),
- *       url('img/someImage-1.png'),
- *       url('../img/someImage-2.png') no-repeat,
+ *       url('../img/html5_logo.png') top right no-repeat,
  *       (linear-gradient, to bottom, #aaa, #ddd)
  *     );
  *   }
@@ -448,11 +447,11 @@ html {
 }
 
 .multiple-backgrounds {
-  background: url("../img/someImage-2.png") no-repeat -webkit-linear-gradient(left top, left bottom, #aaaaaa, #dddddd) rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, -webkit-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, -moz-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, -o-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/someImage-2.png") no-repeat, linear-gradient(to bottom, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/html5_logo.png") top right no-repeat -webkit-linear-gradient(left top, left bottom, #aaaaaa, #dddddd) rgba(0, 0, 0, 0.3);
+  background: url("../img/html5_logo.png") top right no-repeat, -webkit-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/html5_logo.png") top right no-repeat, -moz-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/html5_logo.png") top right no-repeat, -o-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
+  background: url("../img/html5_logo.png") top right no-repeat, linear-gradient(to bottom, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
