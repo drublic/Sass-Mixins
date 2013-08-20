@@ -26,23 +26,12 @@ module.exports = function (grunt) {
 					'tests/css/main.css': 'tests/scss/main.scss'
 				}
 			}
-		},
-
-		release: {
-			options: {
-				file: 'package.json',
-				push: false,
-				npm: false,
-				tagName: 'v<%= version %>',
-				commitMessage: 'Release for <%= version %>'
-			}
 		}
 	});
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-release');
 
 	// Default task
 	grunt.registerTask('default', ['concat', 'sass']);
