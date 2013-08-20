@@ -96,6 +96,10 @@
 	text-align: left;
 }
 
+.opacity {
+	@include x-opacity(0.4);
+}
+
 .rem {
 	@include x-rem(font-size, 1.3);
 }

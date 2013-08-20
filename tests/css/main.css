@@ -480,6 +480,12 @@ html {
   text-align: left;
 }
 
+.opacity {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
 .rem {
   font-size: 20.8px;
   font-size: 1.3rem;
