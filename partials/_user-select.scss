@@ -19,7 +19,7 @@
  *     @include x-user-select;
  *   }
  */
-@mixin x-user-select($value: none) {
+@mixin x-user-select ($value: none) {
 	-webkit-user-select: $value;
 	   -moz-user-select: $value;
 	    -ms-user-select: $value;

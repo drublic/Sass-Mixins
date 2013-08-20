@@ -2,7 +2,7 @@
 
 // Return the corrected angle or position for a css gradient
 
-@function angle($deg) {
+@function angle ($deg) {
 	@if type-of($deg) == 'number' {
 		@return mod(abs($deg - 450), 360deg);
 	} @else {
@@ -15,7 +15,7 @@
 	}
 }
 
-@function helper-gradient-angle($direction) {
+@function helper-gradient-angle ($direction) {
 
 	$old-direction: $direction;
 	$veryold-direction: $direction;

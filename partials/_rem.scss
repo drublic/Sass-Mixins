@@ -24,7 +24,7 @@
  * property of a current element. The fallback solution excepts a
  * `default-font-size`-argument which is 16px by default.
  */
-@mixin x-rem($property, $values, $main-font-size: 16px) {
+@mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
 	$px-values: ();

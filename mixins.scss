@@ -169,7 +169,7 @@
 
 // Return the corrected angle or position for a css gradient
 
-@function angle($deg) {
+@function angle ($deg) {
 	@if type-of($deg) == 'number' {
 		@return mod(abs($deg - 450), 360deg);
 	} @else {
@@ -182,7 +182,7 @@
 	}
 }
 
-@function helper-gradient-angle($direction) {
+@function helper-gradient-angle ($direction) {
 
 	$old-direction: $direction;
 	$veryold-direction: $direction;
@@ -250,7 +250,7 @@
  * Note: By default this linear-gradient-mixin encourages people to use the
  * latest CSS-syntax for gradients.
  */
-@mixin x-linear-gradient($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient ($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
 
@@ -425,7 +425,7 @@
  * is likely you want to add an image or something. Please specify one by
  * yourself.
  */
-@mixin x-multiple-colored-gradient($args) {
+@mixin x-multiple-colored-gradient ($args) {
 
 	$gradient: ();
 	$pos: nth($args, 1);
@@ -498,7 +498,7 @@
  * property of a current element. The fallback solution excepts a
  * `default-font-size`-argument which is 16px by default.
  */
-@mixin x-rem($property, $values, $main-font-size: 16px) {
+@mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
 	$px-values: ();
@@ -629,7 +629,7 @@
  *     @include x-user-select;
  *   }
  */
-@mixin x-user-select($value: none) {
+@mixin x-user-select ($value: none) {
 	-webkit-user-select: $value;
 	   -moz-user-select: $value;
 	    -ms-user-select: $value;
