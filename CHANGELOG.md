@@ -2,6 +2,7 @@
 
 ### HEAD
 
+### 0.4.0 - 20.08.2013
 * Add mixin for opacity (with [-ms-]filter)
 * Multiple backgrounds: Fix bug with empty variable `$end` and background images (#12)
 * Move changelog to own file
