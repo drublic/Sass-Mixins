@@ -10,8 +10,6 @@
  * @param values
  * @returns
  *   -webkit-transform: <values>;
- *      -moz-transform: <values>;
- *        -o-transform: <values>;
  *       -ms-transform: <values>;
  *           transform: <values>;
  *
@@ -22,7 +20,6 @@
  */
 @mixin x-transform ($values) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
-	     -o-transform: $values; // Opera 12
 	    -ms-transform: $values; // IE9
 	        transform: $values;
 }

@@ -10,8 +10,6 @@
  * @param values
  * @returns
  *   -webkit-transition: <values>;
- *      -moz-transition: <values>;
- *        -o-transition: <values>;
  *           transition: <values>;
  *
  * @example
@@ -21,6 +19,5 @@
  */
 @mixin x-transition ($values) {
 	-webkit-transition: $values;
-	     -o-transition: $values;
 	        transition: $values;
 }
