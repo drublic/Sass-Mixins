@@ -238,8 +238,6 @@
  *   background-color: <fallback>;
  *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
  *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:    -moz-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:      -o-linear-gradient(<direction - converted>, <from>, <to>);
  *   background-image:         linear-gradient(<direction>, <from>, <to>);
  *
  * @example
@@ -260,9 +258,7 @@
 	// Cross-browser linear-gradients
 	background-image: -webkit-gradient(linear, unquote(nth($directions, 2)), from($from), to($to)); // Android 2.1-3.0
 	background-image: -webkit-linear-gradient(unquote(nth($directions, 1)), $from, $to);
-	background-image:    -moz-linear-gradient(unquote(nth($directions, 1)), $from, $to);
-	background-image:      -o-linear-gradient(unquote(nth($directions, 1)), $from, $to);
-	background-image:         linear-gradient(unquote($direction),     $from, $to);
+	background-image:         linear-gradient(unquote($direction), $from, $to);
 }
 
 /**
@@ -278,7 +274,7 @@
 /*
  * A function for prefixing gradients
  *
- * @param mode {'webkit-old'|'webkit'|'moz'|'o'|''}
+ * @param mode {'webkit-old'|'webkit'|''}
  * @param gradient
  * @returns
  *   -<mode>-linear-gradient(<gradient>);
@@ -351,16 +347,12 @@
 			@if (nth($background, 1) == 'linear-gradient') {
 				$combined-background-webkit-old: append($combined-background-webkit-old, prefixed-gradient('webkit-old', $background), comma);
 				$combined-background-webkit: append($combined-background-webkit, prefixed-gradient('webkit', $background), comma);
-				$combined-background-moz: append($combined-background-moz, prefixed-gradient('moz', $background), comma);
-				$combined-background-o: append($combined-background-o, prefixed-gradient('o', $background), comma);
 				$combined-background: append($combined-background, prefixed-gradient('', $background), comma);
 
 			// Nothing to do for non-gradients
 			} @else {
 				$combined-background-webkit-old: append($combined-background-webkit-old, $background, comma);
 				$combined-background-webkit: append($combined-background-webkit, $background, comma);
-				$combined-background-moz: append($combined-background-moz, $background, comma);
-				$combined-background-o: append($combined-background-o, $background, comma);
 				$combined-background: append($combined-background, $background, comma);
 			}
 
@@ -371,8 +363,6 @@
 		} @else if (type-of($background) == string) {
 			$combined-background-webkit-old: append($combined-background-webkit-old, $background, space);
 			$combined-background-webkit: append($combined-background-webkit, $background, comma);
-			$combined-background-moz: append($combined-background-moz, $background, comma);
-			$combined-background-o: append($combined-background-o, $background, comma);
 			$combined-background: append($combined-background, $background, comma);
 		}
 	}
@@ -381,8 +371,6 @@
 	@if $end != '' {
 		$combined-background-webkit-old: append($combined-background-webkit-old, $end, space);
 		$combined-background-webkit: append($combined-background-webkit, $end, comma);
-		$combined-background-moz: append($combined-background-moz, $end, comma);
-		$combined-background-o: append($combined-background-o, $end, comma);
 		$combined-background: append($combined-background, $end, comma);
 	}
 
@@ -390,8 +378,6 @@
 	@if ($combined-background != $combined-background-webkit) {
 		background: unquote($combined-background-webkit-old);
 		background: unquote($combined-background-webkit);
-		background: unquote($combined-background-moz);
-		background: unquote($combined-background-o);
 		background: unquote($combined-background);
 	} @else {
 		background: unquote($combined-background);
@@ -412,8 +398,6 @@
  * @param stops {list}
  * @returns
  *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:    -moz-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:      -o-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *
  * @example
@@ -467,8 +451,6 @@
 	}
 
 	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
-	background-image:     -moz-linear-gradient(unquote($pos), $gradient);
-	background-image:       -o-linear-gradient(unquote($pos), $gradient);
 	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
 }
 
@@ -564,7 +546,6 @@
  * @default 4
  * @returns
  *   -moz-tab-size: <value>;
- *     -o-tab-size: <value>;
  *        tab-size: <value>;
  *
  * @example
@@ -590,8 +571,6 @@
  * @param values
  * @returns
  *   -webkit-transform: <values>;
- *      -moz-transform: <values>;
- *        -o-transform: <values>;
  *       -ms-transform: <values>;
  *           transform: <values>;
  *
@@ -602,7 +581,6 @@
  */
 @mixin x-transform ($values) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
-	     -o-transform: $values; // Opera 12
 	    -ms-transform: $values; // IE9
 	        transform: $values;
 }
@@ -619,8 +597,6 @@
  * @param values
  * @returns
  *   -webkit-transition: <values>;
- *      -moz-transition: <values>;
- *        -o-transition: <values>;
  *           transition: <values>;
  *
  * @example
@@ -630,7 +606,6 @@
  */
 @mixin x-transition ($values) {
 	-webkit-transition: $values;
-	     -o-transition: $values;
 	        transition: $values;
 }
 

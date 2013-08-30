@@ -2,6 +2,8 @@
 
 ### HEAD
 
+### 0.4.1 - 30.08.2013
+
 * Remove `-o-` prefix for transforms, transition and tab-size (#17)
 * Remove `-o-` and `-moz-` prefixes of linear gradients (#17)
 

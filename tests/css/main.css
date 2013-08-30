@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * @description
  * Generates keyframe animations
@@ -141,8 +140,6 @@
  *   background-color: <fallback>;
  *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
  *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:    -moz-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:      -o-linear-gradient(<direction - converted>, <from>, <to>);
  *   background-image:         linear-gradient(<direction>, <from>, <to>);
  *
  * @example
@@ -165,7 +162,7 @@
 /*
  * A function for prefixing gradients
  *
- * @param mode {'webkit-old'|'webkit'|'moz'|'o'|''}
+ * @param mode {'webkit-old'|'webkit'|''}
  * @param gradient
  * @returns
  *   -<mode>-linear-gradient(<gradient>);
@@ -200,8 +197,6 @@
  * @param stops {list}
  * @returns
  *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:    -moz-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:      -o-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
  *
  * @example
@@ -273,7 +268,6 @@
  * @default 4
  * @returns
  *   -moz-tab-size: <value>;
- *     -o-tab-size: <value>;
  *        tab-size: <value>;
  *
  * @example
@@ -293,8 +287,6 @@
  * @param values
  * @returns
  *   -webkit-transform: <values>;
- *      -moz-transform: <values>;
- *        -o-transform: <values>;
  *       -ms-transform: <values>;
  *           transform: <values>;
  *
@@ -315,8 +307,6 @@
  * @param values
  * @returns
  *   -webkit-transition: <values>;
- *      -moz-transition: <values>;
- *        -o-transition: <values>;
  *           transition: <values>;
  *
  * @example
@@ -428,8 +418,6 @@ html {
   background-color: #cccccc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
   background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
-  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
 }
 
@@ -437,8 +425,6 @@ html {
   background-color: #dddddd;
   background-image: -webkit-gradient(linear, top left, bottom right, from(#dddddd), to(#555555));
   background-image: -webkit-linear-gradient(left, #dddddd, #555555);
-  background-image: -moz-linear-gradient(left, #dddddd, #555555);
-  background-image: -o-linear-gradient(left, #dddddd, #555555);
   background-image: linear-gradient(to right, #dddddd, #555555);
 }
 
@@ -446,8 +432,6 @@ html {
   background-color: #dddddd;
   background-image: -webkit-gradient(linear, mod(405deg, 360deg), from(white), to(black));
   background-image: -webkit-linear-gradient(mod(405deg, 360deg), white, black);
-  background-image: -moz-linear-gradient(mod(405deg, 360deg), white, black);
-  background-image: -o-linear-gradient(mod(405deg, 360deg), white, black);
   background-image: linear-gradient(45deg, white, black);
   padding: 50px 0;
 }
@@ -461,16 +445,12 @@ html {
     background-image: linear-gradient(to bottom, red 0%, green 50%, blue 100%);
   */
   background-image: -webkit-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
-  background-image: -moz-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
-  background-image: -o-linear-gradient(top, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
   background-image: linear-gradient(to bottom, #aaffff 0%, #ffaaff 20%, #ffffaa 40%, #aaaaff 60%, #ffaaaa 80%, #aaaaaa 100%);
 }
 
 .multiple-backgrounds {
   background: url("../img/html5_logo.png") top right no-repeat -webkit-linear-gradient(left top, left bottom, #aaaaaa, #dddddd) rgba(0, 0, 0, 0.3);
   background: url("../img/html5_logo.png") top right no-repeat, -webkit-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/html5_logo.png") top right no-repeat, -moz-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
-  background: url("../img/html5_logo.png") top right no-repeat, -o-linear-gradient(top, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
   background: url("../img/html5_logo.png") top right no-repeat, linear-gradient(to bottom, #aaaaaa, #dddddd), rgba(0, 0, 0, 0.3);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -512,14 +492,12 @@ html {
 
 .transform {
   -webkit-transform: rotate(1deg);
-  -o-transform: rotate(1deg);
   -ms-transform: rotate(1deg);
   transform: rotate(1deg);
 }
 
 .transition {
   -webkit-transition: background 0.3s ease-in;
-  -o-transition: background 0.3s ease-in;
   transition: background 0.3s ease-in;
 }
 .transition:hover {
