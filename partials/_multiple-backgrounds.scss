@@ -11,7 +11,7 @@
 /*
  * A function for prefixing gradients
  *
- * @param mode {'webkit-old'|'webkit'|'moz'|'o'|''}
+ * @param mode {'webkit-old'|'webkit'|''}
  * @param gradient
  * @returns
  *   -<mode>-linear-gradient(<gradient>);
@@ -84,16 +84,12 @@
 			@if (nth($background, 1) == 'linear-gradient') {
 				$combined-background-webkit-old: append($combined-background-webkit-old, prefixed-gradient('webkit-old', $background), comma);
 				$combined-background-webkit: append($combined-background-webkit, prefixed-gradient('webkit', $background), comma);
-				$combined-background-moz: append($combined-background-moz, prefixed-gradient('moz', $background), comma);
-				$combined-background-o: append($combined-background-o, prefixed-gradient('o', $background), comma);
 				$combined-background: append($combined-background, prefixed-gradient('', $background), comma);
 
 			// Nothing to do for non-gradients
 			} @else {
 				$combined-background-webkit-old: append($combined-background-webkit-old, $background, comma);
 				$combined-background-webkit: append($combined-background-webkit, $background, comma);
-				$combined-background-moz: append($combined-background-moz, $background, comma);
-				$combined-background-o: append($combined-background-o, $background, comma);
 				$combined-background: append($combined-background, $background, comma);
 			}
 
@@ -104,8 +100,6 @@
 		} @else if (type-of($background) == string) {
 			$combined-background-webkit-old: append($combined-background-webkit-old, $background, space);
 			$combined-background-webkit: append($combined-background-webkit, $background, comma);
-			$combined-background-moz: append($combined-background-moz, $background, comma);
-			$combined-background-o: append($combined-background-o, $background, comma);
 			$combined-background: append($combined-background, $background, comma);
 		}
 	}
@@ -114,8 +108,6 @@
 	@if $end != '' {
 		$combined-background-webkit-old: append($combined-background-webkit-old, $end, space);
 		$combined-background-webkit: append($combined-background-webkit, $end, comma);
-		$combined-background-moz: append($combined-background-moz, $end, comma);
-		$combined-background-o: append($combined-background-o, $end, comma);
 		$combined-background: append($combined-background, $end, comma);
 	}
 
@@ -123,8 +115,6 @@
 	@if ($combined-background != $combined-background-webkit) {
 		background: unquote($combined-background-webkit-old);
 		background: unquote($combined-background-webkit);
-		background: unquote($combined-background-moz);
-		background: unquote($combined-background-o);
 		background: unquote($combined-background);
 	} @else {
 		background: unquote($combined-background);
