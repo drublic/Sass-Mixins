@@ -5,6 +5,7 @@ Take what you need!
 ### This repository has some Sass-Mixins for you:
 
 * [animation](partials/_animation.scss)
+* [appearance](partials/_appearance.scss)
 * [border-radius](partials/_border-radius.scss)
 * [box-shadow](partials/_box-shadow.scss)
 * [box-sizing](partials/_box-sizing.scss)

@@ -1,0 +1,26 @@
+/**
+ * @description
+ * Generates `appearance` for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
+ * @link css-tricks http://css-tricks.com/almanac/properties/a/appearance/
+ * @link spec http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance
+ *
+ * @param value
+ * @returns
+ *   -webkit-appearance: <value>;
+ *      -moz-appearance: <value>;
+ *           appearance: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-appearance(button);
+ *   }
+ */
+@mixin x-appearance ($value) {
+	-webkit-appearance: $value;
+	   -moz-appearance: $value;
+	        appearance: $value;
+}
