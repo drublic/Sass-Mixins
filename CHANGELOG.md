@@ -2,6 +2,8 @@
 
 ### HEAD
 
+* Add mixin for appearance
+
 ### 0.4.1 - 30.08.2013
 
 * Remove `-o-` prefix for transforms, transition and tab-size (#17)
