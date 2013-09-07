@@ -5,7 +5,7 @@
 ### 0.4.1 - 30.08.2013
 
 * Remove `-o-` prefix for transforms, transition and tab-size (#17)
-* Remove `-o-` and `-moz-` prefixes of linear gradients (#17)
+* Remove `-o-` and `-moz-` prefixes of linear gradients and multiple backgrounds (#17)
 
 ### 0.4.0 - 20.08.2013
 * Add mixin for opacity (with [-ms-]filter)

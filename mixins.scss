@@ -333,8 +333,6 @@
 @mixin x-multiple-backgrounds ($backgrounds...) {
 	$combined-background-webkit-old: ();
 	$combined-background-webkit: ();
-	$combined-background-moz: ();
-	$combined-background-o: ();
 	$combined-background: ();
 	$end: '';
 

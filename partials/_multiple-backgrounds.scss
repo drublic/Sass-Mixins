@@ -54,9 +54,6 @@
  * Generates multiple backgrounds
  *
  * @param backgrounds {list}
- * @return
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
  *
  * @example
  *   .selector {
@@ -70,8 +67,6 @@
 @mixin x-multiple-backgrounds ($backgrounds...) {
 	$combined-background-webkit-old: ();
 	$combined-background-webkit: ();
-	$combined-background-moz: ();
-	$combined-background-o: ();
 	$combined-background: ();
 	$end: '';
 
