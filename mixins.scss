@@ -317,9 +317,6 @@
  * Generates multiple backgrounds
  *
  * @param backgrounds {list}
- * @return
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
  *
  * @example
  *   .selector {
@@ -553,7 +550,6 @@
  */
 @mixin x-tab-size ($value: 4) {
 	-moz-tab-size: $value;
-	  -o-tab-size: $value;
 	     tab-size: $value;
 }
 

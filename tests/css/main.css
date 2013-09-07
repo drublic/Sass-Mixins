@@ -172,9 +172,6 @@
  * Generates multiple backgrounds
  *
  * @param backgrounds {list}
- * @return
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
  *
  * @example
  *   .selector {
