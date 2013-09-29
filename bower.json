@@ -1,6 +1,6 @@
 {
 	"name": "sass-mixins",
-	"version": "0.4.1",
+	"version": "0.5.0",
 	"main": "mixins.scss",
 	"author": "Hans Christian Reinl",
 	"ignore": [

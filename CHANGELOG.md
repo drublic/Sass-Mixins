@@ -2,13 +2,13 @@
 
 ### HEAD
 
+### 0.5.0 - 29.09.2013
 * Add banner for generated mixins and CSS output
 * Add mixin for appearance
 * Bugfix: Remove `-o-` prefix for tab-size mixin (#17)
 * Remove `-o-` and `-moz-` for mulitple gradients (#17)
 
 ### 0.4.1 - 30.08.2013
-
 * Remove `-o-` prefix for transforms, transition and tab-size (#17)
 * Remove `-o-` and `-moz-` prefixes of linear gradients (#17)
 
