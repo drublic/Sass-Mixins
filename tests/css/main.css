@@ -1,23 +1,25 @@
+/*! sass-mixins - v0.4.1 - 2013-09-29 */
 @charset "UTF-8";
-/**
- * @description
- * Generates keyframe animations
- *
- * @author drublic
- *
- * @link caniuse
- * @link spec
- *
- * @param values
- * @returns
- *   -webkit-animation: <values>;
- *           animation: <values>;
- *
- * @example
- *   .selector {
- *     @include x-animation(jump 1s ease-out);
- *   }
- */
+/* sass-mixins - v0.4.1 - 2013-09-29 */
+                                       /**
+* @description
+* Generates keyframe animations
+*
+* @author drublic
+*
+* @link caniuse
+* @link spec
+*
+* @param values
+* @returns
+*   -webkit-animation: <values>;
+*           animation: <values>;
+*
+* @example
+*   .selector {
+*     @include x-animation(jump 1s ease-out);
+*   }
+*/
 /*
  * @example
  *    @include x-keyframes(jump) {

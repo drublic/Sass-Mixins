@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Add banner for generated mixins and CSS output
 * Add mixin for appearance
 * Bugfix: Remove `-o-` prefix for tab-size mixin (#17)
 * Remove `-o-` and `-moz-` for mulitple gradients (#17)

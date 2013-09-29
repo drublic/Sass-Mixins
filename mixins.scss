@@ -1,4 +1,4 @@
-/**
+/*! sass-mixins - v0.4.1 - 2013-09-29 *//**
  * @description
  * Generates keyframe animations
  *
@@ -66,6 +66,7 @@
 	   -moz-appearance: $value;
 	        appearance: $value;
 }
+
 /**
  * @description
  * Generates cross-browser-compatible `border-radius` for a given element
