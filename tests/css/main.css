@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.5.0 - 2013-09-29 */
+/*! sass-mixins - v0.5.0 - 2013-10-12 */
 @charset "UTF-8";
-/* sass-mixins - v0.5.0 - 2013-09-29 */
+/*! sass-mixins - v0.5.0 - 2013-10-12 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -251,6 +251,32 @@
  */
 /**
  * @description
+ * Generates `placeholder` color for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
+ * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
+ *
+ * @param color
+ * @returns
+ *    &::-webkit-input-placeholder {
+ *        color: <color>;
+ *    }
+ *    &::-moz-placeholder {
+ *        color: <color>;
+ *    }
+ *    &:-ms-input-placeholder {
+ *        color: <color>;
+ *    }
+ *
+ * @example
+ *   .selector {
+ *     @include x-placeholder(#bada55);
+ *   }
+ */
+/**
+ * @description
  * This mixin will enable using the CSS3 value `rem`, which lets you define
  * property-sizes based on the root-element's font-size.
  *
@@ -488,6 +514,16 @@ html {
   padding-left: 2em;
   padding-right: 2em;
   text-align: left;
+}
+
+.placeholder::-webkit-input-placeholder {
+  color: #bada55;
+}
+.placeholder::-moz-placeholder {
+  color: #bada55;
+}
+.placeholder:-ms-input-placeholder {
+  color: #bada55;
 }
 
 .opacity {

@@ -2,6 +2,8 @@
 
 ### HEAD
 
+* Add mixin for placeholder color
+
 ### 0.5.0 - 29.09.2013
 * Add banner for generated mixins and CSS output
 * Add mixin for appearance

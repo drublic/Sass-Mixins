@@ -1,0 +1,37 @@
+/**
+ * @description
+ * Generates `placeholder` color for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
+ * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
+ *
+ * @param color
+ * @returns
+ *    &::-webkit-input-placeholder {
+ *        color: <color>;
+ *    }
+ *    &::-moz-placeholder {
+ *        color: <color>;
+ *    }
+ *    &:-ms-input-placeholder {
+ *        color: <color>;
+ *    }
+ *
+ * @example
+ *   .selector {
+ *     @include x-placeholder(#bada55);
+ *   }
+ */
+@mixin x-placeholder($color: #000) {
+	&::-webkit-input-placeholder {
+		color: $color; // Chrome, Safari, Opera
+	}
+	&::-moz-placeholder {
+		color: $color; // Firefox 19+
+	}
+	&:-ms-input-placeholder {
+		color: $color; // IE 10+
+	}
+}

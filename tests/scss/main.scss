@@ -104,6 +104,10 @@
 	text-align: left;
 }
 
+.placeholder {
+	@include x-placeholder(#bada55);
+}
+
 .opacity {
 	@include x-opacity(0.4);
 }

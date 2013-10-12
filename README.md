@@ -12,6 +12,8 @@ Take what you need!
 * [linear-gradient](partials/_linear-gradient.scss)
 * [multiple-backgrounds](partials/_multiple-backgrounds.scss)
 * [multiple-colored-gradient](partials/_multiple-colored-gradient.scss)
+* [opacity](partials/_opacity.scss)
+* [placeholder](partials/_placeholder.scss)
 * [rem](partials/_rem.scss)
 * [transform](partials/_transform.scss)
 * [transition](partials/_transition.scss)
