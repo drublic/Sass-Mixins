@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.5.0 - 2013-09-29 *//**
+/*! sass-mixins - v0.5.0 - 2013-10-12 *//**
  * @description
  * Generates keyframe animations
  *
@@ -502,6 +502,43 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
 }
 
+/**
+ * @description
+ * Generates `placeholder` color for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
+ * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
+ *
+ * @param color
+ * @returns
+ *    &::-webkit-input-placeholder {
+ *        color: <color>;
+ *    }
+ *    &::-moz-placeholder {
+ *        color: <color>;
+ *    }
+ *    &:-ms-input-placeholder {
+ *        color: <color>;
+ *    }
+ *
+ * @example
+ *   .selector {
+ *     @include x-placeholder(#bada55);
+ *   }
+ */
+@mixin x-placeholder($color: #000) {
+	&::-webkit-input-placeholder {
+		color: $color; // Chrome, Safari, Opera
+	}
+	&::-moz-placeholder {
+		color: $color; // Firefox 19+
+	}
+	&:-ms-input-placeholder {
+		color: $color; // IE 10+
+	}
+}
 /**
  * @description
  * This mixin will enable using the CSS3 value `rem`, which lets you define
