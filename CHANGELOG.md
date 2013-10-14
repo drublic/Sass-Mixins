@@ -2,6 +2,7 @@
 
 ### HEAD
 
+### 0.6.0 - 14.10.2013
 * Add mixin for placeholder color
 
 ### 0.5.0 - 29.09.2013
