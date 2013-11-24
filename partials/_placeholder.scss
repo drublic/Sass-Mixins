@@ -24,14 +24,14 @@
  *     @include x-placeholder(#bada55);
  *   }
  */
-@mixin x-placeholder($color: #000) {
+@mixin x-placeholder {
 	&::-webkit-input-placeholder {
-		color: $color; // Chrome, Safari, Opera
+		@content // Chrome, Safari, Opera
 	}
 	&::-moz-placeholder {
-		color: $color; // Firefox 19+
+		@content // Firefox 19+
 	}
 	&:-ms-input-placeholder {
-		color: $color; // IE 10+
+		@content // IE 10+
 	}
 }

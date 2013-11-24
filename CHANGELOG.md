@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Update placeholder mixin
 
 ### 0.6.0 - 14.10.2013
 * Add mixin for placeholder color

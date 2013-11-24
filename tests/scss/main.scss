@@ -105,7 +105,9 @@
 }
 
 .placeholder {
-	@include x-placeholder(#bada55);
+	@include x-placeholder {
+		color: #bada55;
+	};
 }
 
 .opacity {

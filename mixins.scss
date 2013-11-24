@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.6.0 - 2013-10-14 *//**
+/*! sass-mixins - v0.6.0 - 2013-11-24 *//**
  * @description
  * Generates keyframe animations
  *
@@ -528,15 +528,15 @@
  *     @include x-placeholder(#bada55);
  *   }
  */
-@mixin x-placeholder($color: #000) {
+@mixin x-placeholder {
 	&::-webkit-input-placeholder {
-		color: $color; // Chrome, Safari, Opera
+		@content // Chrome, Safari, Opera
 	}
 	&::-moz-placeholder {
-		color: $color; // Firefox 19+
+		@content // Firefox 19+
 	}
 	&:-ms-input-placeholder {
-		color: $color; // IE 10+
+		@content // IE 10+
 	}
 }
 
