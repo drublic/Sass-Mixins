@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.6.0 - 2013-10-14 */
+/*! sass-mixins - v0.6.0 - 2013-11-24 */
 @charset "UTF-8";
-/* sass-mixins - v0.6.0 - 2013-10-14 */
+/*! sass-mixins - v0.6.0 - 2013-11-24 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -251,28 +251,36 @@
  */
 /**
  * @description
- * Generates `placeholder` color for a given element
+ * Generates `placeholder` content for a given element
  *
  * @author romamatusevich
  *
  * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
  * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
  *
- * @param color
  * @returns
  *    &::-webkit-input-placeholder {
- *        color: <color>;
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
  *    }
  *    &::-moz-placeholder {
- *        color: <color>;
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
  *    }
  *    &:-ms-input-placeholder {
- *        color: <color>;
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
  *    }
  *
  * @example
  *   .selector {
- *     @include x-placeholder(#bada55);
+ *     @include x-placeholder {
+ *         color: #bada55;
+ *         font-weight: bold;
+ *     }
  *   }
  */
 /**
