@@ -41,11 +41,11 @@
 		// If the value is not zero, convert it from px to rem
 		} @else {
 			$px-values: append($px-values, ($value * $main-font-size) );
-			$rem-values: append($rem-values, #{$value}rem);
+			$rem-values: append($rem-values, #{$value});
 		}
 	}
 
 	// Return the property and its list of converted values
 	#{$property}: #{$px-values};
-	#{$property}: #{$rem-values};
+	#{$property}: #{$rem-values}rem;
 }
