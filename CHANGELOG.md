@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Update animation description
 * Update placeholder mixin
 
 ### 0.6.0 - 14.10.2013
