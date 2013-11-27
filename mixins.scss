@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.6.0 - 2013-11-26 *//**
+/*! sass-mixins - v0.6.0 - 2013-11-27 *//**
  * @description
  * Generates keyframe animations
  *
@@ -147,14 +147,14 @@
  *
  * @author drublic
  *
- * @link caniuse
- * @link spec
+ * @link caniuse http://caniuse.com/#feat=css-mediaqueries
+ * @link spec http://www.w3.org/TR/css3-mediaqueries/
  *
  * Note: Please use the CSS unit `em` for device-width in order to stay
  * responsive.
  */
 
-/*
+/**
  * @param device-width {number}
  * @content
  * @returns
@@ -173,7 +173,7 @@
 	}
 }
 
-/*
+/**
  * @param device-width {number}
  * @content
  * @returns
@@ -189,6 +189,43 @@
 @mixin x-until ($device-width) {
 	@media screen and (max-width: $device-width - 0.01) {
 		@content;
+	}
+}
+
+/**
+ * @author romamatusevich
+ *
+ * @param point{string}, bp-mobile-width{number}, bp-tablet-width{number} 
+ * @content
+ * @returns
+ *   @media (max-width: <bp-mobile-width>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-breakpoints(mobile,  320px) { width: 100%; }
+ *   }
+ */
+@mixin x-breakpoints($point, $bp-mobile-width: 640px, $bp-tablet-width: 1024px) {
+	$bp-mobile: '(max-width: #{$bp-mobile-width})';
+	$bp-tablet: '(min-width: #{$bp-mobile-width}) and (max-width: #{$bp-tablet-width})';
+	$bp-desktop: '(min-width: #{$bp-tablet-width})';
+
+	@if $point == mobile {
+		@media #{$bp-mobile} {
+			@content;
+		}
+	}
+	@else if $point == tablet {
+		@media #{$bp-tablet} {
+			@content;
+		}
+	}
+	@else if $point == desktop {
+		@media #{$bp-desktop} {
+			@content;
+		}
 	}
 }
 
