@@ -49,12 +49,16 @@
 }
 
 .breakpoint {
-	@include x-until(125em) {
-		background: green;
+	@include x-until(30em) {
+		color: green;
 	}
 
 	@include x-at-least(40em) {
 		color: blue;
+	}
+
+	@include x-breakpoints(desktop) {
+		color: black;
 	}
 }
 

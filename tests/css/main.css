@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.6.0 - 2013-11-26 */
+/*! sass-mixins - v0.6.0 - 2013-11-27 */
 @charset "UTF-8";
-/*! sass-mixins - v0.6.0 - 2013-11-26 */
+/*! sass-mixins - v0.6.0 - 2013-11-27 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -112,13 +112,13 @@
  *
  * @author drublic
  *
- * @link caniuse
- * @link spec
+ * @link caniuse http://caniuse.com/#feat=css-mediaqueries
+ * @link spec http://www.w3.org/TR/css3-mediaqueries/
  *
  * Note: Please use the CSS unit `em` for device-width in order to stay
  * responsive.
  */
-/*
+/**
  * @param device-width {number}
  * @content
  * @returns
@@ -131,7 +131,7 @@
  *     x-at-least(40em) { width: 60%; }
  *   }
  */
-/*
+/**
  * @param device-width {number}
  * @content
  * @returns
@@ -142,6 +142,21 @@
  * @example
  *   .selector {
  *     x-until(40em) { width: 100%; }
+ *   }
+ */
+/**
+ * @author romamatusevich
+ *
+ * @param point{string}, bp-mobile-width{number}, bp-tablet-width{number} 
+ * @content
+ * @returns
+ *   @media (max-width: <bp-mobile-width>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-breakpoints(mobile,  320px) { width: 100%; }
  *   }
  */
 /**
@@ -467,14 +482,19 @@ html {
   padding: 0 30px;
 }
 
-@media screen and (max-width: 124.99em) {
+@media screen and (max-width: 29.99em) {
   .breakpoint {
-    background: green;
+    color: green;
   }
 }
 @media screen and (min-width: 40em) {
   .breakpoint {
     color: blue;
+  }
+}
+@media (min-width: 1024px) {
+  .breakpoint {
+    color: black;
   }
 }
 
