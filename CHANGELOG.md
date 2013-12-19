@@ -1,6 +1,9 @@
 # Changelog
 
 ### HEAD
+
+### 0.7.0 - 19.12.2013
+* Add breakpoint mixin
 * Update animation description
 * Update placeholder mixin
 
