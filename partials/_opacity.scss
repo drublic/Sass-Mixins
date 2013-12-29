@@ -10,8 +10,7 @@
  * @param value
  * @returns
  *   opacity: <value>;
- *       filter: alpha(opacity=<value * 100>);
- *   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=<value * 100>)";
+ *    filter: alpha(opacity=<value * 100>);
  *
  * @example
  *   .selector {
@@ -20,6 +19,5 @@
  */
 @mixin x-opacity ($value: 1) {
     opacity: $value;
-        filter: alpha(opacity=$value * 100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+     filter: alpha(opacity=$value * 100);
 }
