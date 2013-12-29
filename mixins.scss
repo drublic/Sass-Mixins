@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.7.0 - 2013-12-19 *//**
+/*! sass-mixins - v0.7.0 - 2013-12-29 *//**
  * @description
  * Generates keyframe animations
  *
@@ -525,8 +525,7 @@
  * @param value
  * @returns
  *   opacity: <value>;
- *       filter: alpha(opacity=<value * 100>);
- *   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=<value * 100>)";
+ *    filter: alpha(opacity=<value * 100>);
  *
  * @example
  *   .selector {
@@ -535,8 +534,7 @@
  */
 @mixin x-opacity ($value: 1) {
     opacity: $value;
-        filter: alpha(opacity=$value * 100);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+     filter: alpha(opacity=$value * 100);
 }
 
 /**
