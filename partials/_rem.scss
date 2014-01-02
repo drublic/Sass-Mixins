@@ -34,7 +34,7 @@
 	@each $value in $values {
 
 		// If the value is zero, return 0
-		@if $value == 0 or type_of($value) != number {
+		@if ( $value == 0 ) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 

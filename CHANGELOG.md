@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Fix `x-rem` mixin to work with libsass (#28)
 * Remove -ms-filter for opacity mixin
 
 ### 0.7.0 - 19.12.2013
