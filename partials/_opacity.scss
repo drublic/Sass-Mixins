@@ -18,6 +18,6 @@
  *   }
  */
 @mixin x-opacity ($value: 1) {
-    opacity: $value;
-     filter: alpha(opacity=$value * 100);
+	opacity: $value;
+	filter: alpha(opacity=$value * 100);
 }
