@@ -32,6 +32,9 @@
 	padding: 5px;
 }
 
+.baseline {
+	@include x-baseline(padding-bottom, 1.3em, 2);
+}
 
 .border-radius {
 	@include x-border-radius(20px 10px);
