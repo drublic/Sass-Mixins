@@ -1,0 +1,26 @@
+/**
+ * @description
+ * This mixin will let you build vertical rythm in Sass
+ *
+ * @author anselmh
+ *
+ * @link http://veerle.duoh.com/design/article/the_design_process_of_the_exonet_website_template_design
+ *
+ * @param property
+ * @param baseline-size
+ * @param number of rows
+ * @returns
+ *   <property>: (<value> * <rows>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-baseline(margin-bottom, 1.2em, 2);
+ *   }
+ *
+ */
+@mixin x-baseline ($property, $baseline, $rows) {
+	$result: ($baseline * $rows);
+
+	// Return the property and its list of converted values
+	#{$property}: #{$result};
+}

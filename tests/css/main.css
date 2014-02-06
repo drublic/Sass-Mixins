@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.7.1 - 2014-01-31 */
+/*! sass-mixins - v0.7.1 - 2014-02-06 */
 @charset "UTF-8";
-/* sass-mixins - v0.7.1 - 2014-01-31 */
+/*! sass-mixins - v0.7.1 - 2014-02-06 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -47,6 +47,26 @@
  *   .selector {
  *     @include x-appearance(button);
  *   }
+ */
+/**
+ * @description
+ * This mixin will let you build vertical rythm in Sass
+ *
+ * @author anselmh
+ *
+ * @link http://veerle.duoh.com/design/article/the_design_process_of_the_exonet_website_template_design
+ *
+ * @param property
+ * @param baseline-size
+ * @param number of rows
+ * @returns
+ *   <property>: (<value> * <rows>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-baseline(margin-bottom, 1.2em, 2);
+ *   }
+ *
  */
 /**
  * @description
@@ -461,6 +481,10 @@ html {
   display: inline-block;
   margin: 10px;
   padding: 5px;
+}
+
+.baseline {
+  padding-bottom: 2.6em;
 }
 
 .border-radius {
