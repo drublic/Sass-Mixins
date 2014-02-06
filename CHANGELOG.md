@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Add x-baseline mixin
 * Correct indention in opacity mixin
 
 ### 0.7.1 - 11.01.2014
