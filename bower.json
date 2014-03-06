@@ -6,7 +6,7 @@
 	"ignore": [
 		"node_modules",
 		"partials",
-		"tests",
+		"test",
 		".gitignore",
 		"Gruntfile.js",
 		"package.json"

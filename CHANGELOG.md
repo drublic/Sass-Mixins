@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Rename tests folder to `test`
 * Add x-baseline mixin
 * Correct indention in opacity mixin
 

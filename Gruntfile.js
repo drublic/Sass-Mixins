@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 					banner: banner
 				},
 				files: {
-					'tests/css/main.css': 'tests/scss/main.scss'
+					'test/css/main.css': 'test/scss/main.scss'
 				}
 			}
 		}
