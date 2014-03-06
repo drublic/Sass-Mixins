@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Add better example for multiple colored gradient
 * Rename tests folder to `test`
 * Add x-baseline mixin
 * Correct indention in opacity mixin

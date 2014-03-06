@@ -15,7 +15,17 @@
  *
  * @example
  *   .selector {
- *     @include x-multiple-colored-gradient(( "top", #aaa 0%, #bbb 50%, #ccc 100% ));
+ *     @include x-multiple-colored-gradient((
+ *         "top",
+ *         #f22 0%,
+ *         #f2f 15%,
+ *         #22f 30%,
+ *         #2ff 45%,
+ *         #2f2 60%,
+ *         #2f2 75%,
+ *         #ff2 90%,
+ *         #f22 100%
+ *     ));
  *   }
  *
  * Note: This mixis does not define a fallback-color for your background as it
