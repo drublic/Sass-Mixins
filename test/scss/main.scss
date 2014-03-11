@@ -62,6 +62,12 @@
 	}
 }
 
+.calc {
+	@include x-calc(width, "600px - 2em");
+
+	margin: 0 auto 20px;
+}
+
 .linear-gradient {
 	@include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 }

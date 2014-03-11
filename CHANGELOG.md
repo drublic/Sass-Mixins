@@ -2,6 +2,8 @@
 
 ### HEAD
 
+* Add mixin for calc
+
 ### 0.8.0 - 05.03.2014
 * Add better example for multiple colored gradient
 * Rename tests folder to `test`
