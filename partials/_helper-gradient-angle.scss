@@ -21,27 +21,27 @@
 	$veryold-direction: $direction;
 
 	// New Syntax has to be evaluated to old one
-	@if $direction == "to bottom" {
-		$old-direction: "top";
-	} @else if $direction == "to right" {
-		$old-direction: "left";
-	} @else if $direction == "to top" {
-		$old-direction: "bottom";
-	} @else if $direction == "to left" {
-		$old-direction: "right";
+	@if $direction == 'to bottom' {
+		$old-direction: 'top';
+	} @else if $direction == 'to right' {
+		$old-direction: 'left';
+	} @else if $direction == 'to top' {
+		$old-direction: 'bottom';
+	} @else if $direction == 'to left' {
+		$old-direction: 'right';
 	} @else {
 		$old-direction: angle($direction);
 	}
 
 	// And also for very old syntax
-	@if $direction == "to bottom" {
-		$veryold-direction: "left top, left bottom";
-	} @else if $direction == "to right" {
-		$veryold-direction: "top left, bottom right";
-	} @else if $direction == "to top" {
-		$veryold-direction: "left bottom, left top";
-	} @else if $direction == "to left" {
-		$veryold-direction: "top right, bottom left";
+	@if $direction == 'to bottom' {
+		$veryold-direction: 'left top, left bottom';
+	} @else if $direction == 'to right' {
+		$veryold-direction: 'top left, bottom right';
+	} @else if $direction == 'to top' {
+		$veryold-direction: 'left bottom, left top';
+	} @else if $direction == 'to left' {
+		$veryold-direction: 'top right, bottom left';
 	} @else {
 		$veryold-direction: angle($direction);
 	}

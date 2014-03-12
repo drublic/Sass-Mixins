@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Use single quotes in gradient mixins
 * Add mixin for calc
 
 ### 0.8.0 - 05.03.2014

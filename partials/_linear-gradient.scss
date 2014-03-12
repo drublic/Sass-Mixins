@@ -28,7 +28,7 @@
  * Note: By default this linear-gradient-mixin encourages people to use the
  * latest CSS-syntax for gradients.
  */
-@mixin x-linear-gradient ($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
 
