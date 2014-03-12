@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.8.0 - 2014-03-11 *//**
+/*! sass-mixins - v0.8.0 - 2014-03-12 *//**
  * @description
  * Generates keyframe animations
  *
@@ -110,7 +110,7 @@
  *     @include x-box-shadow(5px 5px 10px 5px #aaa);
  *   }
  */
-@mixin x-box-shadow ($values) {
+@mixin x-box-shadow ($values...) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }
@@ -278,27 +278,27 @@
 	$veryold-direction: $direction;
 
 	// New Syntax has to be evaluated to old one
-	@if $direction == "to bottom" {
-		$old-direction: "top";
-	} @else if $direction == "to right" {
-		$old-direction: "left";
-	} @else if $direction == "to top" {
-		$old-direction: "bottom";
-	} @else if $direction == "to left" {
-		$old-direction: "right";
+	@if $direction == 'to bottom' {
+		$old-direction: 'top';
+	} @else if $direction == 'to right' {
+		$old-direction: 'left';
+	} @else if $direction == 'to top' {
+		$old-direction: 'bottom';
+	} @else if $direction == 'to left' {
+		$old-direction: 'right';
 	} @else {
 		$old-direction: angle($direction);
 	}
 
 	// And also for very old syntax
-	@if $direction == "to bottom" {
-		$veryold-direction: "left top, left bottom";
-	} @else if $direction == "to right" {
-		$veryold-direction: "top left, bottom right";
-	} @else if $direction == "to top" {
-		$veryold-direction: "left bottom, left top";
-	} @else if $direction == "to left" {
-		$veryold-direction: "top right, bottom left";
+	@if $direction == 'to bottom' {
+		$veryold-direction: 'left top, left bottom';
+	} @else if $direction == 'to right' {
+		$veryold-direction: 'top left, bottom right';
+	} @else if $direction == 'to top' {
+		$veryold-direction: 'left bottom, left top';
+	} @else if $direction == 'to left' {
+		$veryold-direction: 'top right, bottom left';
 	} @else {
 		$veryold-direction: angle($direction);
 	}
@@ -338,7 +338,7 @@
  * Note: By default this linear-gradient-mixin encourages people to use the
  * latest CSS-syntax for gradients.
  */
-@mixin x-linear-gradient ($direction: "to bottom", $fallback: #ccc, $from: #ccc, $to: #aaa) {
+@mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
 
@@ -717,7 +717,7 @@
  *     @include x-transform(rotate(1deg));
  *   }
  */
-@mixin x-transform ($values) {
+@mixin x-transform ($values...) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
 	    -ms-transform: $values; // IE9
 	        transform: $values;
@@ -742,7 +742,7 @@
  *     @include x-transition(background 0.3s ease-in);
  *   }
  */
-@mixin x-transition ($values) {
+@mixin x-transition ($values...) {
 	-webkit-transition: $values;
 	        transition: $values;
 }

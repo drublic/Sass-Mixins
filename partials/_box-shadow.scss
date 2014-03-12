@@ -17,7 +17,7 @@
  *     @include x-box-shadow(5px 5px 10px 5px #aaa);
  *   }
  */
-@mixin x-box-shadow ($values) {
+@mixin x-box-shadow ($values...) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }

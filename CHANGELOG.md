@@ -2,6 +2,7 @@
 
 ### HEAD
 
+* Add multi values for box-shadow mixin
 * Use single quotes in gradient mixins
 * Add mixin for calc
 

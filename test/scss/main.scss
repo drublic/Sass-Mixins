@@ -40,6 +40,9 @@
 .box-shadow {
 	@include x-box-shadow(5px 5px 10px 5px #aaa);
 }
+.box-shadow-multi {
+	@include x-box-shadow(inset 5px 5px 10px #333, 5px 5px 10px 5px #aaa);
+}
 
 .box-sizing {
 	@include x-box-sizing();

@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.8.0 - 2014-03-11 */
+/*! sass-mixins - v0.8.0 - 2014-03-12 */
 @charset "UTF-8";
-/*! sass-mixins - v0.8.0 - 2014-03-11 */
+/*! sass-mixins - v0.8.0 - 2014-03-12 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -502,6 +502,11 @@ html {
 .box-shadow {
   -webkit-box-shadow: 5px 5px 10px 5px #aaaaaa;
   box-shadow: 5px 5px 10px 5px #aaaaaa;
+}
+
+.box-shadow-multi {
+  -webkit-box-shadow: inset 5px 5px 10px #333333, 5px 5px 10px 5px #aaaaaa;
+  box-shadow: inset 5px 5px 10px #333333, 5px 5px 10px 5px #aaaaaa;
 }
 
 .box-sizing {
