@@ -159,6 +159,15 @@
 	}
 }
 
+.transition-multi {
+	@include x-transition(background 0.3s ease-in, color 1s);
+
+	&:hover {
+		background: #bbb;
+		color: #f00;
+	}
+}
+
 .user-select {
 	@include x-user-select;
 }

@@ -638,6 +638,15 @@ html {
   background: #bbb;
 }
 
+.transition-multi {
+  -webkit-transition: background 0.3s ease-in, color 1s;
+  transition: background 0.3s ease-in, color 1s;
+}
+.transition-multi:hover {
+  background: #bbb;
+  color: #f00;
+}
+
 .user-select {
   -webkit-user-select: none;
   -moz-user-select: none;

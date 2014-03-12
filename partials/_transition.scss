@@ -17,7 +17,7 @@
  *     @include x-transition(background 0.3s ease-in);
  *   }
  */
-@mixin x-transition ($values) {
+@mixin x-transition ($values...) {
 	-webkit-transition: $values;
 	        transition: $values;
 }

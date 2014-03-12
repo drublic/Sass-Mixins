@@ -717,7 +717,7 @@
  *     @include x-transform(rotate(1deg));
  *   }
  */
-@mixin x-transform ($values...) {
+@mixin x-transform ($values) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
 	    -ms-transform: $values; // IE9
 	        transform: $values;
