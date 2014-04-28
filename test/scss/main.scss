@@ -32,6 +32,11 @@
 	padding: 5px;
 }
 
+.background-size {
+	@include x-background-size(100px auto);
+
+	background: url(../img/html5_logo.png);
+}
 
 .border-radius {
 	@include x-border-radius(20px 10px);

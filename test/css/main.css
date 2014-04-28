@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.8.0 - 2014-03-12 */
+/*! sass-mixins - v0.8.0 - 2014-04-28 */
 @charset "UTF-8";
-/*! sass-mixins - v0.8.0 - 2014-03-12 */
+/*! sass-mixins - v0.8.0 - 2014-04-28 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -46,6 +46,25 @@
  * @example
  *   .selector {
  *     @include x-appearance(button);
+ *   }
+ */
+/**
+ * @description
+ * Generates `background-size` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/background-img-opts
+ * @link spec http://www.w3.org/TR/css3-background/
+ *
+ * @param value
+ * @returns
+ *   -webkit-background-size: $args;
+ *           background-size: $args;
+ *
+ * @example
+ *   .selector {
+ *     @include x-background-size(100% auto);
  *   }
  */
 /**
@@ -462,7 +481,6 @@ html {
     top: -10px;
   }
 }
-
 @keyframes jump {
   from {
     top: 0;
@@ -472,7 +490,6 @@ html {
     top: -10px;
   }
 }
-
 .animation {
   -webkit-animation: jump 1s infinite ease-out;
   animation: jump 1s infinite ease-out;
@@ -492,6 +509,12 @@ html {
   display: inline-block;
   margin: 10px;
   padding: 5px;
+}
+
+.background-size {
+  -webkit-background-size: 100px auto;
+  background-size: 100px auto;
+  background: url(../img/html5_logo.png);
 }
 
 .border-radius {
