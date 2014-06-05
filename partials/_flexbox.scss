@@ -1,0 +1,77 @@
+/**
+ * @description
+ * Generates flexbox properties for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+ * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * @link spec http://www.w3.org/TR/css3-flexbox/
+ */
+
+/**
+ * @returns
+ *   display: -webkit-box;
+ *   display: -moz-box;
+ *   display: -ms-flexbox;
+ *   display: -webkit-flex;
+ *   display: flex;
+ *
+ * @example
+ *   .selector {
+ *     @include x-display-flex;
+ *   }
+ */
+@mixin x-display-flex {
+	display: -webkit-box;  // Chrome 20-, iOS 6-, Safari 3.1  -6
+	display: -moz-box;     // FF 19-
+	display: -webkit-flex; // Chrome 21 - 28
+	display: -ms-flexbox;  // IE 10
+	display: flex;         // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/**
+ * @param values
+ * @returns
+ *   -webkit-box-flex: <values>;
+ *      -moz-box-flex: <values>;
+ *       -webkit-flex: <values>;
+ *           -ms-flex: <values>;
+ *               flex: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex(1 1 auto);
+ *   }
+ */
+@mixin x-flex ($values...) {
+	-webkit-box-flex: $values; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	   -moz-box-flex: $values; // FF 19-
+	    -webkit-flex: $values; // Chrome 21 - 28
+	        -ms-flex: $values; // IE 10
+	            flex: $values; // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/**
+ * @param value
+ * @returns
+ *   -webkit-box-ordinal-group: <value>;
+ *      -moz-box-ordinal-group: <value>;
+ *              -ms-flex-order: <value>;
+ *               -webkit-order: <value>;
+ *                       order: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-order(1);
+ *   }
+ */
+@mixin x-order ($value) {
+	-webkit-box-ordinal-group: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
+	   -moz-box-ordinal-group: $value; // FF 19-
+	           -ms-flex-order: $value; // IE 10
+	            -webkit-order: $value; // Chrome 21 - 28
+	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
+}
+
+/* ToDo: add flex-direction, flex-grow, flex-wrap, flex-shrink, flex-basis, flex-flow, align-content, align-items, align-self, justify-content mixins */

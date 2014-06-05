@@ -76,6 +76,18 @@
 	margin: 0 auto 20px;
 }
 
+.display-flex {
+	@include x-display-flex;
+}
+
+.flex-1 {
+	@include x-flex(1 1 auto);
+}
+
+.flex-3 {
+	@include x-flex(3 1 auto);
+}
+
 .linear-gradient {
 	@include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 }
@@ -130,6 +142,28 @@
 
 .opacity {
 	@include x-opacity(0.4);
+}
+
+.order-1 {
+	@include x-order(1);
+
+	padding: 2%;
+	background-color: #c8fc98;
+}
+
+.order-2 {
+	@include x-order(2);
+
+	width: 60%;
+	padding: 2%;
+	background-color: #fff;
+}
+
+.order-3 {
+	@include x-order(3);
+
+	padding: 2%;
+	background-color: #fde95e;
 }
 
 .rem {

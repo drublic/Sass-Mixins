@@ -53,6 +53,24 @@ x-breakpoints(desktop) { color: black; }</code></pre>
 			<pre><code>x-calc(width, '600px - 2em');</code></pre>
 		</div>
 
+		<div class="test-case">
+			<pre><code>x-display-flex;</code></pre>
+			<div class="display-flex">
+				<article class="order-2 flex-3">
+					<pre><code>x-order(2);</code></pre>
+					<pre><code>x-flex(3 1 auto);</code></pre>
+				</article>
+				<nav class="order-1 flex-1">
+					<pre><code>x-order(1);</code></pre>
+					<pre><code>x-flex(1 1 auto);</code></pre>
+				</nav>
+				<aside class="order-3 flex-1">
+					<pre><code>x-order(3);</code></pre>
+					<pre><code>x-flex(1 1 auto);</code></pre>
+				</aside>
+			</div>
+		</div>
+
 		<div class="test-case linear-gradient">
 			<pre><code>x-linear-gradient('to bottom', #ddd, #ddd, #555);</code></pre>
 		</div>

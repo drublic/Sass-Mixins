@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.8.0 - 2014-04-28 */
+/*! sass-mixins - v0.9.0 - 2014-06-05 */
 @charset "UTF-8";
-/*! sass-mixins - v0.8.0 - 2014-04-28 */
+/*! sass-mixins - v0.9.0 - 2014-06-05 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -199,6 +199,58 @@
  *     @include x-calc(width, "600px - 2em");
  *   }
  */
+/**
+ * @description
+ * Generates flexbox properties for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+ * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * @link spec http://www.w3.org/TR/css3-flexbox/
+ */
+/**
+ * @returns
+ *   display: -webkit-box;
+ *   display: -moz-box;
+ *   display: -ms-flexbox;
+ *   display: -webkit-flex;
+ *   display: flex;
+ *
+ * @example
+ *   .selector {
+ *     @include x-display-flex;
+ *   }
+ */
+/**
+ * @param values
+ * @returns
+ *   -webkit-box-flex: <values>;
+ *      -moz-box-flex: <values>;
+ *       -webkit-flex: <values>;
+ *           -ms-flex: <values>;
+ *               flex: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex(1 1 auto);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-box-ordinal-group: <value>;
+ *      -moz-box-ordinal-group: <value>;
+ *              -ms-flex-order: <value>;
+ *               -webkit-order: <value>;
+ *                       order: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-order(1);
+ *   }
+ */
+/* ToDo: add flex-direction, flex-grow, flex-wrap, flex-shrink, flex-basis, flex-flow, align-content, align-items, align-self, justify-content mixins */
 /**
  * @description
  * Generates a linear gradient for a given element with a fallback color.
@@ -562,6 +614,30 @@ html {
   margin: 0 auto 20px;
 }
 
+.display-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.flex-3 {
+  -webkit-box-flex: 3 1 auto;
+  -moz-box-flex: 3 1 auto;
+  -webkit-flex: 3 1 auto;
+  -ms-flex: 3 1 auto;
+  flex: 3 1 auto;
+}
+
 .linear-gradient {
   background-color: #cccccc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
@@ -621,6 +697,37 @@ html {
 .opacity {
   opacity: 0.4;
   filter: alpha(opacity=40);
+}
+
+.order-1 {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+  padding: 2%;
+  background-color: #c8fc98;
+}
+
+.order-2 {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2;
+  width: 60%;
+  padding: 2%;
+  background-color: #fff;
+}
+
+.order-3 {
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+  padding: 2%;
+  background-color: #fde95e;
 }
 
 .rem {

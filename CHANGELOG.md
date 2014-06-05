@@ -2,6 +2,8 @@
 
 ### HEAD
 
+* Add flexbox mixins
+
 ### 0.9.0 - 03.05.2014
 * Add background-size mixin
 * Add multi values for transition mixin
