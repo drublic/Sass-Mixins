@@ -14,6 +14,13 @@
 	}
 }
 
+.align-content {
+	@include x-align-content(center);
+
+	height: 400px;
+	background: #fff;
+}
+
 .animation {
 	@include x-animation(jump 1s infinite ease-out);
 	@include x-box-sizing;
@@ -86,6 +93,17 @@
 
 .flex-3 {
 	@include x-flex(3 1 auto);
+}
+
+.flex-item {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	background: #c8fc98;
+}
+
+.flex-wrap {
+	@include x-flex-wrap(wrap);
 }
 
 .linear-gradient {

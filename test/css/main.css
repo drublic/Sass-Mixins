@@ -1,6 +1,6 @@
-/*! sass-mixins - v0.9.0 - 2014-06-05 */
+/*! sass-mixins - v0.9.0 - 2014-06-10 */
 @charset "UTF-8";
-/*! sass-mixins - v0.9.0 - 2014-06-05 */
+/*! sass-mixins - v0.9.0 - 2014-06-10 */
                                        /**
 * @description
 * Generates keyframe animations
@@ -250,7 +250,31 @@
  *     @include x-order(1);
  *   }
  */
-/* ToDo: add flex-direction, flex-grow, flex-wrap, flex-shrink, flex-basis, flex-flow, align-content, align-items, align-self, justify-content mixins */
+/**
+ * @param value
+ * @returns
+ *    -webkit-flex-wrap: <value>;
+ *        -ms-flex-wrap: <value>;
+ *            flex-wrap: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex-wrap(wrap);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-align-content: <value>;
+ *      -moz-align-content: <value>;
+ *      -ms-flex-line-pack: <value>;
+ *           align-content: <value>;
+ * @example
+ *   .selector {
+ *     @include x-align-content(center);
+ *   }
+ */
+/* ToDo: add flex-direction, flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
 /**
  * @description
  * Generates a linear gradient for a given element with a fallback color.
@@ -542,6 +566,15 @@ html {
     top: -10px;
   }
 }
+.align-content {
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  align-content: center;
+  height: 400px;
+  background: #fff;
+}
+
 .animation {
   -webkit-animation: jump 1s infinite ease-out;
   animation: jump 1s infinite ease-out;
@@ -636,6 +669,19 @@ html {
   -webkit-flex: 3 1 auto;
   -ms-flex: 3 1 auto;
   flex: 3 1 auto;
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: #c8fc98;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .linear-gradient {
