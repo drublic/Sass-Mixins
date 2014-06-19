@@ -95,6 +95,10 @@
 	@include x-flex(3 1 auto);
 }
 
+.flex-direction {
+	@include x-flex-direction(row-reverse);
+}
+
 .flex-item {
 	width: 100px;
 	height: 100px;

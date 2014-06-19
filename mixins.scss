@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.9.0 - 2014-06-10 *//**
+/*! sass-mixins - v0.9.0 - 2014-06-19 *//**
  * @description
  * Generates keyframe animations
  *
@@ -408,7 +408,52 @@
 	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
  }
 
-/* ToDo: add flex-direction, flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
+/**
+ * @param value
+ * @returns
+ *	  -webkit-box-direction: <value>;
+ *		 -moz-box-direction: <value>;
+ *       -webkit-box-orient: <value>;
+ *		    -moz-box-orient: <value>;
+ *   -webkit-flex-direction: <value>;
+ *      -moz-flex-direction: <value>;
+ *       -ms-flex-direction: <value>;
+ *           flex-direction: <value>;
+ * @example
+ *   .selector {
+ *     @include x-flex-direction(row-reverse);
+ *   }
+ */
+ @mixin x-flex-direction ($value) {
+	@if $value == row {
+		-webkit-box-direction: normal;
+		   -moz-box-direction: normal;
+		   -webkit-box-orient: horizontal;
+		      -moz-box-orient: horizontal;
+	} @elseif $value == row-reverse {
+		-webkit-box-direction: reverse;
+		   -moz-box-direction: reverse;
+		   -webkit-box-orient: horizontal;
+		      -moz-box-orient: horizontal;
+	} @elseif $value == column {
+		-webkit-box-direction: normal;
+		   -moz-box-direction: normal;
+		   -webkit-box-orient: vertical;
+		      -moz-box-orient: vertical;
+	} @elseif $value == column-reverse {
+		-webkit-box-direction: reverse;
+		   -moz-box-direction: reverse;
+		   -webkit-box-orient: vertical;
+		      -moz-box-orient: vertical;
+	}
+
+ 	-webkit-flex-direction: $value;
+ 	   -moz-flex-direction: $value;
+ 	    -ms-flex-direction: $value;
+ 	        flex-direction: $value;
+ }
+
+/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
 
 // Helper for old syntax in linear-gradients
 
