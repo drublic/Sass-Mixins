@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.9.0 - 2014-06-19 *//**
+/*! sass-mixins - v0.9.0 - 2014-07-02 *//**
  * @description
  * Generates keyframe animations
  *
@@ -821,30 +821,48 @@
 
 /**
  * @description
- * This mixin will enable using the CSS3 value `rem`, which lets you define
- * property-sizes based on the root-element's font-size.
+ * This mixin enables you to use the CSS3 value `rem`, which lets you define
+ * property sizes based on the root element's font-size.
  *
  * @author drublic
  *
  * @link caniuse http://caniuse.com/rem
  * @link spec http://www.w3.org/TR/css3-values/#relative0
  *
- * @param property
- * @param values
- * @param default-font-size int optional
- * @returns
- *   <property>: (<value> * <default-font-size>)px;
- *   <property>: <value>;
- *
- * @example
- *   .selector {
- *     @include x-rem(font-size, 1.3);
- *   }
- *
  * Note: Depending on the font-size of the root-element `rem` calculates a
- * property of a current element. The fallback solution excepts a
+ * property of a current element. The fallback solution accepts a
  * `default-font-size`-argument which is 16px by default.
  */
+
+ /*
+  * Returns a number without unit. E.g. 30px -> 30
+  * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+  * 
+  * @param value {String}
+  * @returns
+  *   <Number>
+  */
+ @function strip-unit($value) {
+     @return $value / ($value * 0 + 1);
+ }
+
+ /*
+  * Outputs properties that use rem with a px fallback.
+  * It also takes px values and converts them to rem.
+  *
+  * @param property
+  * @param values
+  * @param default-font-size int optional
+  * @returns
+  *   <property>: <parsed value>px;
+  *   <property>: <parsed value>rem;
+  *
+  * @example
+  *   .selector {
+  *     @include x-rem(font-size, 1.3);
+  *     @include x-rem(padding, 20px);
+  *   }
+  */
 @mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
@@ -854,15 +872,23 @@
 	// Iterate over entries
 	@each $value in $values {
 
-		// If the value is zero, return 0
+		// If the value is zero or of a type that doesn’t need conversion, return the value untouched
 		@if ( $value == 0 ) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 
-		// If the value is not zero, convert it from px to rem
+		// Otherwise convert it properly
 		} @else {
-			$px-values: append($px-values, ($value * $main-font-size) );
-			$rem-values: append($rem-values, #{$value}rem);
+			$unit: unit($value);
+
+			@if $unit == 'px' {
+				$px-values: append($px-values, #{strip-unit($value)}px );
+				$rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
+			} @else {
+				$px-values: append($px-values, ($value * $main-font-size) );
+				$rem-values: append($rem-values, #{$value}rem);
+			}
+
 		}
 	}
 
