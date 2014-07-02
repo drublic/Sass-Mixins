@@ -18,8 +18,8 @@
   "license": "MIT",
   "devDependencies": {
     "grunt": "0.4.x",
-    "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-sass": "0.7.2"
+    "grunt-contrib-concat": "0.4.0",
+    "grunt-contrib-sass": "0.7.3"
   },
   "keywords": []
 }
