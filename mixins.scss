@@ -769,8 +769,10 @@
  *   }
  */
 @mixin x-opacity ($value: 1) {
+	$value-percentage : $value * 100;
+
 	opacity: $value;
-	filter: alpha(opacity=$value * 100);
+	filter: alpha(opacity=$value-percentage);
 }
 
 /**
