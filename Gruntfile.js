@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 
 	// Default task
 	grunt.registerTask('default', ['concat', 'sass']);

@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Use grunt-sass with libsass
 * Fix for x-opacity to not throw an exception
 
 ### 0.10.0 - 02.07.2014

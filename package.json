@@ -19,7 +19,7 @@
   "devDependencies": {
     "grunt": "0.4.x",
     "grunt-contrib-concat": "0.4.0",
-    "grunt-contrib-sass": "0.7.3"
+    "grunt-sass": "^0.16.0"
   },
   "keywords": []
 }
