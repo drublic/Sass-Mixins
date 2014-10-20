@@ -73,6 +73,6 @@
 		}
 	}
 
-	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
-	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
+	background-image: -webkit-linear-gradient(unquote($pos), $gradient);
+	background-image:         linear-gradient(unquote($pos_newsyntax), $gradient);
 }
