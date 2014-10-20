@@ -18,8 +18,9 @@
  *   }
  */
 @mixin x-opacity ($value: 1) {
-	$value-percentage : $value * 100;
+	$value-percentage: $value * 100;
 
 	opacity: $value;
-	filter: alpha(opacity=$value-percentage);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value-percentage})";
+	filter: alpha(opacity=#{$value-percentage});
 }
