@@ -16,7 +16,7 @@
  /*
   * Returns a number without unit. E.g. 30px -> 30
   * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
-  * 
+  *
   * @param value {String}
   * @returns
   *   <Number>
@@ -61,11 +61,11 @@
 			$unit: unit($value);
 
 			@if $unit == 'px' {
-				$px-values: append($px-values, #{strip-unit($value)}px );
+				$px-values: append($px-values, #{strip-unit($value)} * 1px );
 				$rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
 			} @else {
 				$px-values: append($px-values, ($value * $main-font-size) );
-				$rem-values: append($rem-values, #{$value}rem);
+				$rem-values: append($rem-values, #{$value} * 1rem);
 			}
 
 		}
