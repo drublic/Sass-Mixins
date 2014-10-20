@@ -32,7 +32,7 @@
  * is likely you want to add an image or something. Please specify one by
  * yourself.
  */
-@mixin x-multiple-colored-gradient ($args) {
+@mixin x-multiple-colored-gradient ($args...) {
 
 	$gradient: ();
 	$pos: nth($args, 1);
