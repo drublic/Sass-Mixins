@@ -17,7 +17,12 @@
  *     @include x-transition(background 0.3s ease-in);
  *   }
  */
-@mixin x-transition ($values...) {
-	-webkit-transition: $values;
-	        transition: $values;
+@mixin x-transition($property: all, $duration: 1s, $easing: ease, $delay: 0s) {
+  @if($what == transform){
+    -webkit-transition: -webkit-#{$property} $duration $easing $delay;
+            transition: $property $duration $easing $delay;
+  } @else{
+    -webkit-transition: $property $duration $easing $delay;
+            transition: $property $duration $easing $delay;
+  }
 }
