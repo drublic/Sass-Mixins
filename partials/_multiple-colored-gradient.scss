@@ -38,15 +38,8 @@
 	$pos: nth($args, 1);
 	$pos_newsyntax: ();
 
-	@if ($pos != 'top')
-		and ($pos != 'right')
-		and ($pos != 'bottom')
-		and ($pos != 'left')
-		and ($pos != 'to top')
-		and ($pos != 'to right')
-		and ($pos != 'to bottom')
-		and ($pos != 'to left') {
-			$pos: 'top';
+	@if not is-valid-keyword-direction($pos) {
+		$pos: 'top';
 	}
 
 	// New Syntax
@@ -61,18 +54,28 @@
 	}
 
 	@each $g in $args {
-		@if ($g != 'top')
-			and ($g != 'right')
-			and ($g != 'bottom')
-			and ($g != 'left')
-			and ($g != 'to top')
-			and ($g != 'to right')
-			and ($g != 'to bottom')
-			and ($g != 'to left') {
-				$gradient: append($gradient, $g, comma);
+		@if not is-valid-keyword-direction($g) {
+			$gradient: append($gradient, $g, comma);
 		}
 	}
 
 	background-image: -webkit-linear-gradient(unquote($pos), $gradient);
 	background-image:         linear-gradient(unquote($pos_newsyntax), $gradient);
+}
+
+/*
+  * Returns whether a value is a valid keyword direction
+  *
+  * @param value {String}
+  * @returns
+  *   <Bool>
+  */
+@function is-valid-keyword-direction($value) {
+  @return not not index(
+    'top' 'right' 'bottom' 'left'
+    'to top' 'to right' 'to bottom' 'to left'
+    'to top right' 'to right top'
+    'to bottom right' 'to right bottom'
+    'to top left' 'to left top'
+    'to bottom left' 'to left bottom', $value);
 }
