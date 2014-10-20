@@ -52,7 +52,7 @@
 	@each $value in $values {
 
 		// If the value is zero or of a type that doesn’t need conversion, return the value untouched
-		@if ( $value == 0 ) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
+		@if index(auto inherit initial 0, $value) or type-of($value) != "number" {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 
