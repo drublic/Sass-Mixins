@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Fix for x-opacity to not throw an exception
 
 ### 0.10.0 - 02.07.2014
 * Extend x-rem mixin to make it take px values and convert them to rem
