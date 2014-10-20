@@ -17,7 +17,7 @@
  *     @include x-opacity(0.3);
  *   }
  */
-@mixin x-opacity ($value: 1) {
+@mixin x-opacity ($value: 0) {
 	$value-percentage: $value * 100;
 
 	opacity: $value;
