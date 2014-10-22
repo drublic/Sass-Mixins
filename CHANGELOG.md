@@ -2,6 +2,15 @@
 
 ### HEAD
 
+### 0.12.0 - 22.10.2014
+* Add warning when x-breakpoints do not recognize breakpoint
+* Add IE8 support to x-opacity
+* Change default value of 1 from x-opacity to 0
+* Fix potential issues with strings being used in place of length
+* Fix potential edge cases in x-rem
+* Simplify code output in x-multiple-colored-gradient
+* Change list to arglist in x-multiple-colored-gradient
+
 ### 0.11.0 - 20.10.2014
 * Use grunt-sass with libsass
 * Fix for x-opacity to not throw an exception
