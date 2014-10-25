@@ -18,7 +18,7 @@
  *   }
  */
 @mixin x-transition($property: all, $duration: 1s, $easing: ease, $delay: 0s) {
-  @if($what == transform){
+  @if($property == transform){
     -webkit-transition: -webkit-#{$property} $duration $easing $delay;
             transition: $property $duration $easing $delay;
   } @else{
