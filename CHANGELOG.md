@@ -2,7 +2,7 @@
 
 ### HEAD
 
-### 0.12.0 - 22.10.2014
+### 0.12.0 - 11.07.2015
 * Add warning when x-breakpoints do not recognize breakpoint
 * Add IE8 support to x-opacity
 * Change default value of 1 from x-opacity to 0
