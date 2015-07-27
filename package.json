@@ -17,9 +17,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "grunt": "0.4.x",
-    "grunt-contrib-concat": "0.4.0",
-    "grunt-sass": "^0.16.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-sass": "^1.0.0",
+    "grunt-sassdoc": "^2.0.1"
   },
   "keywords": []
 }

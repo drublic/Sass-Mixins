@@ -29,14 +29,24 @@ module.exports = function (grunt) {
 					'test/css/main.css': 'test/scss/main.scss'
 				}
 			}
-		}
+		},
+		sassdoc: {
+			default: {
+				src: 'mixins.scss',
+				options: {
+					basePath: 'https://github.com/drublic/Sass-Mixins/blob/master',
+				},
+			},
+		},
 	});
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-sassdoc');
 
 	// Default task
 	grunt.registerTask('default', ['concat', 'sass']);
+	grunt.registerTask('doc', ['concat', 'sassdoc']);
 
 };
