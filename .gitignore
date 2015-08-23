@@ -1,4 +1,6 @@
 *.sublime-*
 
+.idea
+
 node_modules
 .sass-cache
