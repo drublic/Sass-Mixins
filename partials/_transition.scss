@@ -1,19 +1,19 @@
 ///
-///Generates cross-browser-compatible `transition` output for a given element.
+/// Generates cross-browser-compatible `transition` output for a given element.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-transitions caniuse
-///@link spec
+/// @link http://caniuse.com/css-transitions caniuse
+/// @link spec
 ///
-///@param values
-///@output
-///```css
+/// @param values
+/// @output
+/// ```css
 ///   -webkit-transition: <values>;
 ///           transition: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-transition(background 0.3s ease-in);
 ///   }

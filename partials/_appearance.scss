@@ -1,18 +1,18 @@
 ///
 /// Generates appearance for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-appearance: <value>;
 ///      -moz-appearance: <value>;
 ///           appearance: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-appearance(button);
 ///   }

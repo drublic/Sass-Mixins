@@ -1,22 +1,22 @@
 ///
-///Generates flexbox properties for a given element
+/// Generates flexbox properties for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
-///@link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
-///@link http://www.w3.org/TR/css3-flexbox/ spec
+/// @link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
+/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
+/// @link http://www.w3.org/TR/css3-flexbox/ spec
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   display: -webkit-box;
 ///   display: -moz-box;
 ///   display: -ms-flexbox;
 ///   display: -webkit-flex;
 ///   display: flex;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-display-flex;
 ///   }
@@ -30,17 +30,17 @@
 }
 
 ///
-///@param {String} values
-///@output
-///```css
+/// @param {String} values
+/// @output
+/// ```css
 ///   -webkit-box-flex: <values>;
 ///      -moz-box-flex: <values>;
 ///       -webkit-flex: <values>;
 ///           -ms-flex: <values>;
 ///               flex: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex(1 1 auto);
 ///   }
@@ -54,17 +54,17 @@
 }
 
 ///
-///@param {Number} value
-///@output
-///```css
+/// @param {Number} value
+/// @output
+/// ```css
 ///   -webkit-box-ordinal-group: <value>;
 ///      -moz-box-ordinal-group: <value>;
 ///              -ms-flex-order: <value>;
 ///               -webkit-order: <value>;
 ///                       order: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-order(1);
 ///   }
@@ -78,16 +78,16 @@
 }
 
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///    -webkit-flex-wrap: <value>;
 ///        -ms-flex-wrap: <value>;
 ///            flex-wrap: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex-wrap(wrap);
 ///   }
@@ -104,16 +104,16 @@
 }
 
 ///
-///@param value
+/// @param value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-align-content: <value>;
 ///      -moz-align-content: <value>;
 ///      -ms-flex-line-pack: <value>;
 ///           align-content: <value>;
-///```
-///@example
+/// ```
+/// @example
 ///   .selector {
 ///     @include x-align-content(center);
 ///   }
@@ -137,9 +137,9 @@
  }
 
 ///
-///@param {string} value
-///@output
-///```css
+/// @param {string} value
+/// @output
+/// ```css
 ///    -webkit-box-direction: <value>;
 ///       -moz-box-direction: <value>;
 ///       -webkit-box-orient: <value>;
@@ -148,9 +148,9 @@
 ///      -moz-flex-direction: <value>;
 ///       -ms-flex-direction: <value>;
 ///           flex-direction: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex-direction(row-reverse);
 ///   }
@@ -184,4 +184,4 @@
  	        flex-direction: $value;
  }
 
-///@todo add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins
+//todo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins

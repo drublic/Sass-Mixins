@@ -48,18 +48,18 @@
 ///
 /// Generates appearance for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-appearance: <value>;
 ///      -moz-appearance: <value>;
 ///           appearance: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-appearance(button);
 ///   }
@@ -149,24 +149,24 @@
 }
 
 ///
-///Generates cross-browser-compatible `box-sizing` output for a given element.
+/// Generates cross-browser-compatible `box-sizing` output for a given element.
 ///
-///@author drublic
+/// @author drublic
 ///
 ///
-///@link http://caniuse.com/#feat=css3-boxsizing caniuse
-///@link http://www.w3.org/TR/css3-ui/#box-sizing spec
+/// @link http://caniuse.com/#feat=css3-boxsizing caniuse
+/// @link http://www.w3.org/TR/css3-ui/#box-sizing spec
 ///
-///@param {String} type
+/// @param {String} type
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-box-sizing: <type>;
 ///      -moz-box-sizing: <type>;
 ///           box-sizing: <type>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-box-sizing;
 ///   }
@@ -178,28 +178,28 @@
 }
 
 ///
-///These mixins generates Media Queries
+/// These mixins generates Media Queries
 ///
-///Note: Please use the CSS unit `em` for device-width in order to stay
-///responsive.
+/// Note: Please use the CSS unit `em` for device-width in order to stay
+/// responsive.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/#feat=css-mediaqueries caniuse
-///@link http://www.w3.org/TR/css3-mediaqueries/ spec
+/// @link http://caniuse.com/#feat=css-mediaqueries caniuse
+/// @link http://www.w3.org/TR/css3-mediaqueries/ spec
 ///
-///@param {number} device-width
+/// @param {number} device-width
 ///
-///@content
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media screen and (min-width: <device-width>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-at-least(40em) { width: 60%; }
 ///   }
@@ -211,17 +211,17 @@
 }
 
 ///
-///@param {number} device-width
-///@content
+/// @param {number} device-width
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media screen and (max-width: <device-width - 0.01>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-until(40em) { width: 100%; }
 ///   }
@@ -233,22 +233,22 @@
 }
 
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@param {string} point
-///@param {number} bp-mobile-width
-///@param {number} bp-tablet-width
+/// @param {string} point
+/// @param {number} bp-mobile-width
+/// @param {number} bp-tablet-width
 ///
-///@content
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media (max-width: <bp-mobile-width>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-breakpoints(mobile,  320px) { width: 100%; }
 ///   }
@@ -279,23 +279,23 @@
 }
 
 ///
-///Generates `calc` function which allows mathematical expressions for a given property
+/// Generates `calc` function which allows mathematical expressions for a given property
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link http://caniuse.com/calc caniuse
-///@link http://www.w3.org/TR/css3-values/#calc spec
+/// @link http://caniuse.com/calc caniuse
+/// @link http://www.w3.org/TR/css3-values/#calc spec
 ///
-///@param {String} property
-///@param {String} expression
+/// @param {String} property
+/// @param {String} expression
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   <property>: -webkit-calc(<expression>);
 ///   <property>: calc(<expression>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///  .selector {
 ///    @include x-calc(width, "600px - 2em");
 ///  }
@@ -306,24 +306,24 @@
 }
 
 ///
-///Generates flexbox properties for a given element
+/// Generates flexbox properties for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
-///@link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
-///@link http://www.w3.org/TR/css3-flexbox/ spec
+/// @link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
+/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
+/// @link http://www.w3.org/TR/css3-flexbox/ spec
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   display: -webkit-box;
 ///   display: -moz-box;
 ///   display: -ms-flexbox;
 ///   display: -webkit-flex;
 ///   display: flex;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-display-flex;
 ///   }
@@ -337,17 +337,17 @@
 }
 
 ///
-///@param {String} values
-///@output
-///```css
+/// @param {String} values
+/// @output
+/// ```css
 ///   -webkit-box-flex: <values>;
 ///      -moz-box-flex: <values>;
 ///       -webkit-flex: <values>;
 ///           -ms-flex: <values>;
 ///               flex: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex(1 1 auto);
 ///   }
@@ -361,17 +361,17 @@
 }
 
 ///
-///@param {Number} value
-///@output
-///```css
+/// @param {Number} value
+/// @output
+/// ```css
 ///   -webkit-box-ordinal-group: <value>;
 ///      -moz-box-ordinal-group: <value>;
 ///              -ms-flex-order: <value>;
 ///               -webkit-order: <value>;
 ///                       order: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-order(1);
 ///   }
@@ -385,16 +385,16 @@
 }
 
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///    -webkit-flex-wrap: <value>;
 ///        -ms-flex-wrap: <value>;
 ///            flex-wrap: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex-wrap(wrap);
 ///   }
@@ -411,16 +411,16 @@
 }
 
 ///
-///@param value
+/// @param value
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-align-content: <value>;
 ///      -moz-align-content: <value>;
 ///      -ms-flex-line-pack: <value>;
 ///           align-content: <value>;
-///```
-///@example
+/// ```
+/// @example
 ///   .selector {
 ///     @include x-align-content(center);
 ///   }
@@ -444,9 +444,9 @@
  }
 
 ///
-///@param {string} value
-///@output
-///```css
+/// @param {string} value
+/// @output
+/// ```css
 ///    -webkit-box-direction: <value>;
 ///       -moz-box-direction: <value>;
 ///       -webkit-box-orient: <value>;
@@ -455,9 +455,9 @@
 ///      -moz-flex-direction: <value>;
 ///       -ms-flex-direction: <value>;
 ///           flex-direction: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-flex-direction(row-reverse);
 ///   }
@@ -491,16 +491,15 @@
  	        flex-direction: $value;
  }
 
-///@todo add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins
-
+//todo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins
 ///
-///Helper for old syntax in linear-gradients
+/// Helper for old syntax in linear-gradients
 ///
-///Return the corrected angle or position for a css gradient
+/// Return the corrected angle or position for a css gradient
 ///
-///@param {Number|String} deg
+/// @param {Number|String} deg
 ///
-///@return {Number|String}
+/// @return {Number|String}
 ///
 
 @function angle ($deg) {
@@ -516,11 +515,11 @@
 	}
 }
 ///
-///helper gradient angle
+/// helper gradient angle
 ///
-///@param {String} direction
+/// @param {String} direction
 ///
-///@return {String}
+/// @return {String}
 ///
 @function helper-gradient-angle ($direction) {
 
@@ -559,32 +558,32 @@
 
 
 ///
-///Generates a linear gradient for a given element with a fallback color.
+/// Generates a linear gradient for a given element with a fallback color.
 ///
-///Note: By default this linear-gradient-mixin encourages people to use the
-///latest CSS-syntax for gradients.
+/// Note: By default this linear-gradient-mixin encourages people to use the
+/// latest CSS-syntax for gradients.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/#feat=css-gradients caniuse
-///@link https://drafts.csswg.org/css-images-3/#linear-gradients spec
+/// @link http://caniuse.com/#feat=css-gradients caniuse
+/// @link https://drafts.csswg.org/css-images-3/#linear-gradients spec
 ///
-///@require helper-gradient-angle
+/// @require helper-gradient-angle
 ///
-///@param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
-///@param {color} fallback [#ccc]
-///@param {color} from [#ccc]
-///@param {color} to [#aaa]
+/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
+/// @param {color} fallback [#ccc]
+/// @param {color} from [#ccc]
+/// @param {color} to [#aaa]
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   background-color: <fallback>;
 ///   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
 ///   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
 ///   background-image:         linear-gradient(<direction>, <from>, <to>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 ///   }
@@ -604,12 +603,12 @@
 
 /// A function for prefixing gradients
 ///
-///@todo define old webkit mode
+/// @todo define old webkit mode
 ///
-///@param {'webkit-old'|'webkit'|''} mode
-///@param gradient
+/// @param {'webkit-old'|'webkit'|''} mode
+/// @param gradient
 ///
-///@returns {string} `-<mode>-linear-gradient(<gradient>)`
+/// @returns {string} `-<mode>-linear-gradient(<gradient>)`
 ///
 @function prefixed-gradient ($mode, $gradient) {
 
@@ -646,17 +645,17 @@
 
 
 ///
-///This mixin generates multiple backgrounds
+/// This mixin generates multiple backgrounds
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-gradients caniuse
-///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+/// @link http://caniuse.com/css-gradients caniuse
+/// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
 ///
-///@param {list} backgrounds
+/// @param {list} backgrounds
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-multiple-backgrounds(
 ///       rgba(0, 0, 0, 0.3),
@@ -719,26 +718,26 @@
 }
 
 ///
-///This mixin creates (endless) multiple color stops in gradients just with one
-///call for the mixin.
+/// This mixin creates (endless) multiple color stops in gradients just with one
+/// call for the mixin.
 ///
 /// Note: This mixis does not define a fallback-color for your background as it
 /// is likely you want to add an image or something. Please specify one by
 /// yourself.
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-gradients caniuse
-///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+/// @link http://caniuse.com/css-gradients caniuse
+/// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
-///@param {list} stops
+/// @param {list} stops
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
 ///   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-multiple-colored-gradient(
 ///         "top",
@@ -786,11 +785,11 @@
 
 
 ///
-///Returns whether a value is a valid keyword direction
+/// Returns whether a value is a valid keyword direction
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@returns {Bool}
+/// @returns {Bool}
 ///
 @function is-valid-keyword-direction($value) {
   @return not not index(
@@ -803,22 +802,22 @@
 }
 
 ///
-///Generates `opacity` output for a given element and adds a filter for old IE.
+/// Generates `opacity` output for a given element and adds a filter for old IE.
 ///
-///@author bartveneman
+/// @author bartveneman
 ///
-///@link http://caniuse.com/css-opacity caniuse
-///@link http://www.w3.org/TR/css3-color/#transparency spec
+/// @link http://caniuse.com/css-opacity caniuse
+/// @link http://www.w3.org/TR/css3-color/#transparency spec
 ///
-///@param {Value} value[0]
+/// @param {Value} value[0]
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   opacity: <value>;
 ///    filter: alpha(opacity=<value * 100>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-opacity(0.3);
 ///   }
@@ -832,15 +831,15 @@
 }
 
 ///
-///Generates `placeholder` content for a given element
+/// Generates `placeholder` content for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
-///@link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
+/// @link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///    &::-webkit-input-placeholder {
 ///        <content>
 ///    }
@@ -850,9 +849,9 @@
 ///    &:-ms-input-placeholder {
 ///        <content>
 ///    }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-placeholder {
 ///         color: #bada55;
@@ -873,12 +872,12 @@
 }
 
 ///
-///Returns a number without unit. E.g. 30px -> 30
+/// Returns a number without unit. E.g. 30px -> 30
 ///
-///Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+/// Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
 ///
-///@param {String} value
-///@returns {Number}
+/// @param {String} value
+/// @returns {Number}
 ///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
@@ -886,31 +885,31 @@
 
 
 ///
-///This mixin enables you to use the CSS3 value `rem`, which lets you define
-///property sizes based on the root element's font-size.
+/// This mixin enables you to use the CSS3 value `rem`, which lets you define
+/// property sizes based on the root element's font-size.
 ///
-///Outputs properties that use rem with a px fallback.
-///It also takes px values and converts them to rem.
+/// Outputs properties that use rem with a px fallback.
+/// It also takes px values and converts them to rem.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/rem caniuse
-///@link http://www.w3.org/TR/css3-values/#relative0 spec
+/// @link http://caniuse.com/rem caniuse
+/// @link http://www.w3.org/TR/css3-values/#relative0 spec
 ///
 ///
-///@param {String} property
-///@param {String} values
-///@param {Number} default-font-size - optional
+/// @param {String} property
+/// @param {String} values
+/// @param {Number} default-font-size - optional
 ///
-///@require strip-unit
+/// @require strip-unit
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   <property>: <parsed value>px;
 ///   <property>: <parsed value>rem;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-rem(font-size, 1.3);
 ///     @include x-rem(padding, 20px);
@@ -951,23 +950,23 @@
 }
 
 ///
-///Sass-mixin for CSS property `tab-size`, generates cross-browser-compatible
-///`tab-size` output.
+/// Sass-mixin for CSS property `tab-size`, generates cross-browser-compatible
+/// `tab-size` output.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css3-tabsize caniuse
-///@link http://dev.w3.org/csswg/css-text/#tab-size1 spec
+/// @link http://caniuse.com/css3-tabsize caniuse
+/// @link http://dev.w3.org/csswg/css-text/#tab-size1 spec
 ///
-///@param {Number} value[4] - optional
+/// @param {Number} value[4] - optional
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///  -moz-tab-size: <value>;
 ///       tab-size: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///  .selector {
 ///    @include x-tab-size(4);
 ///   }
@@ -978,23 +977,23 @@
 }
 
 ///
-///Generates cross-browser-compatible `transform` for a given element
+/// Generates cross-browser-compatible `transform` for a given element
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/transforms2d caniuse 2d
-///@link http://caniuse.com/transforms3d caniuse 3d
-///@link spec
+/// @link http://caniuse.com/transforms2d caniuse 2d
+/// @link http://caniuse.com/transforms3d caniuse 3d
+/// @link spec
 ///
-///@param {String} values
-///@output
-///```css
+/// @param {String} values
+/// @output
+/// ```css
 ///  -webkit-transform: <values>;
 ///      -ms-transform: <values>;
 ///          transform: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///  .selector {
 ///    @include x-transform(rotate(1deg));
 ///  }
@@ -1006,21 +1005,21 @@
 }
 
 ///
-///Generates cross-browser-compatible `transition` output for a given element.
+/// Generates cross-browser-compatible `transition` output for a given element.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-transitions caniuse
-///@link spec
+/// @link http://caniuse.com/css-transitions caniuse
+/// @link spec
 ///
-///@param values
-///@output
-///```css
+/// @param values
+/// @output
+/// ```css
 ///   -webkit-transition: <values>;
 ///           transition: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-transition(background 0.3s ease-in);
 ///   }
@@ -1031,23 +1030,23 @@
 }
 
 ///
-///Disables selection of content of a given element
+/// Disables selection of content of a given element
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/user-select-none caniuse
+/// @link http://caniuse.com/user-select-none caniuse
 ///
-///@param {none|auto} value[none] - optional
+/// @param {none|auto} value[none] - optional
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-user-select: <value>;
 ///      -moz-user-select: <value>;
 ///       -ms-user-select: <value>;
 ///           user-select: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-user-select;
 ///   }

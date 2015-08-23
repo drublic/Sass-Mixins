@@ -1,26 +1,26 @@
 ///
-///These mixins generates Media Queries
+/// These mixins generates Media Queries
 ///
-///Note: Please use the CSS unit `em` for device-width in order to stay
-///responsive.
+/// Note: Please use the CSS unit `em` for device-width in order to stay
+/// responsive.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/#feat=css-mediaqueries caniuse
-///@link http://www.w3.org/TR/css3-mediaqueries/ spec
+/// @link http://caniuse.com/#feat=css-mediaqueries caniuse
+/// @link http://www.w3.org/TR/css3-mediaqueries/ spec
 ///
-///@param {number} device-width
+/// @param {number} device-width
 ///
-///@content
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media screen and (min-width: <device-width>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-at-least(40em) { width: 60%; }
 ///   }
@@ -32,17 +32,17 @@
 }
 
 ///
-///@param {number} device-width
-///@content
+/// @param {number} device-width
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media screen and (max-width: <device-width - 0.01>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-until(40em) { width: 100%; }
 ///   }
@@ -54,22 +54,22 @@
 }
 
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@param {string} point
-///@param {number} bp-mobile-width
-///@param {number} bp-tablet-width
+/// @param {string} point
+/// @param {number} bp-mobile-width
+/// @param {number} bp-tablet-width
 ///
-///@content
+/// @content
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   @media (max-width: <bp-mobile-width>) {
 ///      <content>
 ///   }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     x-breakpoints(mobile,  320px) { width: 100%; }
 ///   }

@@ -1,11 +1,11 @@
 ///
-///Helper for old syntax in linear-gradients
+/// Helper for old syntax in linear-gradients
 ///
-///Return the corrected angle or position for a css gradient
+/// Return the corrected angle or position for a css gradient
 ///
-///@param {Number|String} deg
+/// @param {Number|String} deg
 ///
-///@return {Number|String}
+/// @return {Number|String}
 ///
 
 @function angle ($deg) {
@@ -21,11 +21,11 @@
 	}
 }
 ///
-///helper gradient angle
+/// helper gradient angle
 ///
-///@param {String} direction
+/// @param {String} direction
 ///
-///@return {String}
+/// @return {String}
 ///
 @function helper-gradient-angle ($direction) {
 

@@ -1,11 +1,11 @@
 /// A function for prefixing gradients
 ///
-///@todo define old webkit mode
+/// @todo define old webkit mode
 ///
-///@param {'webkit-old'|'webkit'|''} mode
-///@param gradient
+/// @param {'webkit-old'|'webkit'|''} mode
+/// @param gradient
 ///
-///@returns {string} `-<mode>-linear-gradient(<gradient>)`
+/// @returns {string} `-<mode>-linear-gradient(<gradient>)`
 ///
 @function prefixed-gradient ($mode, $gradient) {
 
@@ -42,17 +42,17 @@
 
 
 ///
-///This mixin generates multiple backgrounds
+/// This mixin generates multiple backgrounds
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-gradients caniuse
-///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+/// @link http://caniuse.com/css-gradients caniuse
+/// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
 ///
-///@param {list} backgrounds
+/// @param {list} backgrounds
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-multiple-backgrounds(
 ///       rgba(0, 0, 0, 0.3),

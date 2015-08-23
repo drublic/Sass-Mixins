@@ -1,21 +1,21 @@
 ///
-///Generates cross-browser-compatible `transform` for a given element
+/// Generates cross-browser-compatible `transform` for a given element
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/transforms2d caniuse 2d
-///@link http://caniuse.com/transforms3d caniuse 3d
-///@link spec
+/// @link http://caniuse.com/transforms2d caniuse 2d
+/// @link http://caniuse.com/transforms3d caniuse 3d
+/// @link spec
 ///
-///@param {String} values
-///@output
-///```css
+/// @param {String} values
+/// @output
+/// ```css
 ///  -webkit-transform: <values>;
 ///      -ms-transform: <values>;
 ///          transform: <values>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///  .selector {
 ///    @include x-transform(rotate(1deg));
 ///  }

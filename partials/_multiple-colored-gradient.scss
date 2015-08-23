@@ -1,24 +1,24 @@
 ///
-///This mixin creates (endless) multiple color stops in gradients just with one
-///call for the mixin.
+/// This mixin creates (endless) multiple color stops in gradients just with one
+/// call for the mixin.
 ///
 /// Note: This mixis does not define a fallback-color for your background as it
 /// is likely you want to add an image or something. Please specify one by
 /// yourself.
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/css-gradients caniuse
-///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+/// @link http://caniuse.com/css-gradients caniuse
+/// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
-///@param {list} stops
+/// @param {list} stops
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
 ///   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-multiple-colored-gradient(
 ///         "top",
@@ -66,11 +66,11 @@
 
 
 ///
-///Returns whether a value is a valid keyword direction
+/// Returns whether a value is a valid keyword direction
 ///
-///@param {String} value
+/// @param {String} value
 ///
-///@returns {Bool}
+/// @returns {Bool}
 ///
 @function is-valid-keyword-direction($value) {
   @return not not index(

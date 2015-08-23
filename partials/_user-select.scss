@@ -1,21 +1,21 @@
 ///
-///Disables selection of content of a given element
+/// Disables selection of content of a given element
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/user-select-none caniuse
+/// @link http://caniuse.com/user-select-none caniuse
 ///
-///@param {none|auto} value[none] - optional
+/// @param {none|auto} value[none] - optional
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   -webkit-user-select: <value>;
 ///      -moz-user-select: <value>;
 ///       -ms-user-select: <value>;
 ///           user-select: <value>;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-user-select;
 ///   }

@@ -1,13 +1,13 @@
 ///
-///Generates `placeholder` content for a given element
+/// Generates `placeholder` content for a given element
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
-///@link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
+/// @link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///    &::-webkit-input-placeholder {
 ///        <content>
 ///    }
@@ -17,9 +17,9 @@
 ///    &:-ms-input-placeholder {
 ///        <content>
 ///    }
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-placeholder {
 ///         color: #bada55;

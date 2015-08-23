@@ -1,30 +1,30 @@
 ///
-///Generates a linear gradient for a given element with a fallback color.
+/// Generates a linear gradient for a given element with a fallback color.
 ///
-///Note: By default this linear-gradient-mixin encourages people to use the
-///latest CSS-syntax for gradients.
+/// Note: By default this linear-gradient-mixin encourages people to use the
+/// latest CSS-syntax for gradients.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/#feat=css-gradients caniuse
-///@link https://drafts.csswg.org/css-images-3/#linear-gradients spec
+/// @link http://caniuse.com/#feat=css-gradients caniuse
+/// @link https://drafts.csswg.org/css-images-3/#linear-gradients spec
 ///
-///@require helper-gradient-angle
+/// @require helper-gradient-angle
 ///
-///@param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
-///@param {color} fallback [#ccc]
-///@param {color} from [#ccc]
-///@param {color} to [#aaa]
+/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
+/// @param {color} fallback [#ccc]
+/// @param {color} from [#ccc]
+/// @param {color} to [#aaa]
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   background-color: <fallback>;
 ///   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
 ///   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
 ///   background-image:         linear-gradient(<direction>, <from>, <to>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
 ///   }

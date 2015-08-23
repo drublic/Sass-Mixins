@@ -1,10 +1,10 @@
 ///
-///Returns a number without unit. E.g. 30px -> 30
+/// Returns a number without unit. E.g. 30px -> 30
 ///
-///Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+/// Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
 ///
-///@param {String} value
-///@returns {Number}
+/// @param {String} value
+/// @returns {Number}
 ///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
@@ -12,31 +12,31 @@
 
 
 ///
-///This mixin enables you to use the CSS3 value `rem`, which lets you define
-///property sizes based on the root element's font-size.
+/// This mixin enables you to use the CSS3 value `rem`, which lets you define
+/// property sizes based on the root element's font-size.
 ///
-///Outputs properties that use rem with a px fallback.
-///It also takes px values and converts them to rem.
+/// Outputs properties that use rem with a px fallback.
+/// It also takes px values and converts them to rem.
 ///
-///@author drublic
+/// @author drublic
 ///
-///@link http://caniuse.com/rem caniuse
-///@link http://www.w3.org/TR/css3-values/#relative0 spec
+/// @link http://caniuse.com/rem caniuse
+/// @link http://www.w3.org/TR/css3-values/#relative0 spec
 ///
 ///
-///@param {String} property
-///@param {String} values
-///@param {Number} default-font-size - optional
+/// @param {String} property
+/// @param {String} values
+/// @param {Number} default-font-size - optional
 ///
-///@require strip-unit
+/// @require strip-unit
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   <property>: <parsed value>px;
 ///   <property>: <parsed value>rem;
-///```
+/// ```
 ///
-///@example
+/// @example
 ///   .selector {
 ///     @include x-rem(font-size, 1.3);
 ///     @include x-rem(padding, 20px);

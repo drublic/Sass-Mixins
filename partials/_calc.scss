@@ -1,21 +1,21 @@
 ///
-///Generates `calc` function which allows mathematical expressions for a given property
+/// Generates `calc` function which allows mathematical expressions for a given property
 ///
-///@author romamatusevich
+/// @author romamatusevich
 ///
-///@link http://caniuse.com/calc caniuse
-///@link http://www.w3.org/TR/css3-values/#calc spec
+/// @link http://caniuse.com/calc caniuse
+/// @link http://www.w3.org/TR/css3-values/#calc spec
 ///
-///@param {String} property
-///@param {String} expression
+/// @param {String} property
+/// @param {String} expression
 ///
-///@output
-///```css
+/// @output
+/// ```css
 ///   <property>: -webkit-calc(<expression>);
 ///   <property>: calc(<expression>);
-///```
+/// ```
 ///
-///@example
+/// @example
 ///  .selector {
 ///    @include x-calc(width, "600px - 2em");
 ///  }
