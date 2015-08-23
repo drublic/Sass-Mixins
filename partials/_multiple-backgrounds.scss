@@ -5,7 +5,7 @@
 /// @param {'webkit-old'|'webkit'|''} $mode
 /// @param $gradient
 ///
-/// @returns {string} `-<mode>-linear-gradient(<gradient>)`
+/// @returns {String} `-<mode>-linear-gradient(<gradient>)`
 ///
 @function prefixed-gradient ($mode, $gradient) {
 
