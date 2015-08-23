@@ -1,35 +1,40 @@
-/*! sass-mixins - v0.11.0 - 2014-10-20 *//**
- * @description
- * Generates keyframe animations
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/#feat=css-animation
- * @link spec http://www.w3.org/TR/css3-animations/
- *
- * @param values
- * @returns
- *   -webkit-animation: <values>;
- *           animation: <values>;
- *
- * @example
- *   .selector {
- *     @include x-animation(jump 1s ease-out);
- *   }
- */
+/*! sass-mixins - v0.12.0 - 2015-08-23 *////
+/// Generates keyframe animations
+///
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/#feat=css-animation caniuse
+/// @link http://www.w3.org/TR/css3-animations/ spec
+///
+/// @param {String} values
+///
+///
+/// @output
+/// ```css
+///     -webkit-animation: <values>;
+///             animation: <values>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-animation(jump 1s ease-out);
+///   }
+///
 
 @mixin x-animation ($values) {
 	-webkit-animation: $values;
 	        animation: $values;
 }
 
-/*
- * @example
- *    @include x-keyframes(jump) {
- *      from { top: 0; }
- *      to { top: -10px; }
- *   }
- */
+
+/// @param {String} $name
+/// @example
+///    @include x-keyframes(jump) {
+///      from { top: 0; }
+///      to { top: -10px; }
+///   }
+///
 @mixin x-keyframes ($name) {
 	@-webkit-keyframes #{$name} {
 		@content;
@@ -40,197 +45,214 @@
 	}
 }
 
-/**
- * @description
- * Generates `appearance` for a given element
- *
- * @author romamatusevich
- *
- * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
- * @link css-tricks http://css-tricks.com/almanac/properties/a/appearance/
- * @link spec http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance
- *
- * @param value
- * @returns
- *   -webkit-appearance: <value>;
- *      -moz-appearance: <value>;
- *           appearance: <value>;
- *
- * @example
- *   .selector {
- *     @include x-appearance(button);
- *   }
- */
+///
+/// Generates appearance for a given element
+///
+///@author romamatusevich
+///
+///@param {String} value
+///
+///@output
+///```css
+///   -webkit-appearance: <value>;
+///      -moz-appearance: <value>;
+///           appearance: <value>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-appearance(button);
+///   }
+///
 @mixin x-appearance ($value) {
 	-webkit-appearance: $value;
 	   -moz-appearance: $value;
 	        appearance: $value;
 }
 
-/**
- * @description
- * Generates `background-size` output for a given element.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/background-img-opts
- * @link spec http://www.w3.org/TR/css3-background/
- *
- * @param value
- * @returns
- *   -webkit-background-size: $args;
- *           background-size: $args;
- *
- * @example
- *   .selector {
- *     @include x-background-size(100% auto);
- *   }
- */
+///
+/// Generates `background-size` output for a given element.
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/background-img-opts caniuse
+/// @link http://www.w3.org/TR/css3-background/ spec
+///
+/// @param {String} value
+///
+/// @output
+/// ```css
+///   -webkit-background-size: $args;
+///           background-size: $args;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-background-size(100% auto);
+///   }
+///
 @mixin x-background-size ($values...) {
     -webkit-background-size: $values; // For Android 2.x
             background-size: $values;
 }
 
-/**
- * @description
- * Generates cross-browser-compatible `border-radius` for a given element
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/border-radius
- * @link spec http://www.w3.org/TR/css3-background/#corners
- *
- * @param values
- * @returns
- *   -webkit-border-radius: <values>;
- *           border-radius: <values>;
- *
- * @example
- *   .selector {
- *     @include x-border-radius(20px 10px);
- *   }
- */
+///
+/// Generates cross-browser-compatible `border-radius` for a given element
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/border-radius caniuse
+/// @link http://www.w3.org/TR/css3-background/#corners spec
+///
+/// @param {String} values
+///
+/// @output
+/// ```css
+///   -webkit-border-radius: <values>;
+///           border-radius: <values>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-border-radius(20px 10px);
+///   }
+///
 @mixin x-border-radius ($values) {
 	-webkit-border-radius: $values; // iOS Safari 3.2, Android 2.1
 	        border-radius: $values;
 }
 
-/**
- * @description
- * Generates cross-browser-compatible `box-shadow` for a given element
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css-boxshadow
- * @link spec http://www.w3.org/TR/css3-background/#the-box-shadow
- *
- * @param values
- * @returns
- *   -webkit-box-shadow: <values>;
- *           box-shadow: <values>;
- *
- * @example
- *   .selector {
- *     @include x-box-shadow(5px 5px 10px 5px #aaa);
- *   }
- */
+///
+/// Generates cross-browser-compatible `box-shadow` for a given element
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/css-boxshadow caniuse
+/// @link http://www.w3.org/TR/css3-background/#the-box-shadow spec
+///
+/// @param {String} values
+///
+/// @output
+/// ```css
+///   -webkit-box-shadow: <values>;
+///           box-shadow: <values>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-box-shadow(5px 5px 10px 5px #aaa);
+///   }
+///
 @mixin x-box-shadow ($values...) {
 	-webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
 	        box-shadow: $values;
 }
 
-/**
- * @description
- * Generates cross-browser-compatible `box-sizing` output for a given element.
- *
- * @author drublic
- *
- * @link caniuse
- * @link spec
- *
- * @param type
- * @returns
- *   -webkit-box-sizing: <type>;
- *      -moz-box-sizing: <type>;
- *           box-sizing: <type>;
- *
- * @example
- *   .selector {
- *     @include x-box-sizing;
- *   }
- */
+///
+///Generates cross-browser-compatible `box-sizing` output for a given element.
+///
+///@author drublic
+///
+///
+///@link http://caniuse.com/#feat=css3-boxsizing caniuse
+///@link http://www.w3.org/TR/css3-ui/#box-sizing spec
+///
+///@param {String} type
+///
+///@output
+///```css
+///   -webkit-box-sizing: <type>;
+///      -moz-box-sizing: <type>;
+///           box-sizing: <type>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-box-sizing;
+///   }
+///
 @mixin x-box-sizing ($type: border-box) {
 	-webkit-box-sizing: $type; // Safari <= 5.0, Chrome <= 9.0, iOS Safari 3.2 - 4.3 and Android 2.1 - 3.0
 	   -moz-box-sizing: $type; // FF 2.0 - 28.0
 	        box-sizing: $type; // IE 8, Opera 9.5+
 }
 
-/**
- * @description
- * These mixins generates Media Queries
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/#feat=css-mediaqueries
- * @link spec http://www.w3.org/TR/css3-mediaqueries/
- *
- * Note: Please use the CSS unit `em` for device-width in order to stay
- * responsive.
- */
-
-/**
- * @param device-width {number}
- * @content
- * @returns
- *   @media screen and (min-width: <device-width>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-at-least(40em) { width: 60%; }
- *   }
- */
+///
+///These mixins generates Media Queries
+///
+///Note: Please use the CSS unit `em` for device-width in order to stay
+///responsive.
+///
+///@author drublic
+///
+///@link http://caniuse.com/#feat=css-mediaqueries caniuse
+///@link http://www.w3.org/TR/css3-mediaqueries/ spec
+///
+///@param {number} device-width
+///
+///@content
+///
+///@output
+///```css
+///   @media screen and (min-width: <device-width>) {
+///      <content>
+///   }
+///```
+///
+///@example
+///   .selector {
+///     x-at-least(40em) { width: 60%; }
+///   }
+///
 @mixin x-at-least ($device-width) {
 	@media screen and (min-width: $device-width) {
 		@content;
 	}
 }
 
-/**
- * @param device-width {number}
- * @content
- * @returns
- *   @media screen and (max-width: <device-width - 0.01>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-until(40em) { width: 100%; }
- *   }
- */
+///
+///@param {number} device-width
+///@content
+///
+///@output
+///```css
+///   @media screen and (max-width: <device-width - 0.01>) {
+///      <content>
+///   }
+///```
+///
+///@example
+///   .selector {
+///     x-until(40em) { width: 100%; }
+///   }
+///
 @mixin x-until ($device-width) {
 	@media screen and (max-width: $device-width - 0.01) {
 		@content;
 	}
 }
 
-/**
- * @author romamatusevich
- *
- * @param point{string}, bp-mobile-width{number}, bp-tablet-width{number} 
- * @content
- * @returns
- *   @media (max-width: <bp-mobile-width>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-breakpoints(mobile,  320px) { width: 100%; }
- *   }
- */
+///
+///@author romamatusevich
+///
+///@param {string} point
+///@param {number} bp-mobile-width
+///@param {number} bp-tablet-width
+///
+///@content
+///
+///@output
+///```css
+///   @media (max-width: <bp-mobile-width>) {
+///      <content>
+///   }
+///```
+///
+///@example
+///   .selector {
+///     x-breakpoints(mobile,  320px) { width: 100%; }
+///   }
+///
 @mixin x-breakpoints($point, $bp-mobile-width: 640px, $bp-tablet-width: 1024px) {
 	$bp-mobile: '(max-width: #{$bp-mobile-width})';
 	$bp-tablet: '(min-width: #{$bp-mobile-width}) and (max-width: #{$bp-tablet-width})';
@@ -251,58 +273,61 @@
 			@content;
 		}
 	}
+	@else {
+		@warn "You are requesting an invalid breakpoint: `#{$point}`.";
+	}
 }
 
-/**
- * @description
- * Generates `calc` function which allows mathematical expressions for a given property
- *
- * @author romamatusevich
- *
- * @link spec http://www.w3.org/TR/css3-values/#calc
- * @link caniuse http://caniuse.com/calc
- *
- * @param property
- * @param expression
- *
- * @returns
- *    <property>: -webkit-calc(<expression>);
- *    <property>: calc(<expression>);
- *
- * @example
- *   .selector {
- *     @include x-calc(width, "600px - 2em");
- *   }
- */
+///
+///Generates `calc` function which allows mathematical expressions for a given property
+///
+///@author romamatusevich
+///
+///@link http://caniuse.com/calc caniuse
+///@link http://www.w3.org/TR/css3-values/#calc spec
+///
+///@param {String} property
+///@param {String} expression
+///
+///@output
+///```css
+///   <property>: -webkit-calc(<expression>);
+///   <property>: calc(<expression>);
+///```
+///
+///@example
+///  .selector {
+///    @include x-calc(width, "600px - 2em");
+///  }
+///
 @mixin x-calc ($property, $expression) {
 	#{$property}: -webkit-calc(#{$expression});
 	#{$property}: calc(#{$expression});
 }
 
-/**
- * @description
- * Generates flexbox properties for a given element
- *
- * @author romamatusevich
- *
- * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
- * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
- * @link spec http://www.w3.org/TR/css3-flexbox/
- */
-
-/**
- * @returns
- *   display: -webkit-box;
- *   display: -moz-box;
- *   display: -ms-flexbox;
- *   display: -webkit-flex;
- *   display: flex;
- *
- * @example
- *   .selector {
- *     @include x-display-flex;
- *   }
- */
+///
+///Generates flexbox properties for a given element
+///
+///@author romamatusevich
+///
+///@link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
+///@link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
+///@link http://www.w3.org/TR/css3-flexbox/ spec
+///
+///@output
+///```css
+///   display: -webkit-box;
+///   display: -moz-box;
+///   display: -ms-flexbox;
+///   display: -webkit-flex;
+///   display: flex;
+///```
+///
+///@example
+///   .selector {
+///     @include x-display-flex;
+///   }
+///
 @mixin x-display-flex {
 	display: -webkit-box;  // Chrome 20-, iOS 6-, Safari 3.1  -6
 	display: -moz-box;     // FF 19-
@@ -311,20 +336,22 @@
 	display: flex;         // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param values
- * @returns
- *   -webkit-box-flex: <values>;
- *      -moz-box-flex: <values>;
- *       -webkit-flex: <values>;
- *           -ms-flex: <values>;
- *               flex: <values>;
- *
- * @example
- *   .selector {
- *     @include x-flex(1 1 auto);
- *   }
- */
+///
+///@param {String} values
+///@output
+///```css
+///   -webkit-box-flex: <values>;
+///      -moz-box-flex: <values>;
+///       -webkit-flex: <values>;
+///           -ms-flex: <values>;
+///               flex: <values>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-flex(1 1 auto);
+///   }
+///
 @mixin x-flex ($values...) {
 	-webkit-box-flex: $values; // Chrome 20-, iOS 6-, Safari 3.1 - 6
 	   -moz-box-flex: $values; // FF 19-
@@ -333,20 +360,22 @@
 	            flex: $values; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param value
- * @returns
- *   -webkit-box-ordinal-group: <value>;
- *      -moz-box-ordinal-group: <value>;
- *              -ms-flex-order: <value>;
- *               -webkit-order: <value>;
- *                       order: <value>;
- *
- * @example
- *   .selector {
- *     @include x-order(1);
- *   }
- */
+///
+///@param {Number} value
+///@output
+///```css
+///   -webkit-box-ordinal-group: <value>;
+///      -moz-box-ordinal-group: <value>;
+///              -ms-flex-order: <value>;
+///               -webkit-order: <value>;
+///                       order: <value>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-order(1);
+///   }
+///
 @mixin x-order ($value) {
 	-webkit-box-ordinal-group: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
 	   -moz-box-ordinal-group: $value; // FF 19-
@@ -355,18 +384,21 @@
 	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param value
- * @returns
- *    -webkit-flex-wrap: <value>;
- *        -ms-flex-wrap: <value>;
- *            flex-wrap: <value>;
- *
- * @example
- *   .selector {
- *     @include x-flex-wrap(wrap);
- *   }
- */
+///
+///@param {String} value
+///
+///@output
+///```css
+///    -webkit-flex-wrap: <value>;
+///        -ms-flex-wrap: <value>;
+///            flex-wrap: <value>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-flex-wrap(wrap);
+///   }
+///
 @mixin x-flex-wrap ($value) {
 	// IE 10
 	@if $value == nowrap {
@@ -378,18 +410,21 @@
 	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
 }
 
-/**
- * @param value
- * @returns
- *   -webkit-align-content: <value>;
- *      -moz-align-content: <value>;
- *      -ms-flex-line-pack: <value>;
- *           align-content: <value>;
- * @example
- *   .selector {
- *     @include x-align-content(center);
- *   }
- */
+///
+///@param value
+///
+///@output
+///```css
+///   -webkit-align-content: <value>;
+///      -moz-align-content: <value>;
+///      -ms-flex-line-pack: <value>;
+///           align-content: <value>;
+///```
+///@example
+///   .selector {
+///     @include x-align-content(center);
+///   }
+///
  @mixin x-align-content ($value) {
  	// IE 10
  	@if $value == flex-start {
@@ -408,22 +443,25 @@
 	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
  }
 
-/**
- * @param value
- * @returns
- *	  -webkit-box-direction: <value>;
- *		 -moz-box-direction: <value>;
- *       -webkit-box-orient: <value>;
- *		    -moz-box-orient: <value>;
- *   -webkit-flex-direction: <value>;
- *      -moz-flex-direction: <value>;
- *       -ms-flex-direction: <value>;
- *           flex-direction: <value>;
- * @example
- *   .selector {
- *     @include x-flex-direction(row-reverse);
- *   }
- */
+///
+///@param {string} value
+///@output
+///```css
+///    -webkit-box-direction: <value>;
+///       -moz-box-direction: <value>;
+///       -webkit-box-orient: <value>;
+///          -moz-box-orient: <value>;
+///   -webkit-flex-direction: <value>;
+///      -moz-flex-direction: <value>;
+///       -ms-flex-direction: <value>;
+///           flex-direction: <value>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-flex-direction(row-reverse);
+///   }
+///
  @mixin x-flex-direction ($value) {
 	@if $value == row {
 		-webkit-box-direction: normal;
@@ -453,11 +491,17 @@
  	        flex-direction: $value;
  }
 
-/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
+///@todo add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins
 
-// Helper for old syntax in linear-gradients
-
-// Return the corrected angle or position for a css gradient
+///
+///Helper for old syntax in linear-gradients
+///
+///Return the corrected angle or position for a css gradient
+///
+///@param {Number|String} deg
+///
+///@return {Number|String}
+///
 
 @function angle ($deg) {
 	@if type-of($deg) == 'number' {
@@ -471,7 +515,13 @@
 		@return $position;
 	}
 }
-
+///
+///helper gradient angle
+///
+///@param {String} direction
+///
+///@return {String}
+///
 @function helper-gradient-angle ($direction) {
 
 	$old-direction: $direction;
@@ -508,36 +558,37 @@
 }
 
 
-/**
- * @description
- * Generates a linear gradient for a given element with a fallback color.
- *
- * @author drublic
- *
- * @link caniuse
- * @link spec
- *
- * @dependency helper-gradient-angle
- * @param direction {'to bottom'|'to right'|'to top'|'to left'|<degree>}
- * @param fallback {color}
- * @param from {color}
- * @param to {color}
- * @default 'to bottom', #ccc, #ccc, #aaa
- *
- * @returns
- *   background-color: <fallback>;
- *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
- *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
- *   background-image:         linear-gradient(<direction>, <from>, <to>);
- *
- * @example
- *   .selector {
- *     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
- *   }
- *
- * Note: By default this linear-gradient-mixin encourages people to use the
- * latest CSS-syntax for gradients.
- */
+///
+///Generates a linear gradient for a given element with a fallback color.
+///
+///Note: By default this linear-gradient-mixin encourages people to use the
+///latest CSS-syntax for gradients.
+///
+///@author drublic
+///
+///@link http://caniuse.com/#feat=css-gradients caniuse
+///@link https://drafts.csswg.org/css-images-3/#linear-gradients spec
+///
+///@require helper-gradient-angle
+///
+///@param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
+///@param {color} fallback [#ccc]
+///@param {color} from [#ccc]
+///@param {color} to [#aaa]
+///
+///@output
+///```css
+///   background-color: <fallback>;
+///   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
+///   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
+///   background-image:         linear-gradient(<direction>, <from>, <to>);
+///```
+///
+///@example
+///   .selector {
+///     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+///   }
+///
 @mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
 
 	$directions: helper-gradient-angle($direction);
@@ -551,24 +602,15 @@
 	background-image:         linear-gradient(unquote($direction), $from, $to);
 }
 
-/**
- * @description
- * This mixin generates multiple backgrounds
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css-gradients
- * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
- */
-
-/*
- * A function for prefixing gradients
- *
- * @param mode {'webkit-old'|'webkit'|''}
- * @param gradient
- * @returns
- *   -<mode>-linear-gradient(<gradient>);
- */
+/// A function for prefixing gradients
+///
+///@todo define old webkit mode
+///
+///@param {'webkit-old'|'webkit'|''} mode
+///@param gradient
+///
+///@returns {string} `-<mode>-linear-gradient(<gradient>)`
+///
 @function prefixed-gradient ($mode, $gradient) {
 
 	$prefix: '-' + $mode + '-';
@@ -603,20 +645,26 @@
 }
 
 
-/*
- * Generates multiple backgrounds
- *
- * @param backgrounds {list}
- *
- * @example
- *   .selector {
- *     @include x-multiple-backgrounds(
- *       rgba(0, 0, 0, 0.3),
- *       url('../img/html5_logo.png') top right no-repeat,
- *       (linear-gradient, to bottom, #aaa, #ddd)
- *     );
- *   }
- */
+///
+///This mixin generates multiple backgrounds
+///
+///@author drublic
+///
+///@link http://caniuse.com/css-gradients caniuse
+///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+///
+///
+///@param {list} backgrounds
+///
+///@example
+///   .selector {
+///     @include x-multiple-backgrounds(
+///       rgba(0, 0, 0, 0.3),
+///       url('../img/html5_logo.png') top right no-repeat,
+///       (linear-gradient, to bottom, #aaa, #ddd)
+///     );
+///   }
+///
 @mixin x-multiple-backgrounds ($backgrounds...) {
 	$combined-background-webkit-old: ();
 	$combined-background-webkit: ();
@@ -670,55 +718,49 @@
 
 }
 
-/**
- * @description
- * This mixin creates (endless) multiple color stops in gradients just with one
- * call for the mixin.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css-gradients
- * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
- *
- * @param stops {list}
- * @returns
- *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *
- * @example
- *   .selector {
- *     @include x-multiple-colored-gradient((
- *         "top",
- *         #f22 0%,
- *         #f2f 15%,
- *         #22f 30%,
- *         #2ff 45%,
- *         #2f2 60%,
- *         #2f2 75%,
- *         #ff2 90%,
- *         #f22 100%
- *     ));
- *   }
- *
- * Note: This mixis does not define a fallback-color for your background as it
- * is likely you want to add an image or something. Please specify one by
- * yourself.
- */
-@mixin x-multiple-colored-gradient ($args) {
+///
+///This mixin creates (endless) multiple color stops in gradients just with one
+///call for the mixin.
+///
+/// Note: This mixis does not define a fallback-color for your background as it
+/// is likely you want to add an image or something. Please specify one by
+/// yourself.
+///@author drublic
+///
+///@link http://caniuse.com/css-gradients caniuse
+///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+///
+///@param {list} stops
+///
+///@output
+///```css
+///   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+///   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+///```
+///
+///@example
+///   .selector {
+///     @include x-multiple-colored-gradient(
+///         "top",
+///         #f22 0%,
+///         #f2f 15%,
+///         #22f 30%,
+///         #2ff 45%,
+///         #2f2 60%,
+///         #2f2 75%,
+///         #ff2 90%,
+///         #f22 100%
+///     );
+///   }
+///
+@mixin x-multiple-colored-gradient ($args...) {
 
 	$gradient: ();
 	$pos: nth($args, 1);
 	$pos_newsyntax: ();
 
-	@if ($pos != 'top')
-		and ($pos != 'right')
-		and ($pos != 'bottom')
-		and ($pos != 'left')
-		and ($pos != 'to top')
-		and ($pos != 'to right')
-		and ($pos != 'to bottom')
-		and ($pos != 'to left') {
-			$pos: 'top';
+	@if not is-valid-keyword-direction($pos) {
+		$pos: 'top';
 	}
 
 	// New Syntax
@@ -733,82 +775,91 @@
 	}
 
 	@each $g in $args {
-		@if ($g != 'top')
-			and ($g != 'right')
-			and ($g != 'bottom')
-			and ($g != 'left')
-			and ($g != 'to top')
-			and ($g != 'to right')
-			and ($g != 'to bottom')
-			and ($g != 'to left') {
-				$gradient: append($gradient, $g, comma);
+		@if not is-valid-keyword-direction($g) {
+			$gradient: append($gradient, $g, comma);
 		}
 	}
 
-	background-image:  -webkit-linear-gradient(unquote($pos), $gradient);
-	background-image: unquote('linear-gradient(#{$pos_newsyntax}, #{$gradient})');
+	background-image: -webkit-linear-gradient(unquote($pos), $gradient);
+	background-image:         linear-gradient(unquote($pos_newsyntax), $gradient);
 }
 
-/**
- * @description
- * Generates `opacity` output for a given element and adds a filter for old IE.
- *
- * @author bartveneman
- *
- * @link caniuse http://caniuse.com/css-opacity
- * @link spec http://www.w3.org/TR/css3-color/#transparency
- *
- * @param value
- * @returns
- *   opacity: <value>;
- *    filter: alpha(opacity=<value * 100>);
- *
- * @example
- *   .selector {
- *     @include x-opacity(0.3);
- *   }
- */
-@mixin x-opacity ($value: 1) {
-	$value-percentage : $value * 100;
+
+///
+///Returns whether a value is a valid keyword direction
+///
+///@param {String} value
+///
+///@returns {Bool}
+///
+@function is-valid-keyword-direction($value) {
+  @return not not index(
+    'top' 'right' 'bottom' 'left'
+    'to top' 'to right' 'to bottom' 'to left'
+    'to top right' 'to right top'
+    'to bottom right' 'to right bottom'
+    'to top left' 'to left top'
+    'to bottom left' 'to left bottom', $value);
+}
+
+///
+///Generates `opacity` output for a given element and adds a filter for old IE.
+///
+///@author bartveneman
+///
+///@link http://caniuse.com/css-opacity caniuse
+///@link http://www.w3.org/TR/css3-color/#transparency spec
+///
+///@param {Value} value[0]
+///
+///@output
+///```css
+///   opacity: <value>;
+///    filter: alpha(opacity=<value * 100>);
+///```
+///
+///@example
+///   .selector {
+///     @include x-opacity(0.3);
+///   }
+///
+@mixin x-opacity ($value: 0) {
+	$value-percentage: $value * 100;
 
 	opacity: $value;
-	filter: alpha(opacity=$value-percentage);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value-percentage})";
+	filter: alpha(opacity=#{$value-percentage});
 }
 
-/**
- * @description
- * Generates `placeholder` content for a given element
- *
- * @author romamatusevich
- *
- * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
- * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
- *
- * @returns
- *    &::-webkit-input-placeholder {
- *        <content property 1>: <content value 1>;
- *        ...
- *        <content property n>: <content value n>;
- *    }
- *    &::-moz-placeholder {
- *        <content property 1>: <content value 1>;
- *        ...
- *        <content property n>: <content value n>;
- *    }
- *    &:-ms-input-placeholder {
- *        <content property 1>: <content value 1>;
- *        ...
- *        <content property n>: <content value n>;
- *    }
- *
- * @example
- *   .selector {
- *     @include x-placeholder {
- *         color: #bada55;
- *         font-weight: bold;
- *     }
- *   }
- */
+///
+///Generates `placeholder` content for a given element
+///
+///@author romamatusevich
+///
+///@link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
+///@link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
+///
+///@output
+///```css
+///    &::-webkit-input-placeholder {
+///        <content>
+///    }
+///    &::-moz-placeholder {
+///        <content>
+///    }
+///    &:-ms-input-placeholder {
+///        <content>
+///    }
+///```
+///
+///@example
+///   .selector {
+///     @include x-placeholder {
+///         color: #bada55;
+///         font-weight: bold;
+///     }
+///   }
+///
 @mixin x-placeholder {
 	&::-webkit-input-placeholder {
 		@content // Chrome, Safari, Opera
@@ -821,50 +872,50 @@
 	}
 }
 
-/**
- * @description
- * This mixin enables you to use the CSS3 value `rem`, which lets you define
- * property sizes based on the root element's font-size.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/rem
- * @link spec http://www.w3.org/TR/css3-values/#relative0
- *
- * Note: Depending on the font-size of the root-element `rem` calculates a
- * property of a current element. The fallback solution accepts a
- * `default-font-size`-argument which is 16px by default.
- */
-
- /*
-  * Returns a number without unit. E.g. 30px -> 30
-  * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
-  * 
-  * @param value {String}
-  * @returns
-  *   <Number>
-  */
+///
+///Returns a number without unit. E.g. 30px -> 30
+///
+///Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+///
+///@param {String} value
+///@returns {Number}
+///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
  }
 
- /*
-  * Outputs properties that use rem with a px fallback.
-  * It also takes px values and converts them to rem.
-  *
-  * @param property
-  * @param values
-  * @param default-font-size int optional
-  * @returns
-  *   <property>: <parsed value>px;
-  *   <property>: <parsed value>rem;
-  *
-  * @example
-  *   .selector {
-  *     @include x-rem(font-size, 1.3);
-  *     @include x-rem(padding, 20px);
-  *   }
-  */
+
+///
+///This mixin enables you to use the CSS3 value `rem`, which lets you define
+///property sizes based on the root element's font-size.
+///
+///Outputs properties that use rem with a px fallback.
+///It also takes px values and converts them to rem.
+///
+///@author drublic
+///
+///@link http://caniuse.com/rem caniuse
+///@link http://www.w3.org/TR/css3-values/#relative0 spec
+///
+///
+///@param {String} property
+///@param {String} values
+///@param {Number} default-font-size - optional
+///
+///@require strip-unit
+///
+///@output
+///```css
+///   <property>: <parsed value>px;
+///   <property>: <parsed value>rem;
+///```
+///
+///@example
+///   .selector {
+///     @include x-rem(font-size, 1.3);
+///     @include x-rem(padding, 20px);
+///   }
+///
 @mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
@@ -875,7 +926,7 @@
 	@each $value in $values {
 
 		// If the value is zero or of a type that doesn’t need conversion, return the value untouched
-		@if ( $value == 0 ) or type_of($value) == string or type_of($value) == color or type_of($value) == bool {
+		@if index(auto inherit initial none 0, $value) or type-of($value) != "number" {
 			$px-values: append($px-values, $value);
 			$rem-values: append($rem-values, $value);
 
@@ -884,11 +935,11 @@
 			$unit: unit($value);
 
 			@if $unit == 'px' {
-				$px-values: append($px-values, #{strip-unit($value)}px );
+				$px-values: append($px-values, #{strip-unit($value)} * 1px );
 				$rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
 			} @else {
 				$px-values: append($px-values, ($value * $main-font-size) );
-				$rem-values: append($rem-values, #{$value}rem);
+				$rem-values: append($rem-values, #{$value} * 1rem);
 			}
 
 		}
@@ -899,103 +950,108 @@
 	#{$property}: #{$rem-values};
 }
 
-/**
- * @description
- * Sass-mixin for CSS property `tab-size`, generates cross-browser-compatible
- * `tab-size` output.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css3-tabsize
- * @link spec http://dev.w3.org/csswg/css-text/#tab-size1
- *
- * @param value int optional
- * @default 4
- * @returns
- *   -moz-tab-size: <value>;
- *        tab-size: <value>;
- *
- * @example
- *   .selector {
- *     @include x-tab-size(4);
- *    }
- */
+///
+///Sass-mixin for CSS property `tab-size`, generates cross-browser-compatible
+///`tab-size` output.
+///
+///@author drublic
+///
+///@link http://caniuse.com/css3-tabsize caniuse
+///@link http://dev.w3.org/csswg/css-text/#tab-size1 spec
+///
+///@param {Number} value[4] - optional
+///
+///@output
+///```css
+///  -moz-tab-size: <value>;
+///       tab-size: <value>;
+///```
+///
+///@example
+///  .selector {
+///    @include x-tab-size(4);
+///   }
+///
 @mixin x-tab-size ($value: 4) {
 	-moz-tab-size: $value;
 	     tab-size: $value;
 }
 
-/**
- * @description
- * Generates cross-browser-compatible `transform` for a given element
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/transforms2d http://caniuse.com/transforms3d
- * @link spec
- *
- * @param values
- * @returns
- *   -webkit-transform: <values>;
- *       -ms-transform: <values>;
- *           transform: <values>;
- *
- * @example
- *   .selector {
- *     @include x-transform(rotate(1deg));
- *   }
- */
+///
+///Generates cross-browser-compatible `transform` for a given element
+///
+///@author drublic
+///
+///@link http://caniuse.com/transforms2d caniuse 2d
+///@link http://caniuse.com/transforms3d caniuse 3d
+///@link spec
+///
+///@param {String} values
+///@output
+///```css
+///  -webkit-transform: <values>;
+///      -ms-transform: <values>;
+///          transform: <values>;
+///```
+///
+///@example
+///  .selector {
+///    @include x-transform(rotate(1deg));
+///  }
+///
 @mixin x-transform ($values) {
 	-webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
 	    -ms-transform: $values; // IE9
 	        transform: $values;
 }
 
-/**
- * @description
- * Generates cross-browser-compatible `transition` output for a given element.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css-transitions
- * @link spec
- *
- * @param values
- * @returns
- *   -webkit-transition: <values>;
- *           transition: <values>;
- *
- * @example
- *   .selector {
- *     @include x-transition(background 0.3s ease-in);
- *   }
- */
+///
+///Generates cross-browser-compatible `transition` output for a given element.
+///
+///@author drublic
+///
+///@link http://caniuse.com/css-transitions caniuse
+///@link spec
+///
+///@param values
+///@output
+///```css
+///   -webkit-transition: <values>;
+///           transition: <values>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-transition(background 0.3s ease-in);
+///   }
+///
 @mixin x-transition ($values...) {
 	-webkit-transition: $values;
 	        transition: $values;
 }
 
-/**
- * @description
- * Disables selection of content of a given element
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/user-select-none
- *
- * @param value none|auto optional
- * @default none
- * @returns
- *   -webkit-user-select: <value>;
- *      -moz-user-select: <value>;
- *       -ms-user-select: <value>;
- *           user-select: <value>;
- *
- * @example
- *   .selector {
- *     @include x-user-select;
- *   }
- */
+///
+///Disables selection of content of a given element
+///
+///@author drublic
+///
+///@link http://caniuse.com/user-select-none caniuse
+///
+///@param {none|auto} value[none] - optional
+///
+///@output
+///```css
+///   -webkit-user-select: <value>;
+///      -moz-user-select: <value>;
+///       -ms-user-select: <value>;
+///           user-select: <value>;
+///```
+///
+///@example
+///   .selector {
+///     @include x-user-select;
+///   }
+///
 @mixin x-user-select ($value: none) {
 	-webkit-user-select: $value;
 	   -moz-user-select: $value;
