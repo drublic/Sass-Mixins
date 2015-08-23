@@ -11,8 +11,6 @@
 ///
 /// @param {Number} $device-width
 ///
-/// @content
-///
 /// @output
 /// ```css
 ///   @media screen and (min-width: <device-width>) {
@@ -33,7 +31,6 @@
 
 ///
 /// @param {Number} $device-width
-/// @content
 ///
 /// @output
 /// ```css
@@ -59,8 +56,6 @@
 /// @param {String} $point
 /// @param {Number} $bp-mobile-width
 /// @param {Number} $bp-tablet-width
-///
-/// @content
 ///
 /// @output
 /// ```css
