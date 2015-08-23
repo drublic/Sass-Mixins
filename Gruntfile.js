@@ -34,6 +34,7 @@ module.exports = function (grunt) {
 			default: {
 				src: 'mixins.scss',
 				options: {
+					dest: 'doc',
 					basePath: 'https://github.com/drublic/Sass-Mixins/blob/master',
 				},
 			},
