@@ -197,7 +197,7 @@
 ///
 /// @example
 ///   .selector {
-///     x-at-least(40em) { width: 60%; }
+///     @include x-at-least(40em) { width: 60%; }
 ///   }
 ///
 @mixin x-at-least ($device-width) {
@@ -218,7 +218,7 @@
 ///
 /// @example
 ///   .selector {
-///     x-until(40em) { width: 100%; }
+///     @include x-until(40em) { width: 100%; }
 ///   }
 ///
 @mixin x-until ($device-width) {
@@ -243,7 +243,7 @@
 ///
 /// @example
 ///   .selector {
-///     x-breakpoints(mobile,  320px) { width: 100%; }
+///     @include x-breakpoints(mobile,  320px) { width: 100%; }
 ///   }
 ///
 @mixin x-breakpoints($point, $bp-mobile-width: 640px, $bp-tablet-width: 1024px) {

@@ -64,7 +64,7 @@
      &lt;content&gt;
   }
 </code></pre></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.selector {
-  x-at-least(40em) { width: 60%; }
+  @include x-at-least(40em) { width: 60%; }
 }</code></pre></div><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href="http://caniuse.com/#feat=css-mediaqueries">caniuse</a></li><li><a href="http://www.w3.org/TR/css3-mediaqueries/">spec</a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>drublic</p></li></ul></p></section><section class="main__item container item" id="mixin-x-until"><h3 class="item__heading"><a class="item__name" href="#mixin-x-until">x-until</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin x-until($device-width) { 
 	@media screen and (max-width: $device-width - 0.01) {
 		@content;
@@ -73,7 +73,7 @@
      &lt;content&gt;
   }
 </code></pre></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.selector {
-  x-until(40em) { width: 100%; }
+  @include x-until(40em) { width: 100%; }
 }</code></pre></div></p></section><section class="main__item container item" id="mixin-x-breakpoints"><h3 class="item__heading"><a class="item__name" href="#mixin-x-breakpoints">x-breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin x-breakpoints($point, $bp-mobile-width, $bp-tablet-width) { 
 	$bp-mobile: &#39;(max-width: #{$bp-mobile-width})&#39;;
 	$bp-tablet: &#39;(min-width: #{$bp-mobile-width}) and (max-width: #{$bp-tablet-width})&#39;;
@@ -101,7 +101,7 @@
      &lt;content&gt;
   }
 </code></pre></div><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>.selector {
-  x-breakpoints(mobile,  320px) { width: 100%; }
+  @include x-breakpoints(mobile,  320px) { width: 100%; }
 }</code></pre></div><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>romamatusevich</p></li></ul></p></section><section class="main__item container item" id="mixin-x-calc"><h3 class="item__heading"><a class="item__name" href="#mixin-x-calc">x-calc</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin x-calc($property, $expression) { 
 	#{$property}: -webkit-calc(#{$expression});
 	#{$property}: calc(#{$expression});
