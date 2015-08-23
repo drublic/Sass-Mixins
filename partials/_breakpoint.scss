@@ -9,7 +9,7 @@
 /// @link http://caniuse.com/#feat=css-mediaqueries caniuse
 /// @link http://www.w3.org/TR/css3-mediaqueries/ spec
 ///
-/// @param {number} device-width
+/// @param {number} $device-width
 ///
 /// @content
 ///
@@ -32,7 +32,7 @@
 }
 
 ///
-/// @param {number} device-width
+/// @param {number} $device-width
 /// @content
 ///
 /// @output
@@ -56,9 +56,9 @@
 ///
 /// @author romamatusevich
 ///
-/// @param {string} point
-/// @param {number} bp-mobile-width
-/// @param {number} bp-tablet-width
+/// @param {string} $point
+/// @param {number} $bp-mobile-width
+/// @param {number} $bp-tablet-width
 ///
 /// @content
 ///

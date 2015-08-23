@@ -30,7 +30,7 @@
 }
 
 ///
-/// @param {String} values
+/// @param {String} $values
 /// @output
 /// ```css
 ///   -webkit-box-flex: <values>;
@@ -54,7 +54,7 @@
 }
 
 ///
-/// @param {Number} value
+/// @param {Number} $value
 /// @output
 /// ```css
 ///   -webkit-box-ordinal-group: <value>;
@@ -78,7 +78,7 @@
 }
 
 ///
-/// @param {String} value
+/// @param {String} $value
 ///
 /// @output
 /// ```css
@@ -104,7 +104,7 @@
 }
 
 ///
-/// @param value
+/// @param $value
 ///
 /// @output
 /// ```css
@@ -137,7 +137,7 @@
  }
 
 ///
-/// @param {string} value
+/// @param {string} $value
 /// @output
 /// ```css
 ///    -webkit-box-direction: <value>;

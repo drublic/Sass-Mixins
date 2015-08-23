@@ -11,10 +11,10 @@
 ///
 /// @require helper-gradient-angle
 ///
-/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} direction [to bottom]
-/// @param {color} fallback [#ccc]
-/// @param {color} from [#ccc]
-/// @param {color} to [#aaa]
+/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} $direction [to bottom]
+/// @param {color} $fallback [#ccc]
+/// @param {color} $from [#ccc]
+/// @param {color} $to [#aaa]
 ///
 /// @output
 /// ```css
