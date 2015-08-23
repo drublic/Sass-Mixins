@@ -155,7 +155,7 @@
 /// @link http://caniuse.com/#feat=css3-boxsizing caniuse
 /// @link http://www.w3.org/TR/css3-ui/#box-sizing spec
 ///
-/// @param {String} $type
+/// @param {String} $type [border-box]
 ///
 /// @output
 /// ```css
@@ -186,7 +186,7 @@
 /// @link http://caniuse.com/#feat=css-mediaqueries caniuse
 /// @link http://www.w3.org/TR/css3-mediaqueries/ spec
 ///
-/// @param {number} $device-width
+/// @param {Number} $device-width
 ///
 /// @content
 ///
@@ -209,7 +209,7 @@
 }
 
 ///
-/// @param {number} $device-width
+/// @param {Number} $device-width
 /// @content
 ///
 /// @output
@@ -233,9 +233,9 @@
 ///
 /// @author romamatusevich
 ///
-/// @param {string} $point
-/// @param {number} $bp-mobile-width
-/// @param {number} $bp-tablet-width
+/// @param {String} $point
+/// @param {Number} $bp-mobile-width
+/// @param {Number} $bp-tablet-width
 ///
 /// @content
 ///
@@ -442,7 +442,7 @@
  }
 
 ///
-/// @param {string} $value
+/// @param {String} $value
 /// @output
 /// ```css
 ///    -webkit-box-direction: <value>;
@@ -606,7 +606,7 @@
 /// @param {'webkit-old'|'webkit'|''} $mode
 /// @param $gradient
 ///
-/// @returns {string} `-<mode>-linear-gradient(<gradient>)`
+/// @returns {String} `-<mode>-linear-gradient(<gradient>)`
 ///
 @function prefixed-gradient ($mode, $gradient) {
 
