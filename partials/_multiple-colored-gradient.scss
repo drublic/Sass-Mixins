@@ -1,37 +1,38 @@
-/**
- * @description
- * This mixin creates (endless) multiple color stops in gradients just with one
- * call for the mixin.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/css-gradients
- * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
- *
- * @param stops {list}
- * @returns
- *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
- *
- * @example
- *   .selector {
- *     @include x-multiple-colored-gradient(
- *         "top",
- *         #f22 0%,
- *         #f2f 15%,
- *         #22f 30%,
- *         #2ff 45%,
- *         #2f2 60%,
- *         #2f2 75%,
- *         #ff2 90%,
- *         #f22 100%
- *     );
- *   }
- *
- * Note: This mixis does not define a fallback-color for your background as it
- * is likely you want to add an image or something. Please specify one by
- * yourself.
- */
+///
+///This mixin creates (endless) multiple color stops in gradients just with one
+///call for the mixin.
+///
+/// Note: This mixis does not define a fallback-color for your background as it
+/// is likely you want to add an image or something. Please specify one by
+/// yourself.
+///@author drublic
+///
+///@link http://caniuse.com/css-gradients caniuse
+///@link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
+///
+///@param {list} stops
+///
+///@output
+///```css
+///   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+///   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+///```
+///
+///@example
+///   .selector {
+///     @include x-multiple-colored-gradient(
+///         "top",
+///         #f22 0%,
+///         #f2f 15%,
+///         #22f 30%,
+///         #2ff 45%,
+///         #2f2 60%,
+///         #2f2 75%,
+///         #ff2 90%,
+///         #f22 100%
+///     );
+///   }
+///
 @mixin x-multiple-colored-gradient ($args...) {
 
 	$gradient: ();
@@ -63,13 +64,14 @@
 	background-image:         linear-gradient(unquote($pos_newsyntax), $gradient);
 }
 
-/*
-  * Returns whether a value is a valid keyword direction
-  *
-  * @param value {String}
-  * @returns
-  *   <Bool>
-  */
+
+///
+///Returns whether a value is a valid keyword direction
+///
+///@param {String} value
+///
+///@returns {Bool}
+///
 @function is-valid-keyword-direction($value) {
   @return not not index(
     'top' 'right' 'bottom' 'left'

@@ -1,47 +1,47 @@
-/**
- * @description
- * This mixin enables you to use the CSS3 value `rem`, which lets you define
- * property sizes based on the root element's font-size.
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/rem
- * @link spec http://www.w3.org/TR/css3-values/#relative0
- *
- * Note: Depending on the font-size of the root-element `rem` calculates a
- * property of a current element. The fallback solution accepts a
- * `default-font-size`-argument which is 16px by default.
- */
-
- /*
-  * Returns a number without unit. E.g. 30px -> 30
-  * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
-  *
-  * @param value {String}
-  * @returns
-  *   <Number>
-  */
+///
+///Returns a number without unit. E.g. 30px -> 30
+///
+///Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+///
+///@param {String} value
+///@returns {Number}
+///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
  }
 
- /*
-  * Outputs properties that use rem with a px fallback.
-  * It also takes px values and converts them to rem.
-  *
-  * @param property
-  * @param values
-  * @param default-font-size int optional
-  * @returns
-  *   <property>: <parsed value>px;
-  *   <property>: <parsed value>rem;
-  *
-  * @example
-  *   .selector {
-  *     @include x-rem(font-size, 1.3);
-  *     @include x-rem(padding, 20px);
-  *   }
-  */
+
+///
+///This mixin enables you to use the CSS3 value `rem`, which lets you define
+///property sizes based on the root element's font-size.
+///
+///Outputs properties that use rem with a px fallback.
+///It also takes px values and converts them to rem.
+///
+///@author drublic
+///
+///@link http://caniuse.com/rem caniuse
+///@link http://www.w3.org/TR/css3-values/#relative0 spec
+///
+///
+///@param {String} property
+///@param {String} values
+///@param {Number} default-font-size - optional
+///
+///@require strip-unit
+///
+///@output
+///```css
+///   <property>: <parsed value>px;
+///   <property>: <parsed value>rem;
+///```
+///
+///@example
+///   .selector {
+///     @include x-rem(font-size, 1.3);
+///     @include x-rem(padding, 20px);
+///   }
+///
 @mixin x-rem ($property, $values, $main-font-size: 16px) {
 
 	// Empty list for all values in px
