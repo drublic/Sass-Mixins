@@ -2,7 +2,7 @@
 module.exports = function (grunt) {
 
 	var banner = '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-		'<%= grunt.template.today("yyyy-mm-dd") %> */';
+		'<%= grunt.template.today("yyyy-mm-dd") %> */' + '\n';
 
 	// Project configuration.
 	grunt.initConfig({
