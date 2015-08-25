@@ -30,6 +30,8 @@
 }
 
 ///
+/// Add Breakpoint until the specified device-width
+///
 /// @param {Number} $device-width
 ///
 /// @output
@@ -50,6 +52,8 @@
 	}
 }
 
+///
+/// Add Breakpoint between specified device-widths, default values are 640px and 1024px
 ///
 /// @author romamatusevich
 ///

@@ -30,6 +30,8 @@
 }
 
 ///
+/// Add flex values to element
+///
 /// @param {String} $values
 /// @output
 /// ```css
@@ -54,6 +56,8 @@
 }
 
 ///
+/// Add flex order to element
+///
 /// @param {Number} $value
 /// @output
 /// ```css
@@ -77,6 +81,8 @@
 	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
+///
+/// Add flex wrap to element
 ///
 /// @param {String} $value
 ///
@@ -103,6 +109,8 @@
 	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
 }
 
+///
+/// Add flex align-content to element
 ///
 /// @param $value
 ///
@@ -136,6 +144,8 @@
 	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
  }
 
+///
+/// Add flex direction to element
 ///
 /// @param {String} $value
 /// @output
