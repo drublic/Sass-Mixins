@@ -1,4 +1,4 @@
-/*! sass-mixins - v0.12.0 - 2015-08-23 *////
+/*! sass-mixins - v0.12.0 - 2015-08-25 *////
 /// Generates keyframe animations
 ///
 /// @author drublic
@@ -207,6 +207,8 @@
 }
 
 ///
+/// Add Breakpoint until the specified device-width
+///
 /// @param {Number} $device-width
 ///
 /// @output
@@ -227,6 +229,8 @@
 	}
 }
 
+///
+/// Add Breakpoint between specified device-widths, default values are 640px and 1024px
 ///
 /// @author romamatusevich
 ///
@@ -330,6 +334,8 @@
 }
 
 ///
+/// Add flex values to element
+///
 /// @param {String} $values
 /// @output
 /// ```css
@@ -354,6 +360,8 @@
 }
 
 ///
+/// Add flex order to element
+///
 /// @param {Number} $value
 /// @output
 /// ```css
@@ -377,6 +385,8 @@
 	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
+///
+/// Add flex wrap to element
 ///
 /// @param {String} $value
 ///
@@ -403,6 +413,8 @@
 	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
 }
 
+///
+/// Add flex align-content to element
 ///
 /// @param $value
 ///
@@ -436,6 +448,8 @@
 	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
  }
 
+///
+/// Add flex direction to element
 ///
 /// @param {String} $value
 /// @output
