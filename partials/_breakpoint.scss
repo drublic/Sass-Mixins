@@ -1,13 +1,10 @@
 ///
-/// These mixins generates Media Queries
-///
-/// Note: Please use the CSS unit `em` for device-width in order to stay
-/// responsive.
+/// Add Breakpoint greater than the specified device-width.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/#feat=css-mediaqueries caniuse
-/// @link http://www.w3.org/TR/css3-mediaqueries/ spec
+/// @link http://www.w3.org/TR/css3-mediaqueries spec
 ///
 /// @param {Number} $device-width
 ///
@@ -19,9 +16,13 @@
 /// ```
 ///
 /// @example
+/// Note: Please use the CSS unit `em` for device-width in order to stay
+/// responsive.
+/// ```css
 ///   .selector {
 ///     @include x-at-least(40em) { width: 60%; }
 ///   }
+/// ```
 ///
 @mixin x-at-least ($device-width) {
 	@media screen and (min-width: $device-width) {
@@ -30,7 +31,7 @@
 }
 
 ///
-/// Add Breakpoint until the specified device-width
+/// Add Breakpoint until the specified device-width.
 ///
 /// @param {Number} $device-width
 ///
@@ -53,7 +54,7 @@
 }
 
 ///
-/// Add Breakpoint between specified device-widths, default values are 640px and 1024px
+/// Add Breakpoint between specified device-widths.
 ///
 /// @author romamatusevich
 ///

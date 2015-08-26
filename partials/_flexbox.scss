@@ -3,9 +3,10 @@
 ///
 /// @author romamatusevich
 ///
+/// @link http://caniuse.com/#feat=flexbox caniuse
+/// @link http://www.w3.org/TR/css3-flexbox spec
 /// @link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
-/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
-/// @link http://www.w3.org/TR/css3-flexbox/ spec
+/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox css-tricks
 ///
 /// @output
 /// ```css
@@ -30,9 +31,10 @@
 }
 
 ///
-/// Add flex values to element
+/// Add flex values to element.
 ///
-/// @param {String} $values
+/// @param {Arglist} $values
+///
 /// @output
 /// ```css
 ///   -webkit-box-flex: <values>;
@@ -56,9 +58,10 @@
 }
 
 ///
-/// Add flex order to element
+/// Add flex order to element.
 ///
 /// @param {Number} $value
+///
 /// @output
 /// ```css
 ///   -webkit-box-ordinal-group: <value>;
@@ -82,7 +85,7 @@
 }
 
 ///
-/// Add flex wrap to element
+/// Add flex wrap to element.
 ///
 /// @param {String} $value
 ///
@@ -110,9 +113,9 @@
 }
 
 ///
-/// Add flex align-content to element
+/// Add flex align-content to element.
 ///
-/// @param $value
+/// @param {String} $value
 ///
 /// @output
 /// ```css
@@ -145,9 +148,10 @@
  }
 
 ///
-/// Add flex direction to element
+/// Add flex direction to element.
 ///
 /// @param {String} $value
+///
 /// @output
 /// ```css
 ///    -webkit-box-direction: <value>;

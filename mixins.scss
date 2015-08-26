@@ -1,12 +1,13 @@
-/*! sass-mixins - v0.12.0 - 2015-08-25 *////
-/// Generates keyframe animations
+/*! sass-mixins - v0.12.0 - 2015-08-26 */
+///
+/// Add animation to element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/#feat=css-animation caniuse
-/// @link http://www.w3.org/TR/css3-animations/ spec
+/// @link http://www.w3.org/TR/css3-animations spec
 ///
-/// @param {String} $values
+/// @param {List} $values
 ///
 /// @output
 /// ```css
@@ -26,12 +27,16 @@
 }
 
 
+///
+/// Generates keyframe animations.
+///
 /// @param {String} $name
+///
 /// @example
 ///    @include x-keyframes(jump) {
 ///      from { top: 0; }
 ///      to { top: -10px; }
-///   }
+///    }
 ///
 @mixin x-keyframes ($name) {
 	@-webkit-keyframes #{$name} {
@@ -44,7 +49,7 @@
 }
 
 ///
-/// Generates appearance for a given element
+/// Generates appearance for a given element.
 ///
 /// @author romamatusevich
 ///
@@ -74,14 +79,14 @@
 /// @author drublic
 ///
 /// @link http://caniuse.com/background-img-opts caniuse
-/// @link http://www.w3.org/TR/css3-background/ spec
+/// @link http://www.w3.org/TR/css3-background spec
 ///
-/// @param {String} $value
+/// @param {List} $values
 ///
 /// @output
 /// ```css
-///   -webkit-background-size: $args;
-///           background-size: $args;
+///   -webkit-background-size: $values;
+///           background-size: $values;
 /// ```
 ///
 /// @example
@@ -95,14 +100,14 @@
 }
 
 ///
-/// Generates cross-browser-compatible `border-radius` for a given element
+/// Generates cross-browser-compatible `border-radius` for a given element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/border-radius caniuse
 /// @link http://www.w3.org/TR/css3-background/#corners spec
 ///
-/// @param {String} $values
+/// @param {List} $values
 ///
 /// @output
 /// ```css
@@ -121,14 +126,14 @@
 }
 
 ///
-/// Generates cross-browser-compatible `box-shadow` for a given element
+/// Generates cross-browser-compatible `box-shadow` for a given element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/css-boxshadow caniuse
 /// @link http://www.w3.org/TR/css3-background/#the-box-shadow spec
 ///
-/// @param {String} $values
+/// @param {List} $values
 ///
 /// @output
 /// ```css
@@ -150,7 +155,6 @@
 /// Generates cross-browser-compatible `box-sizing` output for a given element.
 ///
 /// @author drublic
-///
 ///
 /// @link http://caniuse.com/#feat=css3-boxsizing caniuse
 /// @link http://www.w3.org/TR/css3-ui/#box-sizing spec
@@ -176,15 +180,12 @@
 }
 
 ///
-/// These mixins generates Media Queries
-///
-/// Note: Please use the CSS unit `em` for device-width in order to stay
-/// responsive.
+/// Add Breakpoint greater than the specified device-width.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/#feat=css-mediaqueries caniuse
-/// @link http://www.w3.org/TR/css3-mediaqueries/ spec
+/// @link http://www.w3.org/TR/css3-mediaqueries spec
 ///
 /// @param {Number} $device-width
 ///
@@ -196,9 +197,13 @@
 /// ```
 ///
 /// @example
+/// Note: Please use the CSS unit `em` for device-width in order to stay
+/// responsive.
+/// ```css
 ///   .selector {
 ///     @include x-at-least(40em) { width: 60%; }
 ///   }
+/// ```
 ///
 @mixin x-at-least ($device-width) {
 	@media screen and (min-width: $device-width) {
@@ -207,7 +212,7 @@
 }
 
 ///
-/// Add Breakpoint until the specified device-width
+/// Add Breakpoint until the specified device-width.
 ///
 /// @param {Number} $device-width
 ///
@@ -230,7 +235,7 @@
 }
 
 ///
-/// Add Breakpoint between specified device-widths, default values are 640px and 1024px
+/// Add Breakpoint between specified device-widths.
 ///
 /// @author romamatusevich
 ///
@@ -307,9 +312,10 @@
 ///
 /// @author romamatusevich
 ///
+/// @link http://caniuse.com/#feat=flexbox caniuse
+/// @link http://www.w3.org/TR/css3-flexbox spec
 /// @link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
-/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox/ css-tricks
-/// @link http://www.w3.org/TR/css3-flexbox/ spec
+/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox css-tricks
 ///
 /// @output
 /// ```css
@@ -334,9 +340,10 @@
 }
 
 ///
-/// Add flex values to element
+/// Add flex values to element.
 ///
-/// @param {String} $values
+/// @param {Arglist} $values
+///
 /// @output
 /// ```css
 ///   -webkit-box-flex: <values>;
@@ -360,9 +367,10 @@
 }
 
 ///
-/// Add flex order to element
+/// Add flex order to element.
 ///
 /// @param {Number} $value
+///
 /// @output
 /// ```css
 ///   -webkit-box-ordinal-group: <value>;
@@ -386,7 +394,7 @@
 }
 
 ///
-/// Add flex wrap to element
+/// Add flex wrap to element.
 ///
 /// @param {String} $value
 ///
@@ -414,9 +422,9 @@
 }
 
 ///
-/// Add flex align-content to element
+/// Add flex align-content to element.
 ///
-/// @param $value
+/// @param {String} $value
 ///
 /// @output
 /// ```css
@@ -449,9 +457,10 @@
  }
 
 ///
-/// Add flex direction to element
+/// Add flex direction to element.
 ///
 /// @param {String} $value
+///
 /// @output
 /// ```css
 ///    -webkit-box-direction: <value>;
@@ -500,7 +509,7 @@
 
 //todo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins
 ///
-/// Helper for old syntax in linear-gradients
+/// Helper for old syntax (for Angles) in linear-gradients.
 ///
 /// @param {Number|String} $deg
 ///
@@ -520,7 +529,7 @@
 	}
 }
 ///
-/// Helper gradient angle
+/// Get the old direction keyword syntax for gradients, for backward compability.
 ///
 /// @param {String} $direction
 ///
@@ -575,10 +584,10 @@
 ///
 /// @require helper-gradient-angle
 ///
-/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} $direction [to bottom]
-/// @param {color} $fallback [#ccc]
-/// @param {color} $from [#ccc]
-/// @param {color} $to [#aaa]
+/// @param {String | Angle} $direction [to bottom] - Either an angle value or any of `to bottom`, `to right`, `to top` or `to left`
+/// @param {Color} $fallback [#ccc]
+/// @param {Color} $from [#ccc]
+/// @param {Color} $to [#aaa]
 ///
 /// @output
 /// ```css
@@ -590,7 +599,7 @@
 ///
 /// @example
 ///   .selector {
-///     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+///     @include x-linear-gradient('to bottom', #ccc, #ddd, #bbb);
 ///   }
 ///
 @mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {
@@ -606,12 +615,13 @@
 	background-image:         linear-gradient(unquote($direction), $from, $to);
 }
 
-/// A function for prefixing gradients
+///
+/// A function for prefixing gradients.
 ///
 /// @todo define old webkit mode
 ///
-/// @param {'webkit-old'|'webkit'|''} $mode
-/// @param $gradient
+/// @param {String} $mode - Either `webkit-old`, `webkit` or `''`
+/// @param {Arglist} $gradient
 ///
 /// @returns {String} `-<mode>-linear-gradient(<gradient>)`
 ///
@@ -650,7 +660,7 @@
 
 
 ///
-/// This mixin generates multiple backgrounds
+/// This mixin generates multiple backgrounds.
 ///
 /// @author drublic
 ///
@@ -658,7 +668,7 @@
 /// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
 ///
-/// @param {list} $backgrounds
+/// @param {Arglist} $backgrounds
 ///
 /// @example
 ///   .selector {
@@ -726,15 +736,16 @@
 /// This mixin creates (endless) multiple color stops in gradients just with one
 /// call for the mixin.
 ///
-/// Note: This mixis does not define a fallback-color for your background as it
+/// Note: This mixin does not define a fallback-color for your background as it
 /// is likely you want to add an image or something. Please specify one by
 /// yourself.
+///
 /// @author drublic
 ///
 /// @link http://caniuse.com/css-gradients caniuse
 /// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
-/// @param {list} $stops
+/// @param {Arglist} $args
 ///
 /// @output
 /// ```css
@@ -745,7 +756,7 @@
 /// @example
 ///   .selector {
 ///     @include x-multiple-colored-gradient(
-///         "top",
+///         'top',
 ///         #f22 0%,
 ///         #f2f 15%,
 ///         #22f 30%,
@@ -790,7 +801,7 @@
 
 
 ///
-/// Returns whether a value is a valid keyword direction
+/// Returns whether a value is a valid keyword direction.
 ///
 /// @param {String} $value
 ///
@@ -814,7 +825,7 @@
 /// @link http://caniuse.com/css-opacity caniuse
 /// @link http://www.w3.org/TR/css3-color/#transparency spec
 ///
-/// @param {Value} $value[0]
+/// @param {Number} $value [0]
 ///
 /// @output
 /// ```css
@@ -836,12 +847,14 @@
 }
 
 ///
-/// Generates `placeholder` content for a given element
+/// Generates `placeholder` content for a given element.
 ///
 /// @author romamatusevich
 ///
+/// @link http://caniuse.com/#feat=css-placeholder caniuse
+/// @link http://www.w3.org/html/wg/drafts/html/master/single-page.html#the-placeholder-attribute spec
 /// @link https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder MDN
-/// @link http://css-tricks.com/snippets/css/style-placeholder-text/ css-tricks
+/// @link http://css-tricks.com/snippets/css/style-placeholder-text css-tricks
 ///
 /// @output
 /// ```css
@@ -877,12 +890,13 @@
 }
 
 ///
-/// Returns a number without unit. E.g. 30px -> 30
+/// Returns a number without unit.
 ///
 /// Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
 ///
-/// @param {String} $value
-/// @returns {Number}
+/// @param {Number} $value
+///
+/// @returns {Number} - 30px -> 30
 ///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
@@ -901,12 +915,11 @@
 /// @link http://caniuse.com/rem caniuse
 /// @link http://www.w3.org/TR/css3-values/#relative0 spec
 ///
-///
 /// @param {String} $property
-/// @param {String} $values
-/// @param {Number} $default-font-size - optional
+/// @param {List} $values
+/// @param {Number} $default-font-size [16px] - optional
 ///
-/// @require strip-unit
+/// @require {Function} strip-unit
 ///
 /// @output
 /// ```css
@@ -963,7 +976,7 @@
 /// @link http://caniuse.com/css3-tabsize caniuse
 /// @link http://dev.w3.org/csswg/css-text/#tab-size1 spec
 ///
-/// @param {Number} $value[4] - optional
+/// @param {Number} $value [4] - optional
 ///
 /// @output
 /// ```css
@@ -982,15 +995,16 @@
 }
 
 ///
-/// Generates cross-browser-compatible `transform` for a given element
+/// Generates cross-browser-compatible `transform` for a given element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/transforms2d caniuse 2d
 /// @link http://caniuse.com/transforms3d caniuse 3d
-/// @link spec
+/// @link http://www.w3.org/TR/css3-transforms spec
 ///
 /// @param {String} $values
+///
 /// @output
 /// ```css
 ///  -webkit-transform: <values>;
@@ -1015,9 +1029,10 @@
 /// @author drublic
 ///
 /// @link http://caniuse.com/css-transitions caniuse
-/// @link spec
+/// @link http://www.w3.org/TR/css3-transitions spec
 ///
-/// @param $values
+/// @param {Arglist} $values
+///
 /// @output
 /// ```css
 ///   -webkit-transition: <values>;
@@ -1035,13 +1050,14 @@
 }
 
 ///
-/// Disables selection of content of a given element
+/// Disables selection of content of a given element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/user-select-none caniuse
+/// @link https://developer.mozilla.org/en-US/docs/Web/CSS/user-select MDN
 ///
-/// @param {none|auto} $value[none] - optional
+/// @param {none|auto} $value [none] - optional
 ///
 /// @output
 /// ```css

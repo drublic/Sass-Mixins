@@ -1,13 +1,14 @@
 ///
-/// Generates cross-browser-compatible `transform` for a given element
+/// Generates cross-browser-compatible `transform` for a given element.
 ///
 /// @author drublic
 ///
 /// @link http://caniuse.com/transforms2d caniuse 2d
 /// @link http://caniuse.com/transforms3d caniuse 3d
-/// @link spec
+/// @link http://www.w3.org/TR/css3-transforms spec
 ///
 /// @param {String} $values
+///
 /// @output
 /// ```css
 ///  -webkit-transform: <values>;

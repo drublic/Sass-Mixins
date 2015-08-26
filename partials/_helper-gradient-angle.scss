@@ -1,5 +1,5 @@
 ///
-/// Helper for old syntax in linear-gradients
+/// Helper for old syntax (for Angles) in linear-gradients.
 ///
 /// @param {Number|String} $deg
 ///
@@ -19,7 +19,7 @@
 	}
 }
 ///
-/// Helper gradient angle
+/// Get the old direction keyword syntax for gradients, for backward compability.
 ///
 /// @param {String} $direction
 ///

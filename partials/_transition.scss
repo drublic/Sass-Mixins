@@ -4,9 +4,10 @@
 /// @author drublic
 ///
 /// @link http://caniuse.com/css-transitions caniuse
-/// @link spec
+/// @link http://www.w3.org/TR/css3-transitions spec
 ///
-/// @param $values
+/// @param {Arglist} $values
+///
 /// @output
 /// ```css
 ///   -webkit-transition: <values>;

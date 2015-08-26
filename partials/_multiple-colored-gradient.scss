@@ -2,15 +2,16 @@
 /// This mixin creates (endless) multiple color stops in gradients just with one
 /// call for the mixin.
 ///
-/// Note: This mixis does not define a fallback-color for your background as it
+/// Note: This mixin does not define a fallback-color for your background as it
 /// is likely you want to add an image or something. Please specify one by
 /// yourself.
+///
 /// @author drublic
 ///
 /// @link http://caniuse.com/css-gradients caniuse
 /// @link http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients spec
 ///
-/// @param {list} $stops
+/// @param {Arglist} $args
 ///
 /// @output
 /// ```css
@@ -21,7 +22,7 @@
 /// @example
 ///   .selector {
 ///     @include x-multiple-colored-gradient(
-///         "top",
+///         'top',
 ///         #f22 0%,
 ///         #f2f 15%,
 ///         #22f 30%,
@@ -66,7 +67,7 @@
 
 
 ///
-/// Returns whether a value is a valid keyword direction
+/// Returns whether a value is a valid keyword direction.
 ///
 /// @param {String} $value
 ///

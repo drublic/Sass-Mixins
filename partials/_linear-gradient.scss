@@ -11,10 +11,10 @@
 ///
 /// @require helper-gradient-angle
 ///
-/// @param {'to bottom'|'to right'|'to top'|'to left'|Degree} $direction [to bottom]
-/// @param {color} $fallback [#ccc]
-/// @param {color} $from [#ccc]
-/// @param {color} $to [#aaa]
+/// @param {String | Angle} $direction [to bottom] - Either an angle value or any of `to bottom`, `to right`, `to top` or `to left`
+/// @param {Color} $fallback [#ccc]
+/// @param {Color} $from [#ccc]
+/// @param {Color} $to [#aaa]
 ///
 /// @output
 /// ```css
@@ -26,7 +26,7 @@
 ///
 /// @example
 ///   .selector {
-///     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+///     @include x-linear-gradient('to bottom', #ccc, #ddd, #bbb);
 ///   }
 ///
 @mixin x-linear-gradient ($direction: 'to bottom', $fallback: #ccc, $from: #ccc, $to: #aaa) {

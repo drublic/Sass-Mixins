@@ -4,14 +4,14 @@
 /// @author drublic
 ///
 /// @link http://caniuse.com/background-img-opts caniuse
-/// @link http://www.w3.org/TR/css3-background/ spec
+/// @link http://www.w3.org/TR/css3-background spec
 ///
-/// @param {String} $value
+/// @param {List} $values
 ///
 /// @output
 /// ```css
-///   -webkit-background-size: $args;
-///           background-size: $args;
+///   -webkit-background-size: $values;
+///           background-size: $values;
 /// ```
 ///
 /// @example

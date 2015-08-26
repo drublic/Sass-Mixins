@@ -1,10 +1,11 @@
 ///
-/// Returns a number without unit. E.g. 30px -> 30
+/// Returns a number without unit.
 ///
 /// Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
 ///
-/// @param {String} $value
-/// @returns {Number}
+/// @param {Number} $value
+///
+/// @returns {Number} - 30px -> 30
 ///
  @function strip-unit($value) {
      @return $value / ($value * 0 + 1);
@@ -23,12 +24,11 @@
 /// @link http://caniuse.com/rem caniuse
 /// @link http://www.w3.org/TR/css3-values/#relative0 spec
 ///
-///
 /// @param {String} $property
-/// @param {String} $values
-/// @param {Number} $default-font-size - optional
+/// @param {List} $values
+/// @param {Number} $default-font-size [16px] - optional
 ///
-/// @require strip-unit
+/// @require {Function} strip-unit
 ///
 /// @output
 /// ```css
