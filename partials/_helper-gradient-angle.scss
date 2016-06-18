@@ -1,6 +1,10 @@
-// Helper for old syntax in linear-gradients
-
-// Return the corrected angle or position for a css gradient
+///
+/// Helper for old syntax (for Angles) in linear-gradients.
+///
+/// @param {Number|String} $deg
+///
+/// @return {Number|String} - Return the corrected angle or position for a css gradient
+///
 
 @function angle ($deg) {
 	@if type-of($deg) == 'number' {
@@ -14,7 +18,13 @@
 		@return $position;
 	}
 }
-
+///
+/// Get the old direction keyword syntax for gradients, for backward compability.
+///
+/// @param {String} $direction
+///
+/// @return {String}
+///
 @function helper-gradient-angle ($direction) {
 
 	$old-direction: $direction;

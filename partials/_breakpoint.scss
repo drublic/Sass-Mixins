@@ -1,69 +1,79 @@
-/**
- * @description
- * These mixins generates Media Queries
- *
- * @author drublic
- *
- * @link caniuse http://caniuse.com/#feat=css-mediaqueries
- * @link spec http://www.w3.org/TR/css3-mediaqueries/
- *
- * Note: Please use the CSS unit `em` for device-width in order to stay
- * responsive.
- */
-
-/**
- * @param device-width {number}
- * @content
- * @returns
- *   @media screen and (min-width: <device-width>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-at-least(40em) { width: 60%; }
- *   }
- */
+///
+/// Add Breakpoint greater than the specified device-width.
+///
+/// @author drublic
+///
+/// @link http://caniuse.com/#feat=css-mediaqueries caniuse
+/// @link http://www.w3.org/TR/css3-mediaqueries spec
+///
+/// @param {Number} $device-width
+///
+/// @output
+/// ```css
+///   @media screen and (min-width: <device-width>) {
+///      <content>
+///   }
+/// ```
+///
+/// @example
+/// Note: Please use the CSS unit `em` for device-width in order to stay
+/// responsive.
+/// ```css
+///   .selector {
+///     @include x-at-least(40em) { width: 60%; }
+///   }
+/// ```
+///
 @mixin x-at-least ($device-width) {
 	@media screen and (min-width: $device-width) {
 		@content;
 	}
 }
 
-/**
- * @param device-width {number}
- * @content
- * @returns
- *   @media screen and (max-width: <device-width - 0.01>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-until(40em) { width: 100%; }
- *   }
- */
+///
+/// Add Breakpoint until the specified device-width.
+///
+/// @param {Number} $device-width
+///
+/// @output
+/// ```css
+///   @media screen and (max-width: <device-width - 0.01>) {
+///      <content>
+///   }
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-until(40em) { width: 100%; }
+///   }
+///
 @mixin x-until ($device-width) {
 	@media screen and (max-width: $device-width - 0.01) {
 		@content;
 	}
 }
 
-/**
- * @author romamatusevich
- *
- * @param point{string}, bp-mobile-width{number}, bp-tablet-width{number}
- * @content
- * @returns
- *   @media (max-width: <bp-mobile-width>) {
- *      <content>
- *   }
- *
- * @example
- *   .selector {
- *     x-breakpoints(mobile,  320px) { width: 100%; }
- *   }
- */
+///
+/// Add Breakpoint between specified device-widths.
+///
+/// @author romamatusevich
+///
+/// @param {String} $point
+/// @param {Number} $bp-mobile-width [640px]
+/// @param {Number} $bp-tablet-width [1024px]
+///
+/// @output
+/// ```css
+///   @media (max-width: <bp-mobile-width>) {
+///      <content>
+///   }
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-breakpoints(mobile,  320px) { width: 100%; }
+///   }
+///
 @mixin x-breakpoints($point, $bp-mobile-width: 640px, $bp-tablet-width: 1024px) {
 	$bp-mobile: '(max-width: #{$bp-mobile-width})';
 	$bp-tablet: '(min-width: #{$bp-mobile-width}) and (max-width: #{$bp-tablet-width})';

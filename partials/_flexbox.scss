@@ -1,27 +1,27 @@
-/**
- * @description
- * Generates flexbox properties for a given element
- *
- * @author romamatusevich
- *
- * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
- * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
- * @link spec http://www.w3.org/TR/css3-flexbox/
- */
-
-/**
- * @returns
- *   display: -webkit-box;
- *   display: -moz-box;
- *   display: -ms-flexbox;
- *   display: -webkit-flex;
- *   display: flex;
- *
- * @example
- *   .selector {
- *     @include x-display-flex;
- *   }
- */
+///
+/// Generates flexbox properties for a given element.
+///
+/// @author romamatusevich
+///
+/// @link http://caniuse.com/#feat=flexbox caniuse
+/// @link http://www.w3.org/TR/css3-flexbox spec
+/// @link https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes MDN
+/// @link http://css-tricks.com/snippets/css/a-guide-to-flexbox css-tricks
+///
+/// @output
+/// ```css
+///   display: -webkit-box;
+///   display: -moz-box;
+///   display: -ms-flexbox;
+///   display: -webkit-flex;
+///   display: flex;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-display-flex;
+///   }
+///
 @mixin x-display-flex {
 	display: -webkit-box;  // Chrome 20-, iOS 6-, Safari 3.1  -6
 	display: -moz-box;     // FF 19-
@@ -30,20 +30,25 @@
 	display: flex;         // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param values
- * @returns
- *   -webkit-box-flex: <values>;
- *      -moz-box-flex: <values>;
- *       -webkit-flex: <values>;
- *           -ms-flex: <values>;
- *               flex: <values>;
- *
- * @example
- *   .selector {
- *     @include x-flex(1 1 auto);
- *   }
- */
+///
+/// Add flex values to element.
+///
+/// @param {Arglist} $values
+///
+/// @output
+/// ```css
+///   -webkit-box-flex: <values>;
+///      -moz-box-flex: <values>;
+///       -webkit-flex: <values>;
+///           -ms-flex: <values>;
+///               flex: <values>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-flex(1 1 auto);
+///   }
+///
 @mixin x-flex ($values...) {
 	-webkit-box-flex: $values; // Chrome 20-, iOS 6-, Safari 3.1 - 6
 	   -moz-box-flex: $values; // FF 19-
@@ -52,20 +57,25 @@
 	            flex: $values; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param value
- * @returns
- *   -webkit-box-ordinal-group: <value>;
- *      -moz-box-ordinal-group: <value>;
- *              -ms-flex-order: <value>;
- *               -webkit-order: <value>;
- *                       order: <value>;
- *
- * @example
- *   .selector {
- *     @include x-order(1);
- *   }
- */
+///
+/// Add flex order to element.
+///
+/// @param {Number} $value
+///
+/// @output
+/// ```css
+///   -webkit-box-ordinal-group: <value>;
+///      -moz-box-ordinal-group: <value>;
+///              -ms-flex-order: <value>;
+///               -webkit-order: <value>;
+///                       order: <value>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-order(1);
+///   }
+///
 @mixin x-order ($value) {
 	-webkit-box-ordinal-group: $value; // Chrome 20-, iOS 6-, Safari 3.1 - 6
 	   -moz-box-ordinal-group: $value; // FF 19-
@@ -74,18 +84,23 @@
 	                    order: $value; // FF 20+, Chrome 29+, Opera 12.1, 17+
 }
 
-/**
- * @param value
- * @returns
- *    -webkit-flex-wrap: <value>;
- *        -ms-flex-wrap: <value>;
- *            flex-wrap: <value>;
- *
- * @example
- *   .selector {
- *     @include x-flex-wrap(wrap);
- *   }
- */
+///
+/// Add flex wrap to element.
+///
+/// @param {String} $value
+///
+/// @output
+/// ```css
+///    -webkit-flex-wrap: <value>;
+///        -ms-flex-wrap: <value>;
+///            flex-wrap: <value>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-flex-wrap(wrap);
+///   }
+///
 @mixin x-flex-wrap ($value) {
 	// IE 10
 	@if $value == nowrap {
@@ -97,18 +112,23 @@
 	        flex-wrap: $value; // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
 }
 
-/**
- * @param value
- * @returns
- *   -webkit-align-content: <value>;
- *      -moz-align-content: <value>;
- *      -ms-flex-line-pack: <value>;
- *           align-content: <value>;
- * @example
- *   .selector {
- *     @include x-align-content(center);
- *   }
- */
+///
+/// Add flex align-content to element.
+///
+/// @param {String} $value
+///
+/// @output
+/// ```css
+///   -webkit-align-content: <value>;
+///      -moz-align-content: <value>;
+///      -ms-flex-line-pack: <value>;
+///           align-content: <value>;
+/// ```
+/// @example
+///   .selector {
+///     @include x-align-content(center);
+///   }
+///
  @mixin x-align-content ($value) {
  	// IE 10
  	@if $value == flex-start {
@@ -127,22 +147,28 @@
 	        align-content: $value; // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
  }
 
-/**
- * @param value
- * @returns
- *	  -webkit-box-direction: <value>;
- *		 -moz-box-direction: <value>;
- *       -webkit-box-orient: <value>;
- *		    -moz-box-orient: <value>;
- *   -webkit-flex-direction: <value>;
- *      -moz-flex-direction: <value>;
- *       -ms-flex-direction: <value>;
- *           flex-direction: <value>;
- * @example
- *   .selector {
- *     @include x-flex-direction(row-reverse);
- *   }
- */
+///
+/// Add flex direction to element.
+///
+/// @param {String} $value
+///
+/// @output
+/// ```css
+///    -webkit-box-direction: <value>;
+///       -moz-box-direction: <value>;
+///       -webkit-box-orient: <value>;
+///          -moz-box-orient: <value>;
+///   -webkit-flex-direction: <value>;
+///      -moz-flex-direction: <value>;
+///       -ms-flex-direction: <value>;
+///           flex-direction: <value>;
+/// ```
+///
+/// @example
+///   .selector {
+///     @include x-flex-direction(row-reverse);
+///   }
+///
  @mixin x-flex-direction ($value) {
 	@if $value == row {
 		-webkit-box-direction: normal;
@@ -172,4 +198,4 @@
  	        flex-direction: $value;
  }
 
-/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
+//todo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins

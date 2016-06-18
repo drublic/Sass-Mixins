@@ -2,7 +2,7 @@
 module.exports = function (grunt) {
 
 	var banner = '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-		'<%= grunt.template.today("yyyy-mm-dd") %> */';
+		'<%= grunt.template.today("yyyy-mm-dd") %> */' + '\n';
 
 	// Project configuration.
 	grunt.initConfig({
@@ -29,14 +29,25 @@ module.exports = function (grunt) {
 					'test/css/main.css': 'test/scss/main.scss'
 				}
 			}
-		}
+		},
+		sassdoc: {
+			default: {
+				src: 'mixins.scss',
+				options: {
+					dest: 'doc',
+					basePath: 'https://github.com/drublic/Sass-Mixins/blob/master',
+				},
+			},
+		},
 	});
 
 	// Load some stuff
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-sassdoc');
 
 	// Default task
 	grunt.registerTask('default', ['concat', 'sass']);
+	grunt.registerTask('doc', ['concat', 'sassdoc']);
 
 };
