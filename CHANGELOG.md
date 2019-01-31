@@ -2,6 +2,8 @@
 
 ### HEAD
 
+* Change deprecated `@elseif` to `@else if`
+
 ### 0.12.0 - 11.07.2015
 * Add warning when x-breakpoints do not recognize breakpoint
 * Add IE8 support to x-opacity
