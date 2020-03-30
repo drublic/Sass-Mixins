@@ -2,6 +2,17 @@
 
 ### HEAD
 
+### 0.13.0 - 30.03.2020
+* New builds for css
+* Update grunt file and updates for modules
+* Move return description to the right position
+* Add default values to params from mixin x-breakpoints
+* Fix examples in partials/_breakpoints.scss
+* Remove unnecessary @content annotation
+* Add defaulttype to boxsizing param
+* Changed all documentation annotation into sassdoc format
+* Add .idea folder to gitignore
+* Add grunt-sassdoc
 * Change deprecated `@elseif` to `@else if`
 
 ### 0.12.0 - 11.07.2015
