@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 /*globals module */
 module.exports = function (grunt) {
 
@@ -21,6 +23,7 @@ module.exports = function (grunt) {
 		sass: {
 			css: {
 				options: {
+					implementation: sass,
 					unixNewlines: true,
 					style: 'expanded',
 					banner: banner
